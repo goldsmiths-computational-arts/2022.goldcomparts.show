@@ -10,7 +10,7 @@ const template = ({ head, body, assets, nonce }) => "<!DOCTYPE html>\n<html lang
 
 let read = null;
 
-set_paths({"base":"","assets":""});
+set_paths({"base":"/2022.goldcomparts.show","assets":""});
 
 let default_protocol = 'https';
 

@@ -3,7 +3,7 @@
 import preprocess from "svelte-preprocess";
 import adapter from "@sveltejs/adapter-static";
 
-let dev = true;
+let dev = false;
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
