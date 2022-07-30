@@ -43,5 +43,5 @@ https://vadimkorr.github.io/svelte-carousel/
 deploying
 
 you can't have hrefs with '/'
-no underscores in filenames
+no underscores in directory names
 
