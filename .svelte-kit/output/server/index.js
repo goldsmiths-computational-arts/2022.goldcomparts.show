@@ -1,4 +1,4 @@
-import { c as create_ssr_component, s as setContext, v as validate_component, m as missing_component } from "./internal/immutable/chunks/index-f45e0676.js";
+import { c as create_ssr_component, s as setContext, v as validate_component, m as missing_component } from "./internal/immutable/chunks/index-0a18f046.js";
 import { s as set_paths, b as base, a as assets } from "./internal/immutable/chunks/paths-86ffdd15.js";
 function afterUpdate() {
 }
@@ -2416,7 +2416,7 @@ function set_prerendering(value) {
 }
 const template = ({ head, body, assets: assets2, nonce }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="' + assets2 + '/favicon.png" />\n		<meta name="viewport" content="width=device-width" />\n		' + head + "\n	</head>\n	<body>\n		<div>" + body + "</div>\n	</body>\n</html>\n";
 let read = null;
-set_paths({ "base": "/2022.goldcomparts.show", "assets": "" });
+set_paths({ "base": "", "assets": "" });
 let default_protocol = "https";
 function override(settings) {
   default_protocol = settings.protocol || default_protocol;

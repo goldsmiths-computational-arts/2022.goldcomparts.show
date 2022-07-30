@@ -1,4 +1,4 @@
-import { c as create_ssr_component } from "../../internal/immutable/chunks/index-f45e0676.js";
+import { c as create_ssr_component } from "../../internal/immutable/chunks/index-0a18f046.js";
 import { d as dev, b as browser } from "../../internal/immutable/chunks/env-57855b65.js";
 /* empty css                                                                            */const css = {
   code: ".content.svelte-cf77e8{width:100%;max-width:var(--column-width);margin:var(--column-margin-top) auto 0 auto}",

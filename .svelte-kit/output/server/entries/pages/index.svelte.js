@@ -1,21 +1,7 @@
-import { c as create_ssr_component, d as createEventDispatcher, b as add_attribute, n as noop, f as safe_not_equal, h as now, l as loop, a as subscribe, e as escape, v as validate_component } from "../../internal/immutable/chunks/index-f45e0676.js";
+import { n as noop, d as safe_not_equal, f as now, l as loop, c as create_ssr_component, a as subscribe, e as escape, h as createEventDispatcher, b as add_attribute, v as validate_component } from "../../internal/immutable/chunks/index-0a18f046.js";
+import "../../internal/immutable/chunks/Header.svelte_svelte_type_style_lang-13fb8c6a.js";
+import { H as Header } from "../../internal/immutable/chunks/Header-6864b164.js";
 import { b as base } from "../../internal/immutable/chunks/paths-86ffdd15.js";
-const P5 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { target = void 0 } = $$props;
-  let { sketch = void 0 } = $$props;
-  let { parentDivStyle = "display: block;" } = $$props;
-  let { debug = false } = $$props;
-  createEventDispatcher();
-  if ($$props.target === void 0 && $$bindings.target && target !== void 0)
-    $$bindings.target(target);
-  if ($$props.sketch === void 0 && $$bindings.sketch && sketch !== void 0)
-    $$bindings.sketch(sketch);
-  if ($$props.parentDivStyle === void 0 && $$bindings.parentDivStyle && parentDivStyle !== void 0)
-    $$bindings.parentDivStyle(parentDivStyle);
-  if ($$props.debug === void 0 && $$bindings.debug && debug !== void 0)
-    $$bindings.debug(debug);
-  return `<div${add_attribute("style", parentDivStyle, 0)} class="${"m-0"}"></div>`;
-});
 const subscriber_queue = [];
 function writable(value, start = noop) {
   let stop;
@@ -183,44 +169,64 @@ const Counter = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 	<button aria-label="${"Increase the counter by one"}" class="${"svelte-sx9eo4"}"><svg aria-hidden="${"true"}" viewBox="${"0 0 1 1"}" class="${"svelte-sx9eo4"}"><path d="${"M0,0.5 L1,0.5 M0.5,0 L0.5,1"}" class="${"svelte-sx9eo4"}"></path></svg></button>
 </div>`;
 });
+const P5 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let { target = void 0 } = $$props;
+  let { sketch: sketch2 = void 0 } = $$props;
+  let { parentDivStyle = "display: block;" } = $$props;
+  let { debug = false } = $$props;
+  createEventDispatcher();
+  if ($$props.target === void 0 && $$bindings.target && target !== void 0)
+    $$bindings.target(target);
+  if ($$props.sketch === void 0 && $$bindings.sketch && sketch2 !== void 0)
+    $$bindings.sketch(sketch2);
+  if ($$props.parentDivStyle === void 0 && $$bindings.parentDivStyle && parentDivStyle !== void 0)
+    $$bindings.parentDivStyle(parentDivStyle);
+  if ($$props.debug === void 0 && $$bindings.debug && debug !== void 0)
+    $$bindings.debug(debug);
+  return `<div${add_attribute("style", parentDivStyle, 0)} class="${"m-0"}"></div>`;
+});
 const index_svelte_svelte_type_style_lang = "";
 const css = {
-  code: "section.svelte-1egtvge.svelte-1egtvge{display:flex;flex-direction:column;justify-content:center;align-items:center;flex:1}h1.svelte-1egtvge.svelte-1egtvge{width:100%}.welcome.svelte-1egtvge.svelte-1egtvge{display:block;position:relative;width:100%;height:0;padding:0 0 calc(100% * 495 / 2048) 0}.welcome.svelte-1egtvge img.svelte-1egtvge{position:absolute;width:100%;height:100%;top:0;display:block}",
+  code: "main.svelte-jwnn57.svelte-jwnn57{flex:1;display:flex;flex-direction:column;padding:1rem;width:100%;max-width:1024px;margin:0 auto;box-sizing:border-box}footer.svelte-jwnn57.svelte-jwnn57{display:flex;flex-direction:column;justify-content:center;align-items:center;padding:40px}footer.svelte-jwnn57 a.svelte-jwnn57{font-weight:bold}@media(min-width: 480px){footer.svelte-jwnn57.svelte-jwnn57{padding:40px 0}}section.svelte-jwnn57.svelte-jwnn57{display:flex;flex-direction:column;justify-content:center;align-items:center;flex:1}h1.svelte-jwnn57.svelte-jwnn57{width:100%}.welcome.svelte-jwnn57.svelte-jwnn57{display:block;position:relative;width:100%;height:0;padding:0 0 calc(100% * 495 / 2048) 0}.welcome.svelte-jwnn57 img.svelte-jwnn57{position:absolute;width:100%;height:100%;top:0;display:block}",
   map: null
 };
 const prerender = true;
-const Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let width = 55;
-  let height = 55;
-  const sketch = (p5) => {
-    p5.setup = () => {
-      p5.createCanvas(400, 400);
-    };
-    p5.draw = () => {
-      p5.ellipse(p5.width / 2, p5.height / 2, width, height);
-    };
+let width = 55;
+let height = 55;
+const sketch = (p5) => {
+  p5.setup = () => {
+    p5.createCanvas(400, 400);
   };
+  p5.draw = () => {
+    p5.ellipse(p5.width / 2, p5.height / 2, width, height);
+  };
+};
+const Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
   return `${$$result.head += `${$$result.title = `<title>Home</title>`, ""}<meta name="${"description"}" content="${"Svelte demo app"}" data-svelte="svelte-t32ptj">`, ""}
 
-<section class="${"svelte-1egtvge"}"><h1 class="${"svelte-1egtvge"}"><span class="${"welcome svelte-1egtvge"}"><picture><source srcset="${escape(base, true) + "/svelte-welcome.webp"}" type="${"image/webp"}">
-				<img src="${escape(base, true) + "/svelte-welcome.png"}" alt="${"Welcome"}" class="${"svelte-1egtvge"}"></picture></span>
+${validate_component(Header, "Header").$$render($$result, {}, {}, {})}
 
-		to your new<br>SvelteKit app
-	</h1>
+<main class="${"svelte-jwnn57"}"><section class="${"svelte-jwnn57"}"><h1 class="${"svelte-jwnn57"}"><span class="${"welcome svelte-jwnn57"}"><picture><source srcset="${escape(base, true) + "/svelte-welcome.webp"}" type="${"image/webp"}">
+					<img src="${escape(base, true) + "/svelte-welcome.png"}" alt="${"Welcome"}" class="${"svelte-jwnn57"}"></picture></span>
 
-	<h2>try editing <strong>src/routes/index.svelte</strong></h2>
+			to your new<br>SvelteKit app
+		</h1>
 
-	${validate_component(Counter, "Counter").$$render($$result, {}, {}, {})}
-	${validate_component(P5, "P5").$$render($$result, { sketch }, {}, {})}
-	<label>Width
-		<input type="${"range"}" min="${"100"}" max="${"1000"}" step="${"0.01"}"${add_attribute("value", width, 0)}>
-		${escape(width)}</label>
-	
-	<label>Height
-		<input type="${"range"}" min="${"100"}" max="${"1000"}" step="${"0.01"}"${add_attribute("value", height, 0)}>
-		${escape(height)}</label>
-</section>`;
+		<h2>try editing <strong>src/routes/index.svelte</strong></h2>
+
+		${validate_component(Counter, "Counter").$$render($$result, {}, {}, {})}
+		${validate_component(P5, "P5").$$render($$result, { sketch }, {}, {})}
+		<label>Width
+			<input type="${"range"}" min="${"100"}" max="${"1000"}" step="${"0.01"}"${add_attribute("value", width, 0)}>
+			${escape(width)}</label>
+		
+		<label>Height
+			<input type="${"range"}" min="${"100"}" max="${"1000"}" step="${"0.01"}"${add_attribute("value", height, 0)}>
+			${escape(height)}</label></section></main>
+
+<footer class="${"svelte-jwnn57"}"><p>visit <a href="${"https://kit.svelte.dev"}" class="${"svelte-jwnn57"}">kit.svelte.dev</a> to learn SvelteKit</p>
+</footer>`;
 });
 export {
   Routes as default,
