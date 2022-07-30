@@ -39,3 +39,9 @@ You can preview the production build with `npm run preview`.
 
 https://vadimkorr.github.io/svelte-carousel/
 
+
+deploying
+
+you can't have hrefs with '/'
+no underscores in filenames
+
