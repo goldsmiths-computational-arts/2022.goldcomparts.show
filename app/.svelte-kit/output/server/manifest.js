@@ -3,7 +3,7 @@ export const manifest = {
 	assets: new Set([".DS_Store","favicon.png","img/1.png","img/2.png","img/3.png","img/4.png","robots.txt","svelte-welcome.png","svelte-welcome.webp"]),
 	mimeTypes: {".png":"image/png",".txt":"text/plain",".webp":"image/webp"},
 	_: {
-		entry: {"file":"internal/immutable/start-16b8b745.js","imports":["internal/immutable/start-16b8b745.js","internal/immutable/chunks/index-a8208fb1.js","internal/immutable/chunks/preload-helper-57d23010.js","internal/immutable/chunks/paths-86ffdd15.js"],"stylesheets":[]},
+		entry: {"file":"internal/immutable/start-8b803be1.js","imports":["internal/immutable/start-8b803be1.js","internal/immutable/chunks/index-9ccb5910.js","internal/immutable/chunks/preload-helper-50965e7c.js","internal/immutable/chunks/paths-86ffdd15.js"],"stylesheets":[]},
 		nodes: [
 			() => import('./nodes/0.js'),
 			() => import('./nodes/1.js'),
@@ -13,6 +13,7 @@ export const manifest = {
 			() => import('./nodes/5.js'),
 			() => import('./nodes/7.js'),
 			() => import('./nodes/8.js'),
+			() => import('./nodes/9.js'),
 			() => import('./nodes/4.js')
 		],
 		routes: [
@@ -62,13 +63,24 @@ export const manifest = {
 			},
 			{
 				type: 'page',
+				id: "layout",
+				pattern: /^\/layout\/?$/,
+				names: [],
+				types: [],
+				path: "/layout",
+				shadow: null,
+				a: [0,6],
+				b: [1]
+			},
+			{
+				type: 'page',
 				id: "location",
 				pattern: /^\/location\/?$/,
 				names: [],
 				types: [],
 				path: "/location",
 				shadow: null,
-				a: [0,6],
+				a: [0,7],
 				b: [1]
 			},
 			{
@@ -79,7 +91,7 @@ export const manifest = {
 				types: [],
 				path: "/schedule",
 				shadow: null,
-				a: [0,7],
+				a: [0,8],
 				b: [1]
 			},
 			{
@@ -90,7 +102,7 @@ export const manifest = {
 				types: [null],
 				path: null,
 				shadow: null,
-				a: [0,8],
+				a: [0,9],
 				b: [1]
 			}
 		],
