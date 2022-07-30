@@ -1,4 +1,4 @@
-import { c as create_ssr_component } from "../../internal/immutable/chunks/index-57a57ac3.js";
+import { c as create_ssr_component } from "../../internal/immutable/chunks/index-f45e0676.js";
 import { d as dev, b as browser } from "../../internal/immutable/chunks/env-57855b65.js";
 const hydrate = dev;
 const router = browser;

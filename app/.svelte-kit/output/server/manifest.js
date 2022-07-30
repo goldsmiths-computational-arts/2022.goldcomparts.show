@@ -3,18 +3,18 @@ export const manifest = {
 	assets: new Set([".DS_Store","favicon.png","img/1.png","img/2.png","img/3.png","img/4.png","robots.txt","svelte-welcome.png","svelte-welcome.webp"]),
 	mimeTypes: {".png":"image/png",".txt":"text/plain",".webp":"image/webp"},
 	_: {
-		entry: {"file":"internal/immutable/start-8b803be1.js","imports":["internal/immutable/start-8b803be1.js","internal/immutable/chunks/index-9ccb5910.js","internal/immutable/chunks/preload-helper-50965e7c.js","internal/immutable/chunks/paths-86ffdd15.js"],"stylesheets":[]},
+		entry: {"file":"internal/immutable/start-e2534547.js","imports":["internal/immutable/start-e2534547.js","internal/immutable/chunks/index-c572811c.js","internal/immutable/chunks/preload-helper-123687d2.js","internal/immutable/chunks/paths-86ffdd15.js"],"stylesheets":[]},
 		nodes: [
 			() => import('./nodes/0.js'),
 			() => import('./nodes/1.js'),
-			() => import('./nodes/6.js'),
+			() => import('./nodes/7.js'),
 			() => import('./nodes/2.js'),
 			() => import('./nodes/3.js'),
-			() => import('./nodes/5.js'),
-			() => import('./nodes/7.js'),
+			() => import('./nodes/4.js'),
+			() => import('./nodes/6.js'),
 			() => import('./nodes/8.js'),
 			() => import('./nodes/9.js'),
-			() => import('./nodes/4.js')
+			() => import('./nodes/5.js')
 		],
 		routes: [
 			{
@@ -30,13 +30,24 @@ export const manifest = {
 			},
 			{
 				type: 'page',
+				id: "$layout",
+				pattern: /^\/\$layout\/?$/,
+				names: [],
+				types: [],
+				path: "/$layout",
+				shadow: null,
+				a: [0,3],
+				b: [1]
+			},
+			{
+				type: 'page',
 				id: "about",
 				pattern: /^\/about\/?$/,
 				names: [],
 				types: [],
 				path: "/about",
 				shadow: null,
-				a: [0,3],
+				a: [0,4],
 				b: [1]
 			},
 			{
@@ -47,7 +58,7 @@ export const manifest = {
 				types: [],
 				path: "/art",
 				shadow: null,
-				a: [0,4],
+				a: [0,5],
 				b: [1]
 			},
 			{
@@ -57,17 +68,6 @@ export const manifest = {
 				names: [],
 				types: [],
 				path: "/floor-plan",
-				shadow: null,
-				a: [0,5],
-				b: [1]
-			},
-			{
-				type: 'page',
-				id: "layout",
-				pattern: /^\/layout\/?$/,
-				names: [],
-				types: [],
-				path: "/layout",
 				shadow: null,
 				a: [0,6],
 				b: [1]

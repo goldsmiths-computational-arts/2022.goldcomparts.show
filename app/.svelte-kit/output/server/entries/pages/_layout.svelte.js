@@ -1,5 +1,5 @@
-import { c as create_ssr_component, a as subscribe, d as add_attribute, e as escape, v as validate_component } from "../../internal/immutable/chunks/index-57a57ac3.js";
-import { p as page } from "../../internal/immutable/chunks/Header.svelte_svelte_type_style_lang-795f34a3.js";
+import { c as create_ssr_component, a as subscribe, b as add_attribute, e as escape, v as validate_component } from "../../internal/immutable/chunks/index-f45e0676.js";
+import { p as page } from "../../internal/immutable/chunks/Header.svelte_svelte_type_style_lang-49885344.js";
 import { b as base } from "../../internal/immutable/chunks/paths-86ffdd15.js";
 const logo = "/2022.goldcomparts.show/internal/immutable/assets/svelte-logo-87df40b8.svg";
 const css$1 = {
@@ -15,7 +15,11 @@ const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 
 	<nav class="${"svelte-t2wq17"}"><svg viewBox="${"0 0 2 3"}" aria-hidden="${"true"}" class="${"svelte-t2wq17"}"><path d="${"M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z"}" class="${"svelte-t2wq17"}"></path></svg>
 		<ul class="${"svelte-t2wq17"}"><li class="${["svelte-t2wq17", $page.url.pathname === "/" ? "active" : ""].join(" ").trim()}"><a sveltekit:prefetch href="${escape(base, true) + "/"}" class="${"svelte-t2wq17"}">Home</a></li>
-			
+			<li class="${["svelte-t2wq17", $page.url.pathname === "/art" ? "active" : ""].join(" ").trim()}"><a sveltekit:prefetch href="${escape(base, true) + "/art"}" class="${"svelte-t2wq17"}">Art</a></li>
+			<li class="${["svelte-t2wq17", $page.url.pathname === "/schedule" ? "active" : ""].join(" ").trim()}"><a sveltekit:prefetch href="${escape(base, true) + "/schedule"}" class="${"svelte-t2wq17"}">Schedule</a></li>
+			<li class="${["svelte-t2wq17", $page.url.pathname === "/floor-plan" ? "active" : ""].join(" ").trim()}"><a sveltekit:prefetch href="${escape(base, true) + "/floor-plan"}" class="${"svelte-t2wq17"}">Floor Plan</a></li>
+			<li class="${["svelte-t2wq17", $page.url.pathname === "/location" ? "active" : ""].join(" ").trim()}"><a sveltekit:prefetch href="${escape(base, true) + "/location"}" class="${"svelte-t2wq17"}">Location</a></li>
+			<li class="${["svelte-t2wq17", $page.url.pathname === "/about" ? "active" : ""].join(" ").trim()}"><a sveltekit:prefetch href="${escape(base, true) + "/about"}" class="${"svelte-t2wq17"}">About</a></li> 
 			</ul>
 		<svg viewBox="${"0 0 2 3"}" aria-hidden="${"true"}" class="${"svelte-t2wq17"}"><path d="${"M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z"}" class="${"svelte-t2wq17"}"></path></svg></nav>
 
@@ -23,12 +27,12 @@ const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 </header>`;
 });
 const app = "";
-const layout_svelte_svelte_type_style_lang = "";
+const $layout_svelte_svelte_type_style_lang = "";
 const css = {
   code: "main.svelte-1izrdc8.svelte-1izrdc8{flex:1;display:flex;flex-direction:column;padding:1rem;width:100%;max-width:1024px;margin:0 auto;box-sizing:border-box}footer.svelte-1izrdc8.svelte-1izrdc8{display:flex;flex-direction:column;justify-content:center;align-items:center;padding:40px}footer.svelte-1izrdc8 a.svelte-1izrdc8{font-weight:bold}@media(min-width: 480px){footer.svelte-1izrdc8.svelte-1izrdc8{padding:40px 0}}",
   map: null
 };
-const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+const $layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
   return `${validate_component(Header, "Header").$$render($$result, {}, {}, {})}
 
@@ -38,5 +42,5 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 </footer>`;
 });
 export {
-  Layout as default
+  $layout as default
 };

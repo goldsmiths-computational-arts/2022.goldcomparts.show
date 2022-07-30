@@ -17,21 +17,21 @@
 		</svg>
 		<ul>
 			<li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="{base}/">Home</a></li>
-			<!-- <li class:active={$page.url.pathname === '/art'}>
-				<a sveltekit:prefetch href="base/art">Art</a>
+			<li class:active={$page.url.pathname === '/art'}>
+				<a sveltekit:prefetch href="{base}/art">Art</a>
 			</li>
 			<li class:active={$page.url.pathname === '/schedule'}>
-				<a sveltekit:prefetch href="base/schedule">Schedule</a>
+				<a sveltekit:prefetch href="{base}/schedule">Schedule</a>
 			</li>
 			<li class:active={$page.url.pathname === '/floor-plan'}>
-				<a sveltekit:prefetch href="/floor-plan">Floor Plan</a>
+				<a sveltekit:prefetch href="{base}/floor-plan">Floor Plan</a>
 			</li>
 			<li class:active={$page.url.pathname === '/location'}>
-				<a sveltekit:prefetch href="/location">Location</a>
+				<a sveltekit:prefetch href="{base}/location">Location</a>
 			</li>
 			<li class:active={$page.url.pathname === '/about'}>
-				<a sveltekit:prefetch href="/about">About</a>
-			</li> -->
+				<a sveltekit:prefetch href="{base}/about">About</a>
+			</li> 
 			<!-- <li class:active={$page.url.pathname === '/todos'}>
 				<a sveltekit:prefetch href="/todos">Todos</a>
 			</li> -->

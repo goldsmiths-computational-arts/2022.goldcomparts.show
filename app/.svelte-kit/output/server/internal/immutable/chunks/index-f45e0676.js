@@ -152,9 +152,9 @@ function add_attribute(name, value, boolean) {
 }
 export {
   subscribe as a,
-  createEventDispatcher as b,
+  add_attribute as b,
   create_ssr_component as c,
-  add_attribute as d,
+  createEventDispatcher as d,
   escape as e,
   safe_not_equal as f,
   getContext as g,
