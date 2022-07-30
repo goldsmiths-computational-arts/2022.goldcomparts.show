@@ -1,9 +1,0 @@
-before design is done:
-
-- floor plan page
-    - css
-    - image hostin
-
-- embed my zine onto my page
-
-

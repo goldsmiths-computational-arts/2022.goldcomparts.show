@@ -10,7 +10,7 @@ const template = ({ head, body, assets, nonce }) => "<!DOCTYPE html>\n<html lang
 
 let read = null;
 
-set_paths({"base":"","assets":""});
+set_paths({"base":"/2022.goldcomparts.show","assets":""});
 
 let default_protocol = 'https';
 
@@ -45,7 +45,7 @@ export class Server {
 			hooks: null,
 			hydrate: true,
 			manifest,
-			method_override: {"parameter":"_method","allowed":["PATCH","DELETE"]},
+			method_override: {"parameter":"_method","allowed":[]},
 			paths: { base, assets },
 			prefix: assets + '/',
 			prerender: {

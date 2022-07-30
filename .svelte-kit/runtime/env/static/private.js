@@ -15,7 +15,7 @@ export const NODE = "/Users/mx/.nvm/versions/node/v16.13.1/bin/node";
 export const INIT_CWD = "/Users/mx/code/svelte/2022.goldcomparts.show";
 
 /** @type {import('$env/static/private')._P9K_TTY} */
-export const _P9K_TTY = "/dev/ttys008";
+export const _P9K_TTY = "/dev/ttys009";
 
 /** @type {import('$env/static/private').NVM_CD_FLAGS} */
 export const NVM_CD_FLAGS = "-q";

@@ -1,0 +1,16 @@
+before design is done:
+
+- floor plan page
+    - css
+    - image hostin
+
+- embed my zine onto my page
+
+- deal with layout because github pages, i don't think I can use __layout
+- but I should be able to get away with making a header/footer then importing it
+
+- put everything in a docs folder and put things back where they're from
+
+
+
+

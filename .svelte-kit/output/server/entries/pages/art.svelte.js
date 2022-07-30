@@ -1,5 +1,5 @@
-import { c as create_ssr_component } from "../../_app/immutable/chunks/index-ec3180ae.js";
-import { d as dev, b as browser } from "../../_app/immutable/chunks/env-88ec0ac7.js";
+import { c as create_ssr_component } from "../../internal/immutable/chunks/index-f45e0676.js";
+import { d as dev, b as browser } from "../../internal/immutable/chunks/env-57855b65.js";
 const hydrate = dev;
 const router = browser;
 const prerender = true;
