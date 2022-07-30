@@ -1,0 +1,12 @@
+before design is done:
+
+- floor plan page
+    - css
+    - image hosting
+
+- carousel 
+
+- embed my zine onto my page
+
+data formatting for mirko
+
