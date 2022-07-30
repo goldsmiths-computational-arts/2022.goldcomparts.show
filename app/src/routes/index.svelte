@@ -1,5 +1,6 @@
 <script context="module">
 	export const prerender = true;
+	import { base, assets } from '$app/paths';
 </script>
 
 <script>
@@ -33,8 +34,8 @@
 	<h1>
 		<span class="welcome">
 			<picture>
-				<source srcset="svelte-welcome.webp" type="image/webp" />
-				<img src="svelte-welcome.png" alt="Welcome" />
+				<source srcset="{base}/svelte-welcome.webp" type="image/webp" />
+				<img src="{base}/svelte-welcome.png" alt="Welcome" />
 			</picture>
 		</span>
 

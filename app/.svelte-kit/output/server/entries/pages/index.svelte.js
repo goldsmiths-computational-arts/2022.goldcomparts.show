@@ -1,4 +1,5 @@
-import { c as create_ssr_component, d as createEventDispatcher, b as add_attribute, n as noop, f as safe_not_equal, h as now, l as loop, a as subscribe, e as escape, v as validate_component } from "../../_app/immutable/chunks/index-ec3180ae.js";
+import { c as create_ssr_component, d as createEventDispatcher, b as add_attribute, n as noop, f as safe_not_equal, h as now, l as loop, a as subscribe, e as escape, v as validate_component } from "../../internal/immutable/chunks/index-f45e0676.js";
+import { b as base } from "../../internal/immutable/chunks/paths-86ffdd15.js";
 const P5 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { target = void 0 } = $$props;
   let { sketch = void 0 } = $$props;
@@ -202,8 +203,8 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
   return `${$$result.head += `${$$result.title = `<title>Home</title>`, ""}<meta name="${"description"}" content="${"Svelte demo app"}" data-svelte="svelte-t32ptj">`, ""}
 
-<section class="${"svelte-1egtvge"}"><h1 class="${"svelte-1egtvge"}"><span class="${"welcome svelte-1egtvge"}"><picture><source srcset="${"svelte-welcome.webp"}" type="${"image/webp"}">
-				<img src="${"svelte-welcome.png"}" alt="${"Welcome"}" class="${"svelte-1egtvge"}"></picture></span>
+<section class="${"svelte-1egtvge"}"><h1 class="${"svelte-1egtvge"}"><span class="${"welcome svelte-1egtvge"}"><picture><source srcset="${escape(base, true) + "/svelte-welcome.webp"}" type="${"image/webp"}">
+				<img src="${escape(base, true) + "/svelte-welcome.png"}" alt="${"Welcome"}" class="${"svelte-1egtvge"}"></picture></span>
 
 		to your new<br>SvelteKit app
 	</h1>

@@ -1,4 +1,5 @@
-import { c as create_ssr_component, s as setContext, v as validate_component, m as missing_component } from "./_app/immutable/chunks/index-ec3180ae.js";
+import { c as create_ssr_component, s as setContext, v as validate_component, m as missing_component } from "./internal/immutable/chunks/index-f45e0676.js";
+import { s as set_paths, b as base, a as assets } from "./internal/immutable/chunks/paths-86ffdd15.js";
 function afterUpdate() {
 }
 const Root = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -2411,17 +2412,11 @@ async function respond(request, options, state) {
     }
   }
 }
-let base = "";
-let assets = "";
-function set_paths(paths) {
-  base = paths.base;
-  assets = paths.assets || base;
-}
 function set_prerendering(value) {
 }
 const template = ({ head, body, assets: assets2, nonce }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="' + assets2 + '/favicon.png" />\n		<meta name="viewport" content="width=device-width" />\n		' + head + "\n	</head>\n	<body>\n		<div>" + body + "</div>\n	</body>\n</html>\n";
 let read = null;
-set_paths({ "base": "", "assets": "" });
+set_paths({ "base": "/2022.goldcomparts.show", "assets": "" });
 let default_protocol = "https";
 function override(settings) {
   default_protocol = settings.protocol || default_protocol;
@@ -2448,7 +2443,7 @@ class Server {
       hooks: null,
       hydrate: true,
       manifest,
-      method_override: { "parameter": "_method", "allowed": ["PATCH", "DELETE"] },
+      method_override: { "parameter": "_method", "allowed": [] },
       paths: { base, assets },
       prefix: assets + "/",
       prerender: {
@@ -2475,7 +2470,7 @@ class Server {
       throw new Error("The first argument to server.respond must be a Request object. See https://github.com/sveltejs/kit/pull/3384 for details");
     }
     if (!this.options.hooks) {
-      const module = await import("./_app/immutable/chunks/hooks-1c986cc1.js");
+      const module = await import("./internal/immutable/chunks/hooks-90589a53.js");
       this.options.hooks = {
         getSession: module.getSession || (() => ({})),
         handle: module.handle || (({ event, resolve: resolve2 }) => resolve2(event)),
