@@ -6,10 +6,20 @@ before design is done:
 
 - embed my zine onto my page
 
-- deal with layout because github pages, i don't think I can use __layout
-- but I should be able to get away with making a header/footer then importing it
+- test csv
 
-- put everything in a docs folder and put things back where they're from
+after design is done
+
+about page
+artworks page
+artist page
+location page
+schedule page
+p5 script
+home page
+mobile designing
+desktop designing
+
 
 
 
