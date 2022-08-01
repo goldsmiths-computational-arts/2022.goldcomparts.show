@@ -1,9 +1,9 @@
 export const manifest = {
 	appDir: "internal",
-	assets: new Set([".DS_Store","favicon.png","img/1.png","img/2.png","img/3.png","img/4.png","robots.txt","svelte-welcome.png","svelte-welcome.webp"]),
+	assets: new Set(["favicon.png","img/1.png","img/2.png","img/3.png","img/4.png","robots.txt","svelte-welcome.png","svelte-welcome.webp"]),
 	mimeTypes: {".png":"image/png",".txt":"text/plain",".webp":"image/webp"},
 	_: {
-		entry: {"file":"internal/immutable/start-10033c4a.js","imports":["internal/immutable/start-10033c4a.js","internal/immutable/chunks/index-89970c11.js","internal/immutable/chunks/preload-helper-f24fe1ea.js","internal/immutable/chunks/paths-86ffdd15.js"],"stylesheets":[]},
+		entry: {"file":"internal/immutable/start-247a169f.js","imports":["internal/immutable/start-247a169f.js","internal/immutable/chunks/index-89970c11.js","internal/immutable/chunks/preload-helper-35041ebb.js","internal/immutable/chunks/paths-86ffdd15.js"],"stylesheets":[]},
 		nodes: [
 			() => import('./nodes/0.js'),
 			() => import('./nodes/1.js'),
