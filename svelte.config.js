@@ -25,7 +25,7 @@ const config = {
 	},
     paths: {
       // YOUR github repository name
-      base: dev ? "" : "/2022.goldcomparts.show",
+      base: "",
     },
 	appDir: "internal",
   },
