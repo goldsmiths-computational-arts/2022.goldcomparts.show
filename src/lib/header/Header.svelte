@@ -6,7 +6,7 @@
 
 <header>
 	<div id="logo">
-		<a href="https://kit.svelte.dev">
+		<a sveltekit:prefetch href="{base}/">
 			<img src={logo} alt="SvelteKit" />
 		</a>
 	</div>
