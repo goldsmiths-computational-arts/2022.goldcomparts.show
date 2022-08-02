@@ -30,5 +30,7 @@
 		justify-content: center;
 		align-items: center;
 		padding: 40px;
+		position: fixed;
+		bottom: 0;
 	}
 </style>
