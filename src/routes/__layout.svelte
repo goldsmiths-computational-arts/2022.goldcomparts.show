@@ -4,7 +4,9 @@
 
 <main>
 	<Header />
-    <slot />
+	<main>
+		<slot />
+	</main>
     <footer> Comparts show </footer>
 	
 </main>
