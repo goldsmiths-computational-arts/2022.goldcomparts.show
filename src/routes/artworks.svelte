@@ -1,9 +1,12 @@
 <script context="module">
-	import Seo from '$lib/seo/Seo.svelte';
+	
 
-	import '../app.css';
 
 	import { browser, dev } from '$app/env';
+	import { base, assets } from '$app/paths';
+	import '../app.css';
+
+	import Seo from '$lib/seo/Seo.svelte';
 
 	// we don't need any JS on this page, though we'll load
 	// it in dev so that we get hot module replacement...
@@ -27,14 +30,14 @@
 	<p> Page about art</p>
 	<div class="div__artists-grid">
 
-
 		{#each artists as artist}
-			<div class="div--image-tile">
-				<img class="img__responsive" src="/img/1.png" alt="img" />
-				<h3 class="p--art-title"> Title of Art</h3>
-				<p> Artist's Name</p>
-			</div>
-
+			<a  class="a--link-tile" sveltekit:prefetch href="{base}/artist/xxx">
+				<div class="div--image-tile">
+					<img class="img__responsive" src="/img/1.png" alt="img" />
+					<h3 class="p--art-title"> Title of Art</h3>
+					<p> Artist's Name</p>
+				</div>
+			</a>
 		{/each}
 
 	</div>	
@@ -53,7 +56,7 @@
 		padding: 0.5rem;
 	}
 
-	.p--art-title {
-
+	.a--link-tile {
+		text-decoration: none;
 	}
 </style>
