@@ -30,7 +30,9 @@
 		justify-content: center;
 		align-items: center;
 		padding: 40px;
-		position: fixed;
-		bottom: 0;
+		background: black;
+		color: white;
+		/* position: fixed;
+		bottom: 0; */
 	}
 </style>
