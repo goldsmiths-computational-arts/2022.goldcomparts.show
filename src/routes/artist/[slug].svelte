@@ -2,7 +2,7 @@
     import { page } from '$app/stores';
 import Header from '../../lib/header/Header.svelte';
 import About from '../about.svelte';
-import Art from '../art.svelte';
+import ArtWorks from '../artworks.svelte';
 
     let images = [1,2,3,4];
 </script>
