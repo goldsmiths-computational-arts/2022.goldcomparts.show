@@ -17,7 +17,7 @@
 	// it so that it gets served as a static asset in prod
 	export const prerender = true;
 
-	let artists = Array(9).fill(0);
+	let artists = Array(15).fill(0);
 </script>
 
 
