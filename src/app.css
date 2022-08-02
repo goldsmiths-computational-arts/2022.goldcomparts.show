@@ -14,18 +14,19 @@
 	--background-without-opacity: rgba(255, 255, 255, 0.7);
 	--column-width: 42rem;
 	--column-margin-top: 4rem;
+	--horizontal-break-color: green;
 }
 
 body {
 	min-height: 100vh;
 	margin: 0;
-	background-color: var(--primary-color);
+	/* background-color: var(--primary-color);
 	background: linear-gradient(
 		180deg,
 		var(--primary-color) 0%,
 		var(--secondary-color) 10.45%,
 		var(--tertiary-color) 41.35%
-	);
+	); */
 }
 
 body::before {
@@ -52,9 +53,12 @@ body::before {
 
 h1,
 h2,
+h3,
 p {
 	font-weight: 400;
 	color: var(--heading-color);
+	margin: 0;
+	margin-bottom: 0.5rem;
 }
 
 p {
@@ -77,6 +81,10 @@ h1 {
 
 h2 {
 	font-size: 1rem;
+}
+
+h3 {
+	font-weight: 400;
 }
 
 pre {
@@ -105,3 +113,14 @@ button:focus:not(:focus-visible) {
 		font-size: 2.4rem;
 	}
 }
+
+
+.hr--green {
+	border: 0;
+	border-top: 1px solid var(--horizontal-break-color);
+}
+
+.img__responsive {
+	width: 100%;
+	height: auto;
+  }

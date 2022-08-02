@@ -1,5 +1,9 @@
 <script context="module">
 	import { browser, dev } from '$app/env';
+	import '../app.css';
+
+	import Seo from '$lib/seo/Seo.svelte';
+
 
 	// we don't need any JS on this page, though we'll load
 	// it in dev so that we get hot module replacement...
@@ -14,37 +18,28 @@
 	export const prerender = true;
 </script>
 
-<svelte:head>
-	<title>About</title>
-	<meta name="description" content="About this app" />
-</svelte:head>
+
+<Seo title="About" description="About this app" />
 
 <div class="content">
-	<h1>About this app</h1>
-
+	<p>The Computational Arts MA/MFA</p>
 	<p>
-		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
-		following into your command line and following the prompts:
+		Shabby chic before they sold out humblebrag master cleanse try-hard vinyl salvia, etsy wayfarers distillery actually taiyaki. Hell of ennui small batch iceland asymmetrical affogato quinoa selvage. Vinyl pork belly ethical, hell of chambray bitters trust fund poutine cardigan everyday carry migas fanny pack. Helvetica polaroid master cleanse chillwave taxidermy raclette migas adaptogen woke put a bird on it. Cray you probably haven't heard of them hammock XOXO chartreuse.
 	</p>
+	<hr class="hr--green" />
+	<h3> Time</h3>
+	<p> 1st - 4th September</p>
 
-	<pre>npm create svelte@latest</pre>
-
-	<p>
-		The page you're looking at is purely static HTML, with no client-side interactivity needed.
-		Because of that, we don't need to load any JavaScript. Try viewing the page's source, or opening
-		the devtools network panel and reloading.
-	</p>
-
-	<p>
-		<!-- The <a href="/todos">TODOs</a> page illustrates SvelteKit's data loading and form handling. Try using -->
-		it with JavaScript disabled!
-	</p>
+	<h3> Opening Night</h3>
+	<p> 1st September</p>
 </div>
 
 <style>
-	.content {
+
+	
+	/* .content {
 		width: 100%;
 		max-width: var(--column-width);
 		margin: var(--column-margin-top) auto 0 auto;
-	}
+	} */
 </style>

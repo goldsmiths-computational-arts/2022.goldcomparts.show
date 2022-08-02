@@ -1,5 +1,3 @@
-
-
 import preprocess from "svelte-preprocess";
 import adapter from "@sveltejs/adapter-static";
 
@@ -20,14 +18,22 @@ const config = {
       assets: "docs",
       fallback: null,
     }),
-	prerender: {
-		default: true
-	},
+    // vite: {
+    //   // plugins: [WindiCSS.default()],
+    //   vite: {
+    //     optimizeDeps: {
+    //       include: ["lodash.get", "lodash.isequal", "lodash.clonedeep"],
+    //     },
+    //   },
+    // },
+    prerender: {
+      default: true,
+    },
     paths: {
       // YOUR github repository name
       base: "",
     },
-	appDir: "internal",
+    appDir: "internal",
   },
 };
 
