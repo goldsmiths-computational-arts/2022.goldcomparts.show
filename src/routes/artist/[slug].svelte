@@ -32,14 +32,9 @@ let images = [1,2,3,4]
 	// it so that it gets served as a static asset in prod
 	export const prerender = true;
 </script>
-<svelte:component
-  this={Carousel}
-  bind:this={carousel}
->
-{#each images as image}
-    <img class="img__responsive" src="/img/{image}.png" alt="img-description">
-{/each}
-</svelte:component>
+
+
+<img class="img__responsive" src="/img/1.png" alt="img-description" />
 
 <div class="div--grid-row">
     <div class="div--grid-col">
