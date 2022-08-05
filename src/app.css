@@ -18,7 +18,9 @@
 }
 
 body {
+	position: relative;
 	min-height: 100vh;
+	width: 100%;
 	margin: 0;
 	/* background-color: var(--primary-color);
 	background: linear-gradient(
@@ -51,15 +53,35 @@ body::before {
 	flex-direction: column;
 }
 
-h1,
-h2,
-h3,
-p,
-a {
-	font-weight: 400;
-	color: var(--heading-color);
-	margin: 0;
-	margin-bottom: 0.5rem;
+h1, h2, h3, h4, h5 {
+	letter-spacing: 0;
+	color: #151515;
+}
+
+/* title in detail page */
+h1 {
+	font-size: 32px;
+}
+
+/* title in list pages */
+h2 {
+	font-size: 24px;
+}
+
+/* subtitle */
+h3 {
+	font-size: 20px;
+}
+
+/* text */
+h4 {
+	font-size: 16px;
+}
+
+/* tag, footer text */
+h5 {
+	font-size: 13px;
+
 }
 
 p {

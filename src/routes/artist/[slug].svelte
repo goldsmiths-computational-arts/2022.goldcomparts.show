@@ -44,6 +44,7 @@
   {/each}
 </svelte:component>
 
+
 <div class="div--grid-row">
   <div class="div--grid-col">
     <h3>{artwork.title}</h3>
