@@ -23,6 +23,15 @@
 			<h5>
 				Goldsmiths Computational Arts 
 			</h5>
+			<div id="icons">
+				<img src="svg/icon-20-20-web-blackbg.svg"
+				class="icon-2020vimeo_blackbg" alt="website icon">
+				<img src="svg/icon-20-20-instagram-blackbg.svg"
+				class="icon-2020vimeo_blackbg" alt="instagram icon">
+				<img src="svg/icon-20-20-vimeo-blackbg.svg"
+				class="icon-2020vimeo_blackbg" alt="vimeo icon">
+			</div>
+
 		</div>
 	</footer>
 	
@@ -54,5 +63,10 @@
 
 	h5 {
 		color: white;
+	}
+
+	#icons {
+		display: flex;
+		flex-direction: row;
 	}
 </style>
