@@ -7,7 +7,7 @@
 <header>
 	<div id="logo">
 		<a sveltekit:prefetch href="{base}/">
-			<img src={logo} alt="SvelteKit" />
+			SUB (Systems)
 		</a>
 	</div>
 
@@ -47,6 +47,7 @@
 		justify-content: center;
 		width: 100%;
 		height: 100%;
+		text-decoration: none;
 	}
 
 	#logo img {

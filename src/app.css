@@ -81,6 +81,7 @@ h4 {
 /* tag, footer text */
 h5 {
 	font-size: 13px;
+
 }
 
 p {
@@ -88,7 +89,7 @@ p {
 }
 
 a {
-	color: var(--accent-color);
+	/* color: var(--accent-color); */
 	text-decoration: none;
 }
 
