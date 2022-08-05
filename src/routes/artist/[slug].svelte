@@ -20,9 +20,9 @@
   console.log('oi', $page.params)
 
   const artwork =  DataManager.getArtwork($page.params.slug);
-  const artist =  DataManager.getArtist($page.params.slug);
-  console.log(artwork)
-  console.log(artist)
+//   const artist =  DataManager.getArtist($page.params.slug);
+//   console.log(artwork)
+//   console.log(artist)
 
   let images = [1, 2, 3, 4];
   // we don't need any JS on this page, though we'll load
@@ -50,7 +50,7 @@
   </div>
   <div class="div--grid-col">
     <h3>
-      {artist.artistBio}
+      <!-- {artist.artistBio} -->
     </h3>
   </div>
 </div>
