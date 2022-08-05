@@ -54,7 +54,8 @@ body::before {
 h1,
 h2,
 h3,
-p {
+p,
+a {
 	font-weight: 400;
 	color: var(--heading-color);
 	margin: 0;
@@ -66,7 +67,7 @@ p {
 }
 
 a {
-	color: var(--accent-color);
+	/* color: var(--accent-color); */
 	text-decoration: none;
 }
 
