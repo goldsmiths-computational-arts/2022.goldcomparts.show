@@ -3,10 +3,9 @@
 	import { base, assets } from '$app/paths';
 	import Seo from '$lib/seo/Seo.svelte';
 	import EllipseSketch from '$lib/sketches/EllipseSketch.svelte';
+  import { onMount } from 'svelte'
 
 	import '../app.css';
-	import P5 from 'p5-svelte';
-	import Counter from '$lib/Counter.svelte';
 
 	let width = 55;
 	let height = 55;

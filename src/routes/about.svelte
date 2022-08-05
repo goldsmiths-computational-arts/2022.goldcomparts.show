@@ -1,5 +1,6 @@
 <script context="module">
 	import { browser, dev } from '$app/env';
+	import '../app.css';
 
 	import Seo from '$lib/seo/Seo.svelte';
 
@@ -21,13 +22,24 @@
 <Seo title="About" description="About this app" />
 
 <div class="content">
-	<h1>About this app</h1>
+	<p>The Computational Arts MA/MFA</p>
+	<p>
+		Shabby chic before they sold out humblebrag master cleanse try-hard vinyl salvia, etsy wayfarers distillery actually taiyaki. Hell of ennui small batch iceland asymmetrical affogato quinoa selvage. Vinyl pork belly ethical, hell of chambray bitters trust fund poutine cardigan everyday carry migas fanny pack. Helvetica polaroid master cleanse chillwave taxidermy raclette migas adaptogen woke put a bird on it. Cray you probably haven't heard of them hammock XOXO chartreuse.
+	</p>
+	<hr class="hr--green" />
+	<h3> Time</h3>
+	<p> 1st - 4th September</p>
+
+	<h3> Opening Night</h3>
+	<p> 1st September</p>
 </div>
 
 <style>
-	.content {
+
+	
+	/* .content {
 		width: 100%;
 		max-width: var(--column-width);
 		margin: var(--column-margin-top) auto 0 auto;
-	}
+	} */
 </style>
