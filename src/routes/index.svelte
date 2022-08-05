@@ -27,6 +27,11 @@
 
 <EllipseSketch />
 
+<!-- spacer -->
+<div id="spacer"></div>
+
+<h2>The Computational Arts MA/MFA Degree Show</h2>
+
 <style>
 	main {
 		flex: 1;
@@ -45,5 +50,10 @@
 		justify-content: center;
 		align-items: center;
 		flex: 1;
+	}
+
+	#spacer {
+		width: 100%;
+		height: 20%;
 	}
 </style>

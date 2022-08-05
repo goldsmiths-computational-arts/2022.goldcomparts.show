@@ -12,12 +12,15 @@
 	--heading-color: rgba(0, 0, 0, 0.7);
 	--text-color: #444444;
 	--background-without-opacity: rgba(255, 255, 255, 0.7);
-	--column-width: 42rem;
-	--column-margin-top: 4rem;
+	/* --column-width: 42rem;
+	--column-margin-top: 4rem; */
+	
 }
 
 body {
+	position: relative;
 	min-height: 100vh;
+	width: 100%;
 	margin: 0;
 	background-color: var(--primary-color);
 	background: linear-gradient(
@@ -50,11 +53,34 @@ body::before {
 	flex-direction: column;
 }
 
-h1,
-h2,
-p {
-	font-weight: 400;
-	color: var(--heading-color);
+h1, h2, h3, h4, h5 {
+	letter-spacing: 0;
+	color: #151515;
+}
+
+/* title in detail page */
+h1 {
+	font-size: 32px;
+}
+
+/* title in list pages */
+h2 {
+	font-size: 24px;
+}
+
+/* subtitle */
+h3 {
+	font-size: 20px;
+}
+
+/* text */
+h4 {
+	font-size: 16px;
+}
+
+/* tag, footer text */
+h5 {
+	font-size: 13px;
 }
 
 p {
@@ -100,8 +126,4 @@ button:focus:not(:focus-visible) {
 	outline: none;
 }
 
-@media (min-width: 720px) {
-	h1 {
-		font-size: 2.4rem;
-	}
-}
+

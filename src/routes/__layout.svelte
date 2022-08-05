@@ -4,9 +4,9 @@
 
 <main>
 	<Header />
-	<main>
-		<slot />
-	</main>
+
+	<slot />
+
     <footer> Comparts show </footer>
 	
 </main>
@@ -15,12 +15,11 @@
 <style>
 	main {
 		flex: 1;
-		display: flex;
+		display: block;
 		flex-direction: column;
-		padding: 1rem;
+		padding: 0;
 		width: 100%;
-		max-width: 1024px;
-		margin: 0 auto;
+		margin: 0;
 		box-sizing: border-box;
 	}
 
