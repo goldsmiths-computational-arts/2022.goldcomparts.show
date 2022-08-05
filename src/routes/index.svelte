@@ -30,6 +30,10 @@
 <div id="spacer"></div>
 
 <h2>The Computational Arts MA/MFA Degree Show</h2>
+<h1 id="main-title">(SUB)<br>SYSTEMS</h1>
+<h2>1st-4th September 2022</h2>
+
+<div id="lower-spacer"></div>
 
 <style>
 	main {
@@ -53,6 +57,20 @@
 
 	#spacer {
 		width: 100%;
-		height: 20%;
+		height: 500px;
+	}
+
+	#lower-spacer {
+		width: 100%;
+		height: 50px;
+	}
+
+	#main-title {
+		/* placeholder */
+		/* font: "NeutrafaceSlabDisplay-Light"; */
+
+		font-size: 60px;
+		text-align: left;
+
 	}
 </style>

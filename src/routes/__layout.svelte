@@ -7,7 +7,24 @@
 
 	<slot />
 
-    <footer> Comparts show </footer>
+    <footer> 
+		<div id="address">
+			<h5>St. James Hatcham Building <br>
+			25 St James's Goldsmiths, University of London <br>
+			New Cross London SE14 6AD</h5>
+		</div>
+		<div id="hours">
+			<h5>
+				1st - 4th
+				September 2022
+			</h5>
+		</div>
+		<div id="socials">
+			<h5>
+				Goldsmiths Computational Arts 
+			</h5>
+		</div>
+	</footer>
 	
 </main>
 
@@ -25,13 +42,17 @@
 
 	footer {
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
+		flex-direction: row;
+		justify-content: space-between;
 		align-items: center;
 		padding: 40px;
 		background: black;
 		color: white;
 		/* position: fixed;
 		bottom: 0; */
+	}
+
+	h5 {
+		color: white;
 	}
 </style>
