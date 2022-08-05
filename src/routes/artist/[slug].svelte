@@ -5,19 +5,19 @@
 
     import { onMount } from 'svelte';
 
-let Carousel; // for saving Carousel component class
-let carousel; // for calling methods of the carousel instance
+// let Carousel; // for saving Carousel component class
+// let carousel; // for calling methods of the carousel instance
 
-onMount(async () => {
-  const module = await import('svelte-carousel');
-  Carousel = module.default;
-});
+// onMount(async () => {
+//   const module = await import('svelte-carousel');
+//   Carousel = module.default;
+// });
 
 
-// Not used but can be used if we use custom prev and next buttons
-const handleNextClick = () => {
-  carousel.goToNext()
-}
+// // Not used but can be used if we use custom prev and next buttons
+// const handleNextClick = () => {
+//   carousel.goToNext()
+// }
 
 let images = [1,2,3,4]
 	// we don't need any JS on this page, though we'll load
