@@ -81,7 +81,7 @@ export const npm_config_globalconfig = "/Users/mx/.nvm/versions/node/v16.13.1/et
 export const CONDA_EXE = "/Users/mx/opt/anaconda3/bin/conda";
 
 /** @type {import('$env/static/private').SSH_AUTH_SOCK} */
-export const SSH_AUTH_SOCK = "/private/tmp/com.apple.launchd.B7WkxEuJlN/Listeners";
+export const SSH_AUTH_SOCK = "/private/tmp/com.apple.launchd.ohzrSik2eQ/Listeners";
 
 /** @type {import('$env/static/private').__CF_USER_TEXT_ENCODING} */
 export const __CF_USER_TEXT_ENCODING = "0x1F5:0x0:0x0";
