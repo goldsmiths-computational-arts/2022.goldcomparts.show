@@ -20,7 +20,15 @@
 
 <Seo title="Floor Plan" />
 <div>
-	<p> Floor Plan Page</p>
+	<p> Ground Floor</p>
+	<img class="img__responsive" src="/img/2.png" alt="img" />
+
+	<p> First Floor</p>
+	<img class="img__responsive" src="/img/2.png" alt="img" />
+
+	<p> Second Floor</p>
+	<img class="img__responsive" src="/img/2.png" alt="img" />
+	
 </div>
 
 
