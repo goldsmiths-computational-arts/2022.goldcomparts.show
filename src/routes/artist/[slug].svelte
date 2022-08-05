@@ -1,85 +1,82 @@
 <script>
-    import { page } from '$app/stores';
-    import { browser, dev } from '$app/env';
-	import '../../app.css';
+  import { page } from "$app/stores";
+  import { browser, dev } from "$app/env";
+  import "../../app.css";
 
-    import { onMount } from 'svelte';
+  import { onMount } from "svelte";
+ import {DataManager } from '../../lib/util/data-manager'
+  let Carousel; // for saving Carousel component class
+  let carousel; // for calling methods of the carousel instance
 
-let Carousel; // for saving Carousel component class
-let carousel; // for calling methods of the carousel instance
+  onMount(async () => {
+    const module = await import("svelte-carousel");
+    Carousel = module.default;
+  });
 
-onMount(async () => {
-  const module = await import('svelte-carousel');
-  Carousel = module.default;
-});
+  // Not used but can be used if we use custom prev and next buttons
+  const handleNextClick = () => {
+    carousel.goToNext();
+  };
+  console.log('oi', $page.params)
 
+  const artwork =  DataManager.getArtwork($page.params.slug);
+  const artist =  DataManager.getArtist($page.params.slug);
+  console.log(artwork)
+  console.log(artist)
 
-// Not used but can be used if we use custom prev and next buttons
-const handleNextClick = () => {
-  carousel.goToNext()
-}
+  let images = [1, 2, 3, 4];
+  // we don't need any JS on this page, though we'll load
+  // it in dev so that we get hot module replacement...
+  export const hydrate = dev;
 
-let images = [1,2,3,4]
-	// we don't need any JS on this page, though we'll load
-	// it in dev so that we get hot module replacement...
-	export const hydrate = dev;
+  // ...but if the client-side router is already loaded
+  // (i.e. we came here from elsewhere in the app), use it
+  export const router = browser;
 
-	// ...but if the client-side router is already loaded
-	// (i.e. we came here from elsewhere in the app), use it
-	export const router = browser;
-
-	// since there's no dynamic data here, we can prerender
-	// it so that it gets served as a static asset in prod
-	export const prerender = true;
+  // since there's no dynamic data here, we can prerender
+  // it so that it gets served as a static asset in prod
+  export const prerender = true;
 </script>
-<svelte:component
-  this={Carousel}
-  bind:this={carousel}
->
-{#each images as image}
-    <img class="img__responsive" src="/img/{image}.png" alt="img-description">
-{/each}
+
+<svelte:component this={Carousel} bind:this={carousel}>
+  {#each images as image}
+    <img class="img__responsive" src="/img/{image}.png" alt="img-description" />
+  {/each}
 </svelte:component>
 
 <div class="div--grid-row">
-    <div class="div--grid-col">
-        <h3> AGA</h3>
-        <p> Welsley Talbot</p>
-    </div>
-    <div class="div--grid-col">
-        <h3> Swag celiac activated charcoal stumptown enamel pin hot chicken. VHS thundercats everyday carry, schlitz whatever pabst blue bottle you probably haven't heard of them raw denim plaid wolf ennui lyft.</h3>
-        <p> Welsley Talbot</p>
-    </div>
+  <div class="div--grid-col">
+    <h3>{artwork.title}</h3>
+  </div>
+  <div class="div--grid-col">
+    <h3>
+      {artist.artistBio}
+    </h3>
+  </div>
 </div>
 
 <hr class="hr--green" />
 
 <div class="div--grid-row">
-    <div class="div--grid-col">
-        <img class="img__responsive" src="/img/3.png" alt="img-description">
-    </div>
-    <div class="div--grid-col">
-        <h3> Listicle copper mug raw denim mixtape dreamcatcher, woke art party meh seitan brunch. Fashion axe slow-carb palo santo try-hard leggings, put a bird on it migas. Cardigan thundercats chartreuse, taiyaki cred drinking vinegar tattooed banh mi butcher keytar affogato knausgaard VHS.</h3>
-        <h3> Art party yuccie hexagon scenester, beard williamsburg fashion axe distillery. Stumptown shabby chic poke twee seitan pickled normcore coloring book bushwick lo-fi XOXO man braid bicycle rights DIY keffiyeh.</h3>
-        <p> Welsley Talbot</p>
-    </div>
+  <div class="div--grid-col">
+    <img class="img__responsive" src="/img/3.png" alt="img-description" />
+  </div>
+  <div class="div--grid-col">
+    <h3>
+        {artwork.artwork}
+    </h3>
+  </div>
 </div>
 
-
 <style>
-    .div--grid-row {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-        margin: 2rem 0;
-        gap: 3rem;
-    }
-    .div--grid-col {
-        width: 100%;
-    }
-
-    
+  .div--grid-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin: 2rem 0;
+    gap: 3rem;
+  }
+  .div--grid-col {
+    width: 100%;
+  }
 </style>
-
-
-{$page.params.slug}
