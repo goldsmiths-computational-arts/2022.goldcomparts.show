@@ -3,23 +3,12 @@
   import { browser, dev } from "$app/env";
   import "../../app.css";
 
-  import { onMount } from "svelte";
  import {DataManager } from '../../lib/util/data-manager'
-  let Carousel; // for saving Carousel component class
-  let carousel; // for calling methods of the carousel instance
 
-  onMount(async () => {
-    const module = await import("svelte-carousel");
-    Carousel = module.default;
-  });
 
-  // Not used but can be used if we use custom prev and next buttons
-  const handleNextClick = () => {
-    carousel.goToNext();
-  };
   console.log('oi', $page.params)
 
-  const artwork =  DataManager.getArtwork($page.params.slug);
+//   const artwork =  DataManager.getArtwork($page.params.slug);
 //   const artist =  DataManager.getArtist($page.params.slug);
 //   console.log(artwork)
 //   console.log(artist)
@@ -36,22 +25,23 @@
   // since there's no dynamic data here, we can prerender
   // it so that it gets served as a static asset in prod
   export const prerender = true;
+
+  const artist = DataManager.getArtist($page.params.slug)
+  console.log('ART', artist)
 </script>
 
-<svelte:component this={Carousel} bind:this={carousel}>
-  {#each images as image}
-    <img class="img__responsive" src="/img/{image}.png" alt="img-description" />
-  {/each}
-</svelte:component>
+
+<img class="img__responsive" src="/img/1.png" alt="img-description" />
+
 
 
 <div class="div--grid-row">
   <div class="div--grid-col">
-    <h3>{artwork.title}</h3>
+    <h3>{artist.title}</h3>
   </div>
   <div class="div--grid-col">
     <h3>
-      <!-- {artist.artistBio} -->
+      {artist.description}
     </h3>
   </div>
 </div>
@@ -60,11 +50,11 @@
 
 <div class="div--grid-row">
   <div class="div--grid-col">
-    <img class="img__responsive" src="/img/3.png" alt="img-description" />
+    <img class="img__responsive" src={artist.headshot_link} alt={artist.headshot_txt} />
   </div>
   <div class="div--grid-col">
     <h3>
-        {artwork.artwork}
+        {artist.bio}
     </h3>
   </div>
 </div>

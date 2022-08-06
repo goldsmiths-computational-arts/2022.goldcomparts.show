@@ -20,8 +20,8 @@
 	// it so that it gets served as a static asset in prod
 	export const prerender = true;
 
-	const artworks = DataManager.getArtworkList();
-
+	const artists = DataManager.getArtistList();
+	console.log('artists', artists)
 </script>
 
 
@@ -30,12 +30,12 @@
 <section>
 	<div class="div__artists-grid">
 
-		{#each artworks as artwork}
-			<a  class="a--link-tile" sveltekit:prefetch href="{base}/artist/{artwork.slug}">
+		{#each artists as artist}
+			<a  class="a--link-tile" sveltekit:prefetch href="{base}/artist/{artist.slug}">
 				<div class="div--image-tile">
 					<img class="img__responsive" src="/img/1.png" alt="img" />
-					<h3 class="p--art-title">  {artwork.title}</h3>
-					<p> {artwork.preferredName}</p>
+					<h3 class="p--art-title">  {artist.title}</h3>
+					<p> {artist.pref_name ? artist.pref_name : artist.name}</p>
 				</div>
 			</a>
 		{/each}
