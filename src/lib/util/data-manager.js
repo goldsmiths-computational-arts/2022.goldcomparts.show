@@ -1,39 +1,9 @@
-import ArtworksCSV from '../data/artworks.tsv'
-import ArtistCSV from '../data/artist.tsv'
+
+import ArtistCSV from '../data/artists.tsv'
 import { shuffle } from 'lodash';
 import { slugify } from './helper';
 
 export class DataManager {
-    /**
-     * Get shuffled Artwork List
-     *
-     * @static
-     * @return {*} 
-     * @memberof DataManager
-     */
-    static getArtworkList() {
-        let artworks = ArtworksCSV;
-        artworks = artworks.map((artwork) => {
-            return slugify(artwork);
-        })
-        return shuffle(artworks); // randomised
-    }
-
-    /**
-     * Get Artwork based on slug
-     *
-     * @static
-     * @param {*} slug
-     * @return {*} 
-     * @memberof DataManager
-     */
-    static getArtwork(slug) {
-        let artworks = DataManager.getArtworkList();
-
-        return  artworks.find((artwork) => {
-            return artwork.slug === slug.toLowerCase()
-        })
-    }
 
     /**
      * Get shuffled Artist list
