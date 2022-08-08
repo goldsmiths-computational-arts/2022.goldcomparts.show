@@ -31,43 +31,138 @@
 </script>
 
 
-<img class="img__responsive" src="/img/1.png" alt="img-description" />
+<img class="img_responsive" src="/img/1.png" alt="img-description" />
 
+<div class="content_container">
 
+    <div class="artist_wrap">
+        <h1> {artist.name}</h1>
+        <h2> {artist.title}</h2>
+    </div>
 
-<div class="div--grid-row">
-  <div class="div--grid-col">
-    <h3>{artist.title}</h3>
-  </div>
-  <div class="div--grid-col">
-    <h3>
-      {artist.description}
-    </h3>
-  </div>
+    <div class="txt_wrap">
+        <p>{artist.bio}</p>
+        <ul class="keywords">
+            <li>
+                <a href="/">Your Moma</a>
+            </li>
+            <li>
+                <a href="/">Digital bitch</a>
+            </li>
+            <li>
+                <a href="/">AI hard bicepts</a>
+            </li>
+        </ul>
+    </div>
 </div>
 
-<hr class="hr--green" />
+<hr/>
 
-<div class="div--grid-row">
-  <div class="div--grid-col">
-    <img class="img__responsive" src={artist.headshot_link} alt={artist.headshot_txt} />
-  </div>
-  <div class="div--grid-col">
-    <h3>
-        {artist.bio}
-    </h3>
-  </div>
+
+<div class="content_container">
+
+        <div class="img_art">
+            <img  src="/img/3.png" alt="img-description">
+        </div>
+
+        <div class="txt_wrap">
+            <h2> {artist.subtitle}</h2>
+            <p> {artist.description}</p>
+            <div id="icons">
+                <a href="https://www.gold.ac.uk/pg/mfa-computational-arts/">
+                    <img src="svg/icon-20-20-web-blackbg.svg"
+                    class="icon-2020vimeo_blackbg" alt="website icon">
+                </a>
+                <a href="https://www.instagram.com/goldsmithscomparts/">
+                    <img src="svg/icon-20-20-instagram-blackbg.svg"
+                    class="icon-2020vimeo_blackbg" alt="instagram icon">
+                </a>
+                <a href="https://vimeo.com/showcase/9464762">
+                    <img src="svg/icon-20-20-vimeo-blackbg.svg"
+                    class="icon-2020vimeo_blackbg" alt="vimeo icon">
+                </a>
+                <a href="https://vimeo.com/showcase/9464762">
+                    <img src="svg/icon-20-20-vimeo-blackbg.svg"
+                    class="icon-2020vimeo_blackbg" alt="youtuve icon">
+                </a>
+            </div>
+        </div>
+
 </div>
 
 <style>
-  .div--grid-row {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    margin: 2rem 0;
-    gap: 3rem;
-  }
-  .div--grid-col {
-    width: 100%;
-  }
+
+
+    h1 {
+        text-align: left;
+    }
+    p{
+        margin: 1rem 0;
+    }
+    ul {
+        list-style-type: none;
+    }
+    img{
+        width: 100%;
+    }
+    
+    .content_container{
+        width: 100%;
+        display: block;
+    }
+    
+    .keywords a {
+        padding: 5px;
+        border: 1px solid var(--black);
+        border-radius: 5px;
+    }
+
+    .keywords{
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin-top: 5%;
+    }
+
+    .img_responsive{
+        height: 500px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .img_art{
+        width: 100%;
+    }
+
+    .artist_wrap {
+        width: 100%;
+        margin: 1rem;
+        padding: 0;
+    }
+    .txt_wrap {
+        width: 95%;
+        margin: 1rem;
+        padding: 0;
+    }
+
+    @media (min-width: 800px) {
+        .content_container{
+            width: 100%;
+            display:flex;
+            justify-content: space-between;
+            /* justify-content: center; */
+        }
+
+        .txt_wrap {
+            width: 50%;
+        }
+        .artist_wrap {
+            width: 50%;
+        }
+        .img_art{
+            width: 50%;
+            margin: 1rem;        
+
+        }
+    }
 </style>
