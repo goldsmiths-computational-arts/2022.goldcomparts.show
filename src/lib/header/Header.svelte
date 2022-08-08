@@ -8,14 +8,11 @@
 </script>
 
 <header>
-<<<<<<< HEAD
 	<div id="logo">
 		<a sveltekit:prefetch href="{base}/">
 			SUB (Systems)
 		</a>
 	</div>
-=======
->>>>>>> 4968c68 (css work, home, about, artist, and artists page)
 
 	<nav>
 		<!-- <div id="logo">
@@ -56,7 +53,6 @@
 	}
 
 	#logo a {
-<<<<<<< HEAD
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -69,11 +65,6 @@
 		width: 2em;
 		height: 2em;
 		object-fit: contain;
-=======
-		font-family: "Neutraface Slab Display TT Light";
-		font-weight: lighter;
-		font-size: larger;
->>>>>>> 4968c68 (css work, home, about, artist, and artists page)
 	}
 
 	nav {
