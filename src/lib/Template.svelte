@@ -24,9 +24,6 @@
 
 
 
-
-
-
 <main>
 	<Header />
 	<div>

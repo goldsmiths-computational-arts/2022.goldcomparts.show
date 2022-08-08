@@ -21,19 +21,18 @@
 	};
 </script>
 
-
 <Seo title="Home Page" />
 
 <EllipseSketch />
+<main>
+	<div id="title-container">
+		<h2>The Computational Arts MA/MFA Degree Show</h2>
+		<h1 id="main-title">(SUB)<br>SYSTEMS</h1>
+		<h2>1st-4th September 2022</h2>
+	</div>
+	<div class="footer_spacing"></div> 
+</main>
 
-<!-- spacer -->
-<div id="spacer"></div>
-
-<h2>The Computational Arts MA/MFA Degree Show</h2>
-<h1 id="main-title">(SUB)<br>SYSTEMS</h1>
-<h2>1st-4th September 2022</h2>
-
-<div id="lower-spacer"></div>
 
 <style>
 	main {
@@ -47,6 +46,10 @@
 		box-sizing: border-box;
 	}
 
+	h1{
+		font-family: "Neutraface Slab Display TT Light";
+		font-weight: lighter;
+	}
 	section {
 		display: flex;
 		flex-direction: column;
@@ -55,14 +58,10 @@
 		flex: 1;
 	}
 
-	#spacer {
+	#title-container{
 		width: 100%;
-		height: 500px;
-	}
-
-	#lower-spacer {
-		width: 100%;
-		height: 50px;
+		align-items: left;
+		padding: 500px 0px 50px 100px;
 	}
 
 	#main-title {

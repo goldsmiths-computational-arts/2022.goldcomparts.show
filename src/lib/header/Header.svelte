@@ -2,30 +2,37 @@
 	import { page } from '$app/stores';
 	import logo from './svelte-logo.svg';
 	import { base, assets } from '$app/paths';
+
+  // Show mobile icon and display menu
+  let showMobileMenu = false;
 </script>
 
 <header>
-	<div id="logo">
-		<a sveltekit:prefetch href="{base}/">
-			<img src={logo} alt="SvelteKit" />
-		</a>
-	</div>
 
 	<nav>
+		<!-- <div id="logo">
+			<a sveltekit:prefetch href="{base}/">
+				(SUB)SYSTEMS
+			</a>
+		</div> -->
+	
 
 		<ul>
-			<li class:active={$page.url.pathname === '/about'}>
-				<a sveltekit:prefetch href="{base}/about">About</a>
+			<li id = "logo" class:active={$page.url.pathname === '/home'}>
+				<a sveltekit:prefetch href="{base}/">(SUB)SYSTEMS</a>
 			</li> 
-			<li class:active={$page.url.pathname === '/artworks'}>
-				<a sveltekit:prefetch href="{base}/artworks">Artworks</a>
+			<li class:active={$page.url.pathname === '/floor-plan'}>
+				<a sveltekit:prefetch href="{base}/floor-plan">Floor Plan</a>
 			</li>
 			<li class:active={$page.url.pathname === '/schedule'}>
 				<a sveltekit:prefetch href="{base}/schedule">Schedule</a>
 			</li>
-			<li class:active={$page.url.pathname === '/floor-plan'}>
-				<a sveltekit:prefetch href="{base}/floor-plan">Floor Plan</a>
+			<li class:active={$page.url.pathname === '/artworks'}>
+				<a sveltekit:prefetch href="{base}/artworks">Artworks</a>
 			</li>
+			<li class:active={$page.url.pathname === '/about'}>
+				<a sveltekit:prefetch href="{base}/about">About</a>
+			</li> 
 		</ul>
 	</nav>
 </header>
@@ -37,47 +44,40 @@
 	}
 
 	#logo {
-		width: 3em;
-		height: 3em;
+		float:left;
 	}
 
 	#logo a {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		height: 100%;
-	}
-
-	#logo img {
-		width: 2em;
-		height: 2em;
-		object-fit: contain;
+		font-family: "Neutraface Slab Display TT Light";
+		font-weight: lighter;
+		font-size: larger;
 	}
 
 	nav {
-		display: flex;
-		justify-content: center;
-		--background: rgba(255, 255, 255, 0.7);
+		position: fixed;
+		background: var(--white);
+		opacity: 0.7;
+		width: 100%;
 	}
 
 
 	ul {
-		position: relative;
-		padding: 0;
+		/* position: relative; */
+		/* display: flex; */
 		margin: 0;
+ 		padding: 0;
 		height: 3em;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		overflow: hidden;
+		/* justify-content: left; */
 		list-style: none;
-		background: transparent;
 		background-size: contain;
 	}
 
 	li {
 		position: relative;
 		height: 100%;
+		float: right;
+
 	}
 
 	li.active::before {
@@ -85,16 +85,23 @@
 		content: '';
 		width: 0;
 		height: 0;
-		position: absolute;
-		top: 0;
-		left: calc(50% - var(--size));
-		/* border: var(--size) solid transparent;
-		border-top: var(--size) solid var(--accent-color); */
 	}
 
-	li.active {
-		text-decoration: underline;
+	li a {
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
 
+	li.active{
+		text-decoration: underline overline;
+
+	}
+	
+	li a:hover:not(.active) {
+		background-color:  var(--matrix_green);
 	}
 
 	nav a {
@@ -107,11 +114,8 @@
 		font-size: 0.8rem;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
-		/* text-decoration: none; */
 		transition: color 0.2s linear;
 	}
 
-	a:hover {
-		color: var(--accent-color);
-	}
+
 </style>
