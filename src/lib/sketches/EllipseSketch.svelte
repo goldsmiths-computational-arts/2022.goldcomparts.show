@@ -50,7 +50,7 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        background-color: rgb(232, 232, 232);
+        background-color: var(--white);
         z-index: -1;
     }
 </style>

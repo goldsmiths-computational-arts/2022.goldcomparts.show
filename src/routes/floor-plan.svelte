@@ -20,18 +20,36 @@
 
 <Seo title="Floor Plan" />
 <div>
-	<p> Ground Floor</p>
-	<img class="img__responsive" src="/img/2.png" alt="img" />
+	<!-- Under navbar spacing  -->
+	<div class="header_spacing"></div> 
+		<div class="container">
+		<h2> Ground Floor</h2>
+		<img class="img_responsive" src="/img/2.png" alt="img" />
 
-	<p> First Floor</p>
-	<img class="img__responsive" src="/img/2.png" alt="img" />
+		<h2> First Floor</h2>
+		<img class="img_responsive" src="/img/2.png" alt="img" />
 
-	<p> Second Floor</p>
-	<img class="img__responsive" src="/img/2.png" alt="img" />
-	
+		<h2> Second Floor</h2>
+		<img class="img_responsive" src="/img/2.png" alt="img" />
+		
+		<h2> Last Floor</h2>
+		<img class="img_responsive" src="/img/2.png" alt="img" />
+		
+		<div class="footer_spacing"></div> 
+	</div>
+
+
 </div>
 
 
 <style>
-	
+	.container{
+		display: block;
+		width: 80%;
+		margin: 0 10%;
+	}
+	.img_responsive{
+		width: 100%;
+		margin: 2rem 0;
+	}
 </style>
