@@ -47,8 +47,10 @@
 
 <style>
 	.div__EllipseSketchWrapper {
+        position: absolute;
         width: 100%;
         height: 100%;
-        background-color: red;
+        background-color: var(--white);
+        z-index: -1;
     }
 </style>
