@@ -26,7 +26,8 @@
   // it so that it gets served as a static asset in prod
   export const prerender = true;
 
-  const artist = DataManager.getArtist($page.params.slug)
+//   const artist = DataManager.getArtist($page.params.slug)
+  const artist = DataManager.getArtistList()[0];
   console.log('ART', artist)
 </script>
 
