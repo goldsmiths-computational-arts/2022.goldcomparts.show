@@ -4,17 +4,54 @@
 	import { base, assets } from '$app/paths';
 
   // Show mobile icon and display menu
-  let showMobileMenu = false;
+//   let showMobileMenu = false;
+
+let showMenu = false;
+
+let menuItems = [
+  { label: "Floor Plan", href: "/floor-plan" },
+  { label: "Schedule", href: "/schedule" },
+  { label: "Artworks", href: "/artworks" },
+  { label: "About", href: "/about" }
+];
+
+function toggleMenu() {
+  showMenu = !showMenu;
+}
+
+function hideMenu() {
+  showMenu = false;
+}
 </script>
 
 <header>
-	<div id="logo">
-		<a sveltekit:prefetch href="{base}/">
-			SUB (Systems)
-		</a>
-	</div>
+	<nav aria-label="main navigation">
+		<div class="container">
+			<ul>
+				<li id = "logo" class:active={$page.url.pathname === '/home'}>
+					<a sveltekit:prefetch href="{base}/">(SUB)SYSTEMS</a>
+				</li> 
+				<!-- hamburger menu -->
+				{#if !showMenu}
+					<img id="hamburger-menu"
+					src="/img/hamburger.webp"
+					class:is-active={showMenu}
+					on:click={toggleMenu}>
+				{/if}
 
-	<nav>
+				{#if showMenu}
+					{#each menuItems as item}
+					<li
+					class:active={$page.url.pathname === item.href}
+					on:click={hideMenu}>
+						<a sveltekit:prefetch href="{base + item.href}">{item.label}</a>
+					</li>
+					{/each}
+				{/if}
+
+
+			</ul>
+		</div>
 		<!-- <div id="logo">
 			<a sveltekit:prefetch href="{base}/">
 				(SUB)SYSTEMS
@@ -22,10 +59,8 @@
 		</div> -->
 	
 
-		<ul>
-			<li id = "logo" class:active={$page.url.pathname === '/home'}>
-				<a sveltekit:prefetch href="{base}/">(SUB)SYSTEMS</a>
-			</li> 
+		<!-- <ul>
+
 			<li class:active={$page.url.pathname === '/floor-plan'}>
 				<a sveltekit:prefetch href="{base}/floor-plan">Floor Plan</a>
 			</li>
@@ -38,7 +73,7 @@
 			<li class:active={$page.url.pathname === '/about'}>
 				<a sveltekit:prefetch href="{base}/about">About</a>
 			</li> 
-		</ul>
+		</ul> -->
 	</nav>
 </header>
 
@@ -68,7 +103,7 @@
 	}
 
 	nav {
-		position: fixed;
+		position: absolute;
 		background: var(--white);
 		opacity: 0.7;
 		width: 100%;
@@ -91,7 +126,12 @@
 		position: relative;
 		height: 100%;
 		float: right;
+	}
 
+	#hamburger-menu {
+		position: relative;
+		height: 100%;
+		float: right;
 	}
 
 	li.active::before {

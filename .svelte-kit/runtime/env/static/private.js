@@ -15,7 +15,7 @@ export const NODE = "/Users/mx/.nvm/versions/node/v16.13.1/bin/node";
 export const INIT_CWD = "/Users/mx/code/svelte/2022.goldcomparts.show";
 
 /** @type {import('$env/static/private')._P9K_TTY} */
-export const _P9K_TTY = "/dev/ttys003";
+export const _P9K_TTY = "/dev/ttys002";
 
 /** @type {import('$env/static/private').NVM_CD_FLAGS} */
 export const NVM_CD_FLAGS = "-q";
@@ -42,7 +42,7 @@ export const npm_config_global_prefix = "/Users/mx/.nvm/versions/node/v16.13.1";
 export const CONDA_SHLVL = "1";
 
 /** @type {import('$env/static/private').TERM_PROGRAM_VERSION} */
-export const TERM_PROGRAM_VERSION = "1.69.2";
+export const TERM_PROGRAM_VERSION = "1.70.0";
 
 /** @type {import('$env/static/private').CONDA_PROMPT_MODIFIER} */
 export const CONDA_PROMPT_MODIFIER = "(base) ";

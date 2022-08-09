@@ -48,7 +48,7 @@
 	#title-container{
 		width: 100%;
 		align-items: left;
-		padding: 500px 0px 50px 100px;
+		padding: 300px 0px 20px 10px;
 	}
 
 	#main-title {

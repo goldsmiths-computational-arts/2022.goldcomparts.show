@@ -480,6 +480,7 @@ onMount(async() => {
         height: 100%;
         background-color: var(--white);
         z-index: -1;
+        overflow: hidden;
     }
 </style>
   

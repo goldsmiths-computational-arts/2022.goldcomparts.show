@@ -8,6 +8,7 @@
 	--black: #151515;
 	--white: #fff;
 	--matrix_green: #00FF41;
+
 }
 
 body {
@@ -15,6 +16,7 @@ body {
 	min-height: 100vh;
 	width: 100%;
 	margin: 0;
+	overflow:hidden;
 }
 
 body::before {
