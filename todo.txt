@@ -23,6 +23,10 @@ desktop designing
 
 add touch .nojekyll and touch CNAME echo "2022.goldcomparts.show" to build
 
+css for sketch
+fallback image poster
+toggle and loadtime thing for sketch
+
 
 
 

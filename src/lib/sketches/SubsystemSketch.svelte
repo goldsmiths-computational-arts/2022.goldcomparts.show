@@ -3,7 +3,7 @@
 import P5 from 'p5-svelte';
 import { onMount } from 'svelte';
 let hasMounted = false;
-let sketchWidth = 1000;
+let sketchWidth = 400;
 onMount(async() => {
         let element = document.getElementById('SubsystemSketch');
         sketchWidth = element.offsetWidth;
@@ -219,7 +219,8 @@ onMount(async() => {
     p5.tint(255,220);
     p5.copy(img, 0, 0, img.width, img.height, 0, 0,p5.windowWidth,p5.windowHeight);
     hoverCheck();
-    buttonCheck();
+    // switch for html buttons
+    // buttonCheck();
    
   }
   
@@ -445,15 +446,15 @@ onMount(async() => {
     p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
     reset();
     if (p5.windowWidth>MobileThreshold){
-      DRAWPROB=0.2;
-      DELAY=2;
-      THRESHDISTANCE  = p5.windowWidth*0.045;
+      DRAWPROB=0.1;
+      DELAY=5;
+      THRESHDISTANCE  = p5.windowWidth*0.001;
   
     }
     else{
-      DRAWPROB=0.8;
-      DELAY=4;
-      THRESHDISTANCE  = p5.windowWidth*0.08;
+      DRAWPROB=0.1;
+      DELAY=5;
+      THRESHDISTANCE  = p5.windowWidth*0.002;
   
     }
   }
