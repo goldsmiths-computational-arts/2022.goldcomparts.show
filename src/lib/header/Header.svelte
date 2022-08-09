@@ -22,65 +22,48 @@ function toggleMenu() {
 function hideMenu() {
   showMenu = false;
 }
+
+function menuImg() {
+
+}
 </script>
 
 <header>
-	<nav aria-label="main navigation">
+	<nav aria-label="main navigation"
+	class={showMenu ? "menu-expanded": ""}>
 		<div class="container">
 			<ul>
 				<li id = "logo" class:active={$page.url.pathname === '/home'}>
 					<a sveltekit:prefetch href="{base}/">(SUB)SYSTEMS</a>
 				</li> 
 				<!-- hamburger menu -->
-				{#if !showMenu}
+
 					<img id="hamburger-menu"
-					src="/img/hamburger.webp"
+					src="/img/{showMenu ? "close" : "hamburger"}.webp"
 					class:is-active={showMenu}
-					on:click={toggleMenu}>
-				{/if}
+					on:click={toggleMenu}
+					alt="menu icon">
 
 				{#if showMenu}
-					{#each menuItems as item}
-					<li
-					class:active={$page.url.pathname === item.href}
-					on:click={hideMenu}>
-						<a sveltekit:prefetch href="{base + item.href}">{item.label}</a>
-					</li>
-					{/each}
+					<div id="overlay"
+					class={showMenu ? "menu-expanded" : "menu-minimized"}>
+						{#each menuItems as item}
+						<li
+						class:active={$page.url.pathname === item.href}
+						on:click={hideMenu}>
+							<a sveltekit:prefetch href="{base + item.href}">{item.label}</a>
+						</li>
+						{/each}
+					</div>
 				{/if}
-
-
 			</ul>
 		</div>
-		<!-- <div id="logo">
-			<a sveltekit:prefetch href="{base}/">
-				(SUB)SYSTEMS
-			</a>
-		</div> -->
-	
-
-		<!-- <ul>
-
-			<li class:active={$page.url.pathname === '/floor-plan'}>
-				<a sveltekit:prefetch href="{base}/floor-plan">Floor Plan</a>
-			</li>
-			<li class:active={$page.url.pathname === '/schedule'}>
-				<a sveltekit:prefetch href="{base}/schedule">Schedule</a>
-			</li>
-			<li class:active={$page.url.pathname === '/artworks'}>
-				<a sveltekit:prefetch href="{base}/artworks">Artworks</a>
-			</li>
-			<li class:active={$page.url.pathname === '/about'}>
-				<a sveltekit:prefetch href="{base}/about">About</a>
-			</li> 
-		</ul> -->
 	</nav>
 </header>
 
 <style>
 	header {
-		display: flex;
-		justify-content: space-between;
+
 	}
 
 	#logo {
@@ -103,10 +86,17 @@ function hideMenu() {
 	}
 
 	nav {
-		position: absolute;
 		background: var(--white);
 		opacity: 0.7;
 		width: 100%;
+	}
+
+	nav .menu-minimized {
+		position: absolute;
+	}
+
+	nav .menu-expanded {
+		position: relative;
 	}
 
 
@@ -122,9 +112,42 @@ function hideMenu() {
 		background-size: contain;
 	}
 
+	ul .menu-expanded {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	ul .menu-minimized {
+
+	}
+
+	#overlay {
+		margin-top: 3em;
+		position: absolute;
+		width: 100%;
+		height: 80%;
+		z-index: 1;
+		background-color: white;
+		
+	}
+
+	/* #overlay .menu-minimized {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+	} */
+
+	#overlay .menu-expanded {
+		display: flex;
+		justify-content: space-around;
+		flex-direction: row;
+	}
+
 	li {
 		position: relative;
-		height: 100%;
+		/* height: 100%; */
 		float: right;
 	}
 

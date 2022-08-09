@@ -354,7 +354,7 @@ onMount(async() => {
     let hovering = false;
     for (const [key, value] of Object.entries(buttonMode)) {
       if (p5.dist(value[1],value[2],p5.mouseX,p5.mouseY)<60){
-        p5.cursor(CROSS);
+        p5.cursor(p5.CROSS);
         hovering=true;
   
       }
@@ -436,7 +436,7 @@ onMount(async() => {
   
   }
   
-  p5.keyPressed = () => {
+  p5.keyPressed = (key) => {
     if (key === "r") {
       reset();
     }
