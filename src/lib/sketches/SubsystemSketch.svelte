@@ -2,14 +2,45 @@
 
 import P5 from 'p5-svelte';
 import { onMount } from 'svelte';
+let hasMounted = false;
+let sketchWidth = 1000;
 onMount(async() => {
         let element = document.getElementById('SubsystemSketch');
-        width = element.offsetWidth;
+        sketchWidth = element.offsetWidth;
         hasMounted = true;
 
     });
 
-class Neuron {
+
+  
+  
+  let Neurons=[];
+  let pointData;
+  let pointsX=[];
+  let pointsY=[];
+  let pointDataSmall;
+  let pointsXSmall=[];
+  let pointsYSmall=[];
+  let numNeurons;
+  let img;
+  let temp_img;
+  
+  let DRAWPROB = 0.2;
+  let THRESHDISTANCE  = 55;
+  let MobileThreshold = 600;
+  let DELAY = 1;
+  let buttonFont;
+  let titleFont;
+  
+  
+  let mode ="desktop";
+  let buttonDictionaryDesktop;
+  let buttonDictionaryTablet;
+  let buttonDictionaryMobile;
+
+  const sketch = (p5) => {
+
+    class Neuron {
     constructor(_x,_y){
       this.pos =new p5.createVector(_x,_y)
       this.origPos=new p5.createVector(_x,_y);
@@ -43,7 +74,7 @@ class Neuron {
   
     move(size){
       let multi = 0.8;
-      let noiseValue=10* noise(this.pos.x*0.1,this.pos.y*0.1)
+      let noiseValue=10* p5.noise(this.pos.x*0.1,this.pos.y*0.1)
       if (size){
         multi=25;
       }
@@ -129,56 +160,29 @@ class Neuron {
           let tempPosX=Neurons[this.connectionsIndex[i]].pos.x;
           let tempPosY=Neurons[this.connectionsIndex[i]].pos.y;
     
-          line(this.pos.x,this.pos.y,tempPosX,tempPosY);  
+          p5.line(this.pos.x,this.pos.y,tempPosX,tempPosY);  
         }
   
         else if (this.drawn){
           let tempPosX=Neurons[this.connectionsIndex[i]].pos.x;
           let tempPosY=Neurons[this.connectionsIndex[i]].pos.y;
     
-          line(this.pos.x,this.pos.y,tempPosX,tempPosY);
+         p5.line(this.pos.x,this.pos.y,tempPosX,tempPosY);
         }
         
       }
     }
     
   }
-  
-  
-  let Neurons=[];
-  let pointData;
-  let pointsX=[];
-  let pointsY=[];
-  let pointDataSmall;
-  let pointsXSmall=[];
-  let pointsYSmall=[];
-  let numNeurons;
-  let img;
-  let temp_img;
-  
-  let DRAWPROB = 0.2;
-  let THRESHDISTANCE  = 55;
-  let MobileThreshold = 600;
-  let DELAY = 1;
-  let buttonFont;
-  let titleFont;
-  
-  
-  let mode ="desktop";
-  let buttonDictionaryDesktop;
-  let buttonDictionaryTablet;
-  let buttonDictionaryMobile;
-
-  const sketch = (p5) => {
     p5.preload = () => {
-      pointData=loadTable("data/points1.5k.csv",'csv');
-      pointDataSmall=loadTable("data/pointsmobile.csv",'csv');
+      pointData=p5.loadTable("/creativeCodingSketch/data/points1.5k.csv",'csv');
+      pointDataSmall=p5.loadTable("/creativeCodingSketch/data/pointsmobile.csv",'csv');
       
-      img = p5.loadImage('data/4.png');
+      img = p5.loadImage('/creativeCodingSketch/data/4.png');
       
       
-      buttonFont = loadFont('fonts/DotGothic16-Regular.ttf');
-      titleFont = loadFont('fonts/Neutraface_Slab_Display_Light.otf');
+      buttonFont = p5.loadFont('/creativeCodingSketch/fonts/DotGothic16-Regular.ttf');
+      titleFont = p5.loadFont('/creativeCodingSketch/fonts/Neutraface_Slab_Display_Light.otf');
     }
   
   p5.setup = () => {
@@ -191,20 +195,20 @@ class Neuron {
     reset();
   
     buttonDictionaryDesktop={
-      0:["Machine Learning",width*0.8,height*0.675,"http://www.google.com"],
-      1:["Performance",width*0.27,height*0.15,"http://www.google.com"],
-      2:["Installation",width*0.9,height*0.18,"http://www.google.com"],
+      0:["Machine Learning",p5.width*0.8,p5.height*0.675,"http://www.google.com"],
+      1:["Performance",p5.width*0.27,p5.height*0.15,"http://www.google.com"],
+      2:["Installation",p5.width*0.9,p5.height*0.18,"http://www.google.com"],
     };
   
     buttonDictionaryMobile={
-      0:["Machine Learning",width*0.2,height*0.2,"http://www.google.com"],
-      1:["Performance",width*0.2,height*0.3,"http://www.google.com"],
-      2:["Installation",width*0.2,height*0.4,"http://www.google.com"],
+      0:["Machine Learning",p5.width*0.2,p5.height*0.2,"http://www.google.com"],
+      1:["Performance",p5.width*0.2,p5.height*0.3,"http://www.google.com"],
+      2:["Installation",p5.width*0.2,p5.height*0.4,"http://www.google.com"],
     };
   }
   
   p5.draw = () => {
-    if (frameCount<5){
+    if (p5.frameCount<5){
       p5.background(255);
     }
     
@@ -213,7 +217,7 @@ class Neuron {
     
     updateNeurons();
     p5.tint(255,220);
-    p5.copy(img, 0, 0, img.width, img.height, 0, 0,windowWidth,windowHeight);
+    p5.copy(img, 0, 0, img.width, img.height, 0, 0,p5.windowWidth,p5.windowHeight);
     hoverCheck();
     buttonCheck();
    
@@ -238,10 +242,10 @@ class Neuron {
   function updateNeurons(){
    
     
-    for( n of Neurons){
+    for(let n of Neurons){
       n.check();
     
-      if (frameCount%DELAY==0){
+      if (p5.frameCount%DELAY==0){
         if (p5.random(0,1)>0.85){
           n.move(false);
         }
@@ -251,8 +255,8 @@ class Neuron {
       n.decay();
     }
   
-    if ( frameCount%30==0){
-      random_neuron=int(p5.random(0,Neurons.length));
+    if ( p5.frameCount%30==0){
+      let random_neuron=p5.int(p5.random(0,Neurons.length));
       Neurons[random_neuron].value=200;
     }
   
@@ -263,15 +267,15 @@ class Neuron {
     p5.textSize(24);
     p5.stroke(0,0,0,200)
     p5.fill(0);
-    textAlign(CORNER, CENTER);
+    textAlign(p5.CORNER, p5.CENTER);
     textFont(buttonFont)
-    let h=height*0.6
+    let h=p5.height*0.6
     text("The Computational Arts MA/MFA Degree Show",120,h);
     h+=48+24
     p5.textSize(60);
     p5.stroke(0)
     p5.fill(0);
-    p5.textAlign(CORNER, CENTER);
+    p5.textAlign(p5.CORNER, p5.CENTER);
     p5.textFont(buttonFont)
     p5.text("(SUB)",110,h);
     h+=60+12;
@@ -280,7 +284,7 @@ class Neuron {
     p5.textSize(24);
     p5.stroke(0)
     p5.fill(0);
-    p5.textAlign(CORNER, CENTER);
+    p5.textAlign(p5.CORNER, p5.CENTER);
     p5.textFont(buttonFont)
     p5.text("1st - 4th September 2022",120,h);
   }
@@ -292,7 +296,7 @@ class Neuron {
     for (const [key, value] of Object.entries(buttonDictionaryDesktop)) {
       let x=value[1];
       let y = value[2];
-      if (windowWidth<x || windowHeight<y){
+      if (p5.windowWidth<x || p5.windowHeight<y){
         mode="mobile";
         valid=false;
       } 
@@ -327,14 +331,14 @@ class Neuron {
     p5.textFont(buttonFont)
     p5.stroke("#00FE00")
     p5.fill(255,255,255);
-    p5.rectMode(CENTER);
+    p5.rectMode(p5.CENTER);
     p5.textSize(32);
     let w=pad_x+p5.textWidth(input);
     let h=pad_y+32;
     p5.rect(x,y,w,h);
     p5.stroke(0)
     p5.fill(0);
-    p5.textAlign(CENTER, CENTER);
+    p5.textAlign(p5.CENTER, p5.CENTER);
     p5.text(input,x,y-7);
   }
   
@@ -348,21 +352,21 @@ class Neuron {
     }
     let hovering = false;
     for (const [key, value] of Object.entries(buttonMode)) {
-      if (p5.dist(value[1],value[2],mouseX,mouseY)<60){
+      if (p5.dist(value[1],value[2],p5.mouseX,p5.mouseY)<60){
         p5.cursor(CROSS);
         hovering=true;
   
       }
     }
   if(!hovering){
-    p5.cursor(ARROW);
+    p5.cursor(p5.ARROW);
     }
   }
   
-  function p5.mousePressed(){
+   p5.mousePressed = () => {
     let pulsed=false;
-    for( n of Neurons){
-        if (p5.dist(n.pos.x,n.pos.y,mouseX,mouseY)<40){
+    for( let n of Neurons){
+        if (p5.dist(n.pos.x,n.pos.y,p5.mouseX,p5.mouseY)<40){
           if (!pulsed){
             n.value=300;
             pulsed=true;
@@ -379,7 +383,7 @@ class Neuron {
       buttonMode=buttonDictionaryMobile;
     }
     for (const [key, value] of Object.entries(buttonMode)) {
-      if (p5.dist(value[1],value[2],mouseX,mouseY)<40){
+      if (p5.dist(value[1],value[2],p5.mouseX,p5.mouseY)<40){
         window.open(value[3]);
       }
     }
@@ -389,17 +393,17 @@ class Neuron {
   
   function reset(){
     p5.background(0);
-    THRESHDISTANCE  = windowWidth*0.045;
+    THRESHDISTANCE  = p5.windowWidth*0.045;
     Neurons=[];
     let idx=0;
-    if (windowWidth>MobileThreshold){
+    if (p5.windowWidth>MobileThreshold){
       numNeurons=pointData.getRowCount();
   
       while (Neurons.length<numNeurons){
-        angleMode=RADIANS;
+        p5.angleMode=p5.RADIANS;
         
-        const x = p5.map(p5.floor(pointsX[p5.floor(idx)])+p5.random(-10,10),0,1440,0,windowWidth);
-        const y = p5.map(p5.floor(pointsY[p5.floor(idx)])+p5.random(-10,10),0,1024,0,windowHeight);
+        const x = p5.map(p5.floor(pointsX[p5.floor(idx)])+p5.random(-10,10),0,1440,0,p5.windowWidth);
+        const y = p5.map(p5.floor(pointsY[p5.floor(idx)])+p5.random(-10,10),0,1024,0,p5.windowHeight);
   
   
         Neurons.push(new Neuron(x,y));
@@ -413,10 +417,10 @@ class Neuron {
     numNeurons=pointDataSmall.getRowCount();
   
     while (Neurons.length<numNeurons){
-      angleMode=RADIANS;
+      p5.angleMode=p5.RADIANS;
       
-      const x = p5.map(p5.floor(pointsXSmall[p5.floor(idx)])+p5.random(-10,10),0,1440,0,windowWidth);
-      const y = p5.map(p5.floor(pointsYSmall[p5.floor(idx)])+p5.random(-10,10),0,1024,0,windowHeight);
+      const x = p5.map(p5.floor(pointsXSmall[p5.floor(idx)])+p5.random(-10,10),0,1440,0,p5.windowWidth);
+      const y = p5.map(p5.floor(pointsYSmall[p5.floor(idx)])+p5.random(-10,10),0,1024,0,p5.windowHeight);
   
   
       Neurons.push(new Neuron(x,y));
@@ -431,25 +435,25 @@ class Neuron {
   
   }
   
-  function p5.keyPressed(){
+  p5.keyPressed = () => {
     if (key === "r") {
       reset();
     }
   }
   
-  function p5.windowResized() {
-    p5.resizeCanvas(windowWidth, windowHeight);
+  p5.windowResized = () => {
+    p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
     reset();
-    if (windowWidth>MobileThreshold){
+    if (p5.windowWidth>MobileThreshold){
       DRAWPROB=0.2;
       DELAY=2;
-      THRESHDISTANCE  = windowWidth*0.045;
+      THRESHDISTANCE  = p5.windowWidth*0.045;
   
     }
     else{
       DRAWPROB=0.8;
       DELAY=4;
-      THRESHDISTANCE  = windowWidth*0.08;
+      THRESHDISTANCE  = p5.windowWidth*0.08;
   
     }
   }
