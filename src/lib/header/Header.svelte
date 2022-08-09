@@ -8,20 +8,9 @@
 </script>
 
 <header>
-	<div id="logo">
-		<a sveltekit:prefetch href="{base}/">
-			SUB (Systems)
-		</a>
-	</div>
 
-	<nav>
-		<!-- <div id="logo">
-			<a sveltekit:prefetch href="{base}/">
-				(SUB)SYSTEMS
-			</a>
-		</div> -->
-	
 
+	<nav>	
 		<ul>
 			<li id = "logo" class:active={$page.url.pathname === '/home'}>
 				<a sveltekit:prefetch href="{base}/">(SUB)SYSTEMS</a>
