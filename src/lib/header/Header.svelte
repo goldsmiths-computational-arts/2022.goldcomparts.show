@@ -8,6 +8,8 @@
 
 let showMenu = false;
 
+let width;
+
 let menuItems = [
   { label: "Floor Plan", href: "/floor-plan" },
   { label: "Schedule", href: "/schedule" },
@@ -28,6 +30,8 @@ function menuImg() {
 }
 </script>
 
+<svelte:window bind:innerWidth={width}/>
+
 <header>
 	<nav aria-label="main navigation"
 	class={showMenu ? "menu-expanded": ""}>
@@ -37,14 +41,25 @@ function menuImg() {
 					<a sveltekit:prefetch href="{base}/">(SUB)SYSTEMS</a>
 				</li> 
 				<!-- hamburger menu -->
-
+				{#if width < 600}
 					<img id="hamburger-menu"
 					src="/img/{showMenu ? "close" : "hamburger"}.webp"
 					class:is-active={showMenu}
 					on:click={toggleMenu}
 					alt="menu icon">
+				{/if}
 
-				{#if showMenu}
+				{#if width > 600}
+					{#each menuItems as item}
+					<li
+					class:active={$page.url.pathname === item.href}
+					on:click={hideMenu}>
+						<a sveltekit:prefetch href="{base + item.href}">{item.label}</a>
+					</li>
+					{/each}
+				{/if}
+
+				{#if showMenu }
 					<div id="overlay"
 					class={showMenu ? "menu-expanded" : "menu-minimized"}>
 						{#each menuItems as item}
