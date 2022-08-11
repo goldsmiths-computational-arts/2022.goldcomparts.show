@@ -1,6 +1,6 @@
 
-import ArtistCSV from '../data/artists.tsv'
-import { shuffle } from 'lodash';
+import ArtistCSV from '../data/threeArtists.tsv'
+import { shuffle } from 'lodash-es';
 import { slugify } from './helper';
 
 export class DataManager {

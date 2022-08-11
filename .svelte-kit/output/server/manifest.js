@@ -1,19 +1,19 @@
 export const manifest = {
 	appDir: "internal",
-	assets: new Set(["favicon.png","img/1.png","img/2.png","img/3.png","img/4.png","robots.txt","svelte-welcome.png","svelte-welcome.webp"]),
-	mimeTypes: {".png":"image/png",".txt":"text/plain",".webp":"image/webp"},
+	assets: new Set([".DS_Store","creativeCodingSketch/data/4.png","creativeCodingSketch/data/4s.png","creativeCodingSketch/data/points1.3.csv","creativeCodingSketch/data/points1.5k.csv","creativeCodingSketch/data/points1.8.csv","creativeCodingSketch/data/pointsmobile.csv","creativeCodingSketch/fonts/BasisGrotesqueProOffWhite-Regular.otf","creativeCodingSketch/fonts/Coconat-Regular.otf","creativeCodingSketch/fonts/DotGothic16-Regular.ttf","creativeCodingSketch/fonts/Neutraface_Slab_Display_Light.otf","data/finalWeb.csv","data/threeArtists.csv","favicon.png","img/1.png","img/2.png","img/3.png","img/4.png","robots.txt","svelte-welcome.png","svelte-welcome.webp","svg/icon-20-20-instagram-blackbg.svg","svg/icon-20-20-vimeo-blackbg.svg","svg/icon-20-20-web-blackbg.svg"]),
+	mimeTypes: {".png":"image/png",".csv":"text/csv",".otf":"font/otf",".ttf":"font/ttf",".txt":"text/plain",".webp":"image/webp",".svg":"image/svg+xml"},
 	_: {
-		entry: {"file":"internal/immutable/start-2dc768de.js","imports":["internal/immutable/start-2dc768de.js","internal/immutable/chunks/index-1577698e.js","internal/immutable/chunks/paths-86ffdd15.js","internal/immutable/chunks/preload-helper-30e8f224.js"],"stylesheets":[]},
+		entry: {"file":"internal/immutable/start-5b6b863c.js","imports":["internal/immutable/start-5b6b863c.js","internal/immutable/chunks/index-2b5bfe42.js","internal/immutable/chunks/paths-86ffdd15.js","internal/immutable/chunks/preload-helper-30e8f224.js"],"stylesheets":[]},
 		nodes: [
 			() => import('./nodes/0.js'),
 			() => import('./nodes/1.js'),
 			() => import('./nodes/6.js'),
 			() => import('./nodes/2.js'),
-			() => import('./nodes/3.js'),
+			() => import('./nodes/4.js'),
 			() => import('./nodes/5.js'),
 			() => import('./nodes/7.js'),
 			() => import('./nodes/8.js'),
-			() => import('./nodes/4.js')
+			() => import('./nodes/3.js')
 		],
 		routes: [
 			{
@@ -40,11 +40,11 @@ export const manifest = {
 			},
 			{
 				type: 'page',
-				id: "art",
-				pattern: /^\/art\/?$/,
+				id: "artworks",
+				pattern: /^\/artworks\/?$/,
 				names: [],
 				types: [],
-				path: "/art",
+				path: "/artworks",
 				shadow: null,
 				a: [0,4],
 				b: [1]

@@ -45,3 +45,7 @@ deploying
 you can't have hrefs with '/'
 no underscores in directory names
 
+
+how to find and replace in vscode 
+([a-zA-Z]+[(])
+p5.$1

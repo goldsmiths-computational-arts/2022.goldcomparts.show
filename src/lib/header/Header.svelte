@@ -4,37 +4,81 @@
 	import { base, assets } from '$app/paths';
 
   // Show mobile icon and display menu
-  let showMobileMenu = false;
+//   let showMobileMenu = false;
+
+let showMenu = false;
+
+let width;
+
+let menuItems = [
+  { label: "Floor Plan", href: "/floor-plan" },
+  { label: "Schedule", href: "/schedule" },
+  { label: "Artworks", href: "/artworks" },
+  { label: "About", href: "/about" }
+];
+
+function toggleMenu() {
+  showMenu = !showMenu;
+}
+
+function hideMenu() {
+  showMenu = false;
+}
+
+function menuImg() {
+
+}
 </script>
 
+<svelte:window bind:innerWidth={width}/>
+
 <header>
+	<nav aria-label="main navigation"
+	class={showMenu ? "menu-expanded": ""}>
+		<div class="container">
+			<ul>
+				<li id = "logo" class:active={$page.url.pathname === '/home'}>
+					<a sveltekit:prefetch href="{base}/">(SUB)SYSTEMS</a>
+				</li> 
+				<!-- hamburger menu -->
+				{#if width < 600}
+					<img id="hamburger-menu"
+					src="/img/{showMenu ? "close" : "hamburger"}.webp"
+					class:is-active={showMenu}
+					on:click={toggleMenu}
+					alt="menu icon">
+				{/if}
 
+				{#if width > 600}
+					{#each menuItems as item}
+					<li
+					class:active={$page.url.pathname === item.href}
+					on:click={hideMenu}>
+						<a sveltekit:prefetch href="{base + item.href}">{item.label}</a>
+					</li>
+					{/each}
+				{/if}
 
-	<nav>	
-		<ul>
-			<li id = "logo" class:active={$page.url.pathname === '/home'}>
-				<a sveltekit:prefetch href="{base}/">(SUB)SYSTEMS</a>
-			</li> 
-			<li class:active={$page.url.pathname === '/floor-plan'}>
-				<a sveltekit:prefetch href="{base}/floor-plan">Floor Plan</a>
-			</li>
-			<li class:active={$page.url.pathname === '/schedule'}>
-				<a sveltekit:prefetch href="{base}/schedule">Schedule</a>
-			</li>
-			<li class:active={$page.url.pathname === '/artworks'}>
-				<a sveltekit:prefetch href="{base}/artworks">Artworks</a>
-			</li>
-			<li class:active={$page.url.pathname === '/about'}>
-				<a sveltekit:prefetch href="{base}/about">About</a>
-			</li> 
-		</ul>
+				{#if showMenu }
+					<div id="overlay"
+					class={showMenu ? "menu-expanded" : "menu-minimized"}>
+						{#each menuItems as item}
+						<li
+						class:active={$page.url.pathname === item.href}
+						on:click={hideMenu}>
+							<a sveltekit:prefetch href="{base + item.href}">{item.label}</a>
+						</li>
+						{/each}
+					</div>
+				{/if}
+			</ul>
+		</div>
 	</nav>
 </header>
 
 <style>
 	header {
-		display: flex;
-		justify-content: space-between;
+
 	}
 
 	#logo {
@@ -57,10 +101,17 @@
 	}
 
 	nav {
-		position: fixed;
 		background: var(--white);
 		opacity: 0.7;
 		width: 100%;
+	}
+
+	nav .menu-minimized {
+		position: absolute;
+	}
+
+	nav .menu-expanded {
+		position: relative;
 	}
 
 
@@ -76,11 +127,49 @@
 		background-size: contain;
 	}
 
+	ul .menu-expanded {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	ul .menu-minimized {
+
+	}
+
+	#overlay {
+		margin-top: 3em;
+		position: absolute;
+		width: 100%;
+		height: 80%;
+		z-index: 1;
+		background-color: white;
+		
+	}
+
+	/* #overlay .menu-minimized {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+	} */
+
+	#overlay .menu-expanded {
+		display: flex;
+		justify-content: space-around;
+		flex-direction: row;
+	}
+
 	li {
+		position: relative;
+		/* height: 100%; */
+		float: right;
+	}
+
+	#hamburger-menu {
 		position: relative;
 		height: 100%;
 		float: right;
-
 	}
 
 	li.active::before {

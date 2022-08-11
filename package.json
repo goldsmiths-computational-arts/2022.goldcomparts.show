@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build",
+		"build": "vite build && touch ./docs/.nojekyll && echo '2022.goldcomparts.show' > CNAME",
 		"package": "svelte-kit package",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync",
@@ -28,6 +28,7 @@
 		"@sveltejs/adapter-static": "^1.0.0-next.38",
 		"cookie": "^0.4.1",
 		"lodash": "^4.17.21",
+		"lodash-es": "^4.17.21",
 		"p5": "^1.4.2",
 		"p5-svelte": "^3.1.2",
 		"svelte-carousel": "^1.0.19",
