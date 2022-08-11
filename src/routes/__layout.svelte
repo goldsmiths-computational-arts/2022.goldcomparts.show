@@ -1,11 +1,19 @@
 <script>
 	import Header from '$lib/header/Header.svelte';
+
+	let fullSite = false;
 </script>
 
 <main>
+	{#if fullSite}
 	<Header/>
+	{/if}
+
 	<slot/>
 
+
+
+	{#if fullSite}
     <footer> 
 		<div class="content_container">
 			<div class="address_wrap">
@@ -43,6 +51,7 @@
 			</div>
 		</div>
 	</footer>
+	{/if}
 </main>
 
 

@@ -15,7 +15,7 @@ export const NODE = "/Users/mx/.nvm/versions/node/v16.13.1/bin/node";
 export const INIT_CWD = "/Users/mx/code/svelte/2022.goldcomparts.show";
 
 /** @type {import('$env/static/private')._P9K_TTY} */
-export const _P9K_TTY = "/dev/ttys002";
+export const _P9K_TTY = "/dev/ttys000";
 
 /** @type {import('$env/static/private').NVM_CD_FLAGS} */
 export const NVM_CD_FLAGS = "-q";
@@ -46,6 +46,9 @@ export const TERM_PROGRAM_VERSION = "1.70.0";
 
 /** @type {import('$env/static/private').CONDA_PROMPT_MODIFIER} */
 export const CONDA_PROMPT_MODIFIER = "(base) ";
+
+/** @type {import('$env/static/private').ZDOTDIR} */
+export const ZDOTDIR = "/var/folders/_4/36h6xbsn0f9bkr1tyj2f50fr0000gn/T/vscode-zsh";
 
 /** @type {import('$env/static/private').ORIGINAL_XDG_CURRENT_DESKTOP} */
 export const ORIGINAL_XDG_CURRENT_DESKTOP = "undefined";
@@ -160,6 +163,9 @@ export const _CE_M = "";
 
 /** @type {import('$env/static/private').XPC_SERVICE_NAME} */
 export const XPC_SERVICE_NAME = "0";
+
+/** @type {import('$env/static/private').VSCODE_INJECTION} */
+export const VSCODE_INJECTION = "1";
 
 /** @type {import('$env/static/private').SHLVL} */
 export const SHLVL = "2";

@@ -3,7 +3,7 @@
 import P5 from 'p5-svelte';
 import { onMount } from 'svelte';
 let hasMounted = false;
-let sketchWidth = 400;
+let sketchWidth = 10;
 onMount(async() => {
         let element = document.getElementById('SubsystemSketch');
         sketchWidth = element.offsetWidth;
@@ -25,8 +25,8 @@ onMount(async() => {
   let img;
   let temp_img;
   
-  let DRAWPROB = 0.2;
-  let THRESHDISTANCE  = 55;
+  let DRAWPROB = 0.1;
+  let THRESHDISTANCE  = 40;
   let MobileThreshold = 600;
   let DELAY = 1;
   let buttonFont;
@@ -175,7 +175,7 @@ onMount(async() => {
     
   }
     p5.preload = () => {
-      pointData=p5.loadTable("/creativeCodingSketch/data/points1.5k.csv",'csv');
+      // pointData=p5.loadTable("/creativeCodingSketch/data/points1.5k.csv",'csv');
       pointDataSmall=p5.loadTable("/creativeCodingSketch/data/pointsmobile.csv",'csv');
       
       img = p5.loadImage('/creativeCodingSketch/data/4.png');
@@ -190,6 +190,7 @@ onMount(async() => {
     
     tableHelper();
     p5.createCanvas(1440, 1024);
+    p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
     
     
     reset();
@@ -225,10 +226,10 @@ onMount(async() => {
   }
   
   function tableHelper(){
-    for (let r = 0; r < pointData.getRowCount(); r++){
+    for (let r = 0; r < pointDataSmall.getRowCount(); r++){
       
-      pointsX.push(pointData.getString(r,0));
-      pointsY.push(pointData.getString(r,1));
+      pointsX.push(pointDataSmall.getString(r,0));
+      pointsY.push(pointDataSmall.getString(r,1));
     
     
     }
@@ -398,7 +399,7 @@ onMount(async() => {
     Neurons=[];
     let idx=0;
     if (p5.windowWidth>MobileThreshold){
-      numNeurons=pointData.getRowCount();
+      numNeurons=pointDataSmall.getRowCount();
   
       while (Neurons.length<numNeurons){
         p5.angleMode=p5.RADIANS;
@@ -480,7 +481,7 @@ onMount(async() => {
         height: 100%;
         background-color: var(--white);
         z-index: -1;
-        overflow: hidden;
+        /* overflow: hidden; */
     }
 </style>
   
