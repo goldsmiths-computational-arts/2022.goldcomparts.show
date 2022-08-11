@@ -1,18 +1,18 @@
-import { c as create_ssr_component, v as validate_component } from "../../internal/immutable/chunks/index-93124d4c.js";
-/* empty css                                            */import { S as Seo } from "../../internal/immutable/chunks/Seo-9d6c2f37.js";
+import { c as create_ssr_component, v as validate_component } from "../../internal/immutable/chunks/index-67574ba7.js";
+/* empty css                                            */import { S as Seo } from "../../internal/immutable/chunks/Seo-6b61412b.js";
 const SubsystemSketch_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: ".div__SketchWrapper.svelte-1gaf7vy{position:absolute;width:100%;height:100%;background-color:var(--white);z-index:-1}",
+  code: ".div__SketchWrapper.svelte-1nbtkwx{position:absolute;width:100%;height:100%;background-color:var(--white);z-index:-1}",
   map: null
 };
 const SubsystemSketch = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$1);
-  return `<div id="${"SubsystemSketch"}" class="${"div__SketchWrapper svelte-1gaf7vy"}">${``}
+  return `<div id="${"SubsystemSketch"}" class="${"div__SketchWrapper svelte-1nbtkwx"}">${``}
 </div>`;
 });
 const index_svelte_svelte_type_style_lang = "";
 const css = {
-  code: 'main.svelte-1phep9q{flex:1;display:flex;flex-direction:column;padding:1rem;width:100%;max-width:1024px;margin:0 auto;box-sizing:border-box}h1.svelte-1phep9q{font-family:"Neutraface Slab Display TT Light";font-weight:lighter}#title-container.svelte-1phep9q{width:100%;align-items:left;padding:500px 0px 50px 100px}#main-title.svelte-1phep9q{font-size:60px;text-align:left}',
+  code: 'main.svelte-augaqv{flex:1;display:flex;flex-direction:column;padding:1rem;width:100%;max-width:1024px;margin:0 auto;box-sizing:border-box;background-color:rgba(255, 255, 255, 0.5)}h1.svelte-augaqv{font-family:"Neutraface Slab Display TT Light";font-weight:lighter}#title-container.svelte-augaqv{width:100%;align-items:left;padding:100px 0px 20px 10px}#main-title.svelte-augaqv{font-size:60px;text-align:left}p.svelte-augaqv{margin:5px;padding-top:10px}',
   map: null
 };
 const prerender = true;
@@ -21,10 +21,21 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `${validate_component(Seo, "Seo").$$render($$result, { title: "Home Page" }, {}, {})}
 
 ${validate_component(SubsystemSketch, "SubsystemSketch").$$render($$result, {}, {}, {})}
-<main class="${"svelte-1phep9q"}"><div id="${"title-container"}" class="${"svelte-1phep9q"}"><h2>The Computational Arts MA/MFA Degree Show</h2>
-		<h1 id="${"main-title"}" class="${"svelte-1phep9q"}">(SUB)<br>SYSTEMS</h1>
+
+<main class="${"svelte-augaqv"}"><div id="${"title-container"}" class="${"svelte-augaqv"}"><h2>The Computational Arts MA/MFA Degree Show</h2>
+		<h1 id="${"main-title"}" class="${"svelte-augaqv"}">(SUB)<br>SYSTEMS</h1>
 		<h2>1st-4th September 2022</h2></div>
-	<div class="${"footer_spacing"}"></div> 
+
+	${``}
+
+	
+	${`<div id="${"press-release"}"><p class="${"svelte-augaqv"}">As a storm moves past, it leaves in its wake droplets of water that can nourish, carve and bury the ground below. While its chemical undergoings sustain life as we know it, species morph and symbiosis automates again within renewed landscapes. This interplay of systems, geological, atmospheric and biological, gets iterated and entangled in technology. 
+		</p>
+		<p class="${"svelte-augaqv"}">The 2022 Goldsmiths MA/MFA Computational Arts programme invites you to SubSystems, an exhibition that highlights and explores the nuanced relationships that artists have with technology and new media in contemporary times. Artists in this exhibition trace the ways in which environments are remoulded as arrays of components, the remembering and anticipation time is reshaped by speculative computation, identities are formed in the linkage of users and digital devices, and power structures and biases are reproduced in the sedimentation of datasets. Operating as both discrete modules but also a chorus of interconnected components, their works exist as systems within systems, subsystems of information, matter and behaviour.
+		</p>
+		<p class="${"svelte-augaqv"}">Featuring more than 70 ground-breaking immersive performances, interactive installations, virtual and augmented realities and experimental narratives, the interdisciplinary nature of SubSystems begin to suggest how physical and creative computation has shaped the world we live in, and offers a glimpse into the future of the ever-evolving state of computational arts.
+		</p></div>`}
+
 </main>`;
 });
 export {

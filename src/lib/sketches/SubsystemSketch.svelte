@@ -191,6 +191,7 @@ onMount(async() => {
     tableHelper();
     p5.createCanvas(1440, 1024);
     p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
+    p5.frameRate(10);
     
     
     reset();

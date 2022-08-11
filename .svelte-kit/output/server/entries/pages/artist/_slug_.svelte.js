@@ -1,8 +1,32 @@
-import { c as create_ssr_component, a as subscribe, e as escape } from "../../../internal/immutable/chunks/index-93124d4c.js";
-import { p as page } from "../../../internal/immutable/chunks/stores-f15f0229.js";
+import { g as getContext, c as create_ssr_component, b as subscribe, e as escape } from "../../../internal/immutable/chunks/index-67574ba7.js";
 import { d as dev, b as browser } from "../../../internal/immutable/chunks/env-57855b65.js";
 /* empty css                                               */import { D as DataManager } from "../../../internal/immutable/chunks/data-manager-5c72f515.js";
 import "lodash-es";
+const getStores = () => {
+  const stores = getContext("__svelte__");
+  return {
+    page: {
+      subscribe: stores.page.subscribe
+    },
+    navigating: {
+      subscribe: stores.navigating.subscribe
+    },
+    get preloading() {
+      console.error("stores.preloading is deprecated; use stores.navigating instead");
+      return {
+        subscribe: stores.navigating.subscribe
+      };
+    },
+    session: stores.session,
+    updated: stores.updated
+  };
+};
+const page = {
+  subscribe(fn) {
+    const store = getStores().page;
+    return store.subscribe(fn);
+  }
+};
 const _slug__svelte_svelte_type_style_lang = "";
 const css = {
   code: "h1.svelte-1a141io.svelte-1a141io{text-align:left}p.svelte-1a141io.svelte-1a141io{margin:1rem 0}ul.svelte-1a141io.svelte-1a141io{list-style-type:none}img.svelte-1a141io.svelte-1a141io{width:100%}.content_container.svelte-1a141io.svelte-1a141io{width:100%;display:block}.keywords.svelte-1a141io a.svelte-1a141io{padding:5px;border:1px solid var(--black);border-radius:5px}.keywords.svelte-1a141io.svelte-1a141io{display:flex;justify-content:space-between;padding:0;margin-top:5%}.img_responsive.svelte-1a141io.svelte-1a141io{height:500px;width:100%;object-fit:cover}.img_art.svelte-1a141io.svelte-1a141io{width:100%}.artist_wrap.svelte-1a141io.svelte-1a141io{width:100%;margin:1rem;padding:0}.txt_wrap.svelte-1a141io.svelte-1a141io{width:95%;margin:1rem;padding:0}@media(min-width: 800px){.content_container.svelte-1a141io.svelte-1a141io{width:100%;display:flex;justify-content:space-between}.txt_wrap.svelte-1a141io.svelte-1a141io{width:50%}.artist_wrap.svelte-1a141io.svelte-1a141io{width:50%}.img_art.svelte-1a141io.svelte-1a141io{width:50%;margin:1rem}}",
@@ -42,10 +66,10 @@ const U5Bslugu5D = create_ssr_component(($$result, $$props, $$bindings, slots) =
 
         <div class="${"txt_wrap svelte-1a141io"}"><h2>${escape(artist.subtitle)}</h2>
             <p class="${"svelte-1a141io"}">${escape(artist.description)}</p>
-            <div id="${"icons"}"><a href="${"https://www.gold.ac.uk/pg/mfa-computational-arts/"}"><img src="${"svg/icon-20-20-web-blackbg.svg"}" class="${"icon-2020vimeo_blackbg svelte-1a141io"}" alt="${"website icon"}"></a>
-                <a href="${"https://www.instagram.com/goldsmithscomparts/"}"><img src="${"svg/icon-20-20-instagram-blackbg.svg"}" class="${"icon-2020vimeo_blackbg svelte-1a141io"}" alt="${"instagram icon"}"></a>
-                <a href="${"https://vimeo.com/showcase/9464762"}"><img src="${"svg/icon-20-20-vimeo-blackbg.svg"}" class="${"icon-2020vimeo_blackbg svelte-1a141io"}" alt="${"vimeo icon"}"></a>
-                <a href="${"https://vimeo.com/showcase/9464762"}"><img src="${"svg/icon-20-20-vimeo-blackbg.svg"}" class="${"icon-2020vimeo_blackbg svelte-1a141io"}" alt="${"youtuve icon"}"></a></div></div>
+            <div id="${"icons"}"><a href="${"https://www.gold.ac.uk/pg/mfa-computational-arts/"}"><img src="${"/svg/icon-20-20-web-blackbg.svg"}" class="${"icon-2020vimeo_blackbg svelte-1a141io"}" alt="${"website icon"}"></a>
+                <a href="${"https://www.instagram.com/goldsmithscomparts/"}"><img src="${"/svg/icon-20-20-instagram-blackbg.svg"}" class="${"icon-2020vimeo_blackbg svelte-1a141io"}" alt="${"instagram icon"}"></a>
+                <a href="${"https://vimeo.com/showcase/9464762"}"><img src="${"/svg/icon-20-20-vimeo-blackbg.svg"}" class="${"icon-2020vimeo_blackbg svelte-1a141io"}" alt="${"vimeo icon"}"></a>
+                <a href="${"https://vimeo.com/showcase/9464762"}"><img src="${"/svg/icon-20-20-vimeo-blackbg.svg"}" class="${"icon-2020vimeo_blackbg svelte-1a141io"}" alt="${"youtuve icon"}"></a></div></div>
 
 </div>`;
 });
