@@ -18,10 +18,10 @@
   export const prerender = true;
 
   const artist = DataManager.getArtist($page.params.slug);
-  
+  console.log('ARTIST', artist)
 </script>
 
-<img class="img_responsive" src="/img/1.png" alt="img-description" />
+<img class="img_responsive" src={artist.images_link[0]} alt="img-description" />
 
 <div class="content_container">
   <div class="artist_wrap">
