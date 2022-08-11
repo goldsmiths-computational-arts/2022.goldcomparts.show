@@ -181,8 +181,8 @@ onMount(async() => {
       img = p5.loadImage('/creativeCodingSketch/data/4.png');
       
       
-      buttonFont = p5.loadFont('/creativeCodingSketch/fonts/DotGothic16-Regular.ttf');
-      titleFont = p5.loadFont('/creativeCodingSketch/fonts/Neutraface_Slab_Display_Light.otf');
+      // buttonFont = p5.loadFont('/creativeCodingSketch/fonts/DotGothic16-Regular.ttf');
+      // titleFont = p5.loadFont('/creativeCodingSketch/fonts/Neutraface_Slab_Display_Light.otf');
     }
   
   p5.setup = () => {

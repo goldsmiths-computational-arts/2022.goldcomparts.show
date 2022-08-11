@@ -3,10 +3,10 @@
 	import { base, assets } from '$app/paths';
 	import Seo from '$lib/seo/Seo.svelte';
 	import SubsystemSketch from '$lib/sketches/SubsystemSketch.svelte';
-  import { onMount } from 'svelte'
+  	import { onMount } from 'svelte'
 	import '../app.css';
 
-	let fullSite = false;
+	let fullSite = true;
 </script>
 
 <Seo title="Home Page" />

@@ -1,7 +1,7 @@
 <script>
 	import Header from '$lib/header/Header.svelte';
 
-	let fullSite = false;
+	let fullSite = true;
 </script>
 
 <main>
