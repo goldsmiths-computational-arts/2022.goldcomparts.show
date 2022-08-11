@@ -4,9 +4,6 @@
   import "../../app.css";
   import { DataManager } from "../../lib/util/data-manager";
 
-
-  console.log("oi", $page.params);
-
   //   const artwork =  DataManager.getArtwork($page.params.slug);
   //   const artist =  DataManager.getArtist($page.params.slug);
   //   console.log(artwork)
