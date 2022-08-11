@@ -2,8 +2,8 @@
   import { page } from "$app/stores";
   import { browser, dev } from "$app/env";
   import "../../app.css";
-
   import { DataManager } from "../../lib/util/data-manager";
+
 
   console.log("oi", $page.params);
 
@@ -26,7 +26,7 @@
   export const prerender = true;
 
   const artist = DataManager.getArtist($page.params.slug);
-  console.log("ART", artist);
+  
 </script>
 
 <img class="img_responsive" src="/img/1.png" alt="img-description" />
@@ -73,7 +73,6 @@
         />
       </a>
       {/if}
-
       {#if artist.instagram}
 
       <a href="https://www.instagram.com/{artist.instagram}/">

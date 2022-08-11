@@ -1,5 +1,5 @@
-import { c as create_ssr_component, v as validate_component } from "../../internal/immutable/chunks/index-93124d4c.js";
-import { S as Seo } from "../../internal/immutable/chunks/Seo-9d6c2f37.js";
+import { c as create_ssr_component, v as validate_component } from "../../internal/immutable/chunks/index-67574ba7.js";
+import { S as Seo } from "../../internal/immutable/chunks/Seo-6b61412b.js";
 /* empty css                                            */import { d as dev, b as browser } from "../../internal/immutable/chunks/env-57855b65.js";
 const about_svelte_svelte_type_style_lang = "";
 const css = {

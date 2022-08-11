@@ -11,12 +11,16 @@
 
 }
 
+/* debug
+* {
+    border: 1px solid red;
+} */
+
 body {
 	position: relative;
 	min-height: 100vh;
 	width: 100%;
 	margin: 0;
-	overflow:hidden;
 }
 
 body::before {
