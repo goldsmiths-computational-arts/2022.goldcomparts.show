@@ -65,7 +65,7 @@
     <p>{artist.description}</p>
     <div id="icons">
       {#if artist.website}
-      <a href={artist.website}>
+      <a href={artist.website} target="_blank" >
         <img
           src="/svg/icon-20-20-web-blackbg.svg"
           class="img--social_icons"
@@ -75,7 +75,7 @@
       {/if}
       {#if artist.instagram}
 
-      <a href="https://www.instagram.com/{artist.instagram}/">
+      <a target="_blank" href="https://www.instagram.com/{artist.instagram}/">
         <img
           src="/svg/icon-20-20-instagram-blackbg.svg"
           class="img--social_icons"
@@ -86,7 +86,7 @@
 
       {#if artist.vimeo}
 
-      <a href="https://vimeo.com/showcase/9464762">
+      <a href={artist.vimeo} target="_blank" >
         <img
           src="/svg/icon-20-20-vimeo-blackbg.svg"
           class="img--social_icons"
@@ -96,7 +96,7 @@
       {/if}
 
       {#if artist.youtube}
-      <a href={artist.youtube}>
+      <a href={artist.youtube} target="_blank" >
         <img
           src="/svg/icon-20-20-vimeo-blackbg.svg"
           class="img--social_icons"
