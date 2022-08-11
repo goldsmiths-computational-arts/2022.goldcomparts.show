@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build && touch ./docs/.nojekyll && echo '2022.goldcomparts.show' > CNAME",
+		"build": "vite build && touch ./docs/.nojekyll && echo '2022.goldcomparts.show' > ./docs/CNAME",
 		"package": "svelte-kit package",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync",

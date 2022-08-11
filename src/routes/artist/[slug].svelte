@@ -2,7 +2,7 @@
   import { page } from "$app/stores";
   import { browser, dev } from "$app/env";
   import "../../app.css";
-
+  import { base, assets } from '$app/paths';
  import {DataManager } from '../../lib/util/data-manager'
 
 
@@ -71,19 +71,19 @@
             <p> {artist.description}</p>
             <div id="icons">
                 <a href="https://www.gold.ac.uk/pg/mfa-computational-arts/">
-                    <img src="svg/icon-20-20-web-blackbg.svg"
+                    <img src="/svg/icon-20-20-web-blackbg.svg"
                     class="icon-2020vimeo_blackbg" alt="website icon">
                 </a>
                 <a href="https://www.instagram.com/goldsmithscomparts/">
-                    <img src="svg/icon-20-20-instagram-blackbg.svg"
+                    <img src="/svg/icon-20-20-instagram-blackbg.svg"
                     class="icon-2020vimeo_blackbg" alt="instagram icon">
                 </a>
                 <a href="https://vimeo.com/showcase/9464762">
-                    <img src="svg/icon-20-20-vimeo-blackbg.svg"
+                    <img src="/svg/icon-20-20-vimeo-blackbg.svg"
                     class="icon-2020vimeo_blackbg" alt="vimeo icon">
                 </a>
                 <a href="https://vimeo.com/showcase/9464762">
-                    <img src="svg/icon-20-20-vimeo-blackbg.svg"
+                    <img src="/svg/icon-20-20-vimeo-blackbg.svg"
                     class="icon-2020vimeo_blackbg" alt="youtuve icon">
                 </a>
             </div>
