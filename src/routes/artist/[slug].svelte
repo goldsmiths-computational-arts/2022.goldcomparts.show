@@ -4,11 +4,6 @@
   import "../../app.css";
   import { DataManager } from "../../lib/util/data-manager";
 
-  //   const artwork =  DataManager.getArtwork($page.params.slug);
-  //   const artist =  DataManager.getArtist($page.params.slug);
-  //   console.log(artwork)
-  //   console.log(artist)
-
   let images = [1, 2, 3, 4];
   // we don't need any JS on this page, though we'll load
   // it in dev so that we get hot module replacement...
