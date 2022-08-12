@@ -85,7 +85,7 @@
       "_app-2fbb1765.js"
     ],
     "css": [
-      "internal/immutable/assets/index-8b75105a.css"
+      "internal/immutable/assets/index-4ebe2c82.css"
     ]
   },
   "src/routes/location.svelte": {
@@ -135,7 +135,7 @@
       "_index-67574ba7.js"
     ],
     "css": [
-      "internal/immutable/assets/app-52a42ce2.css"
+      "internal/immutable/assets/app-c84abb28.css"
     ],
     "assets": [
       "internal/immutable/assets/fira-mono-cyrillic-ext-400-normal-3df7909e.woff2",
