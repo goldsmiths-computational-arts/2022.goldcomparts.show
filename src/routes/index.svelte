@@ -46,6 +46,8 @@
 
 
 <style>
+	
+
 	main {
 		flex: 1;
 		display: flex;
@@ -60,8 +62,9 @@
 	}
 
 	h1{
-		font-family: "Neutraface Slab Display TT Light";
-		font-weight: lighter;
+		font-family: NeutrafaceSlabDisplay;
+		font-weight: 300;
+		
 	}
 	section {
 		display: flex;
