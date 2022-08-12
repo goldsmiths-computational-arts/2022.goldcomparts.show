@@ -7,6 +7,7 @@
 	font-weight: 300;
 	src: url('/fonts/Neutraface_Slab_Display_Light.otf');
 }
+
 :root {
 	font-family: DotGothic16;
 	--black: #151515;
