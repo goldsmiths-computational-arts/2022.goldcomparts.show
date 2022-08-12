@@ -1,6 +1,6 @@
 
-import ArtistCSV from '../data/artists.tsv'
-import AdditionalArtistCSV from '../data/threeArtists.tsv'
+import ArtistTSV from '../data/artist.tsv'
+import ArtistCSV from '../data/artists.csv'
 import { shuffle } from 'lodash-es';
 import { slugify } from './helper';
 
@@ -14,9 +14,9 @@ export class DataManager {
      * @memberof DataManager
      */
     static getArtistList() {
-        let artists =  ArtistCSV;
-        let additionalArtists = AdditionalArtistCSV
-        artists = artists.concat(additionalArtists);
+        let artists =  ArtistTSV;
+        // let additionalArtists = AdditionalArtistCSV
+        // artists = artists.concat(additionalArtists);
         artists = artists.map((artist) => {
             return slugify(artist);
         })
