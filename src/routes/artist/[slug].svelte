@@ -18,7 +18,13 @@
   export const prerender = true;
 
   const artist = DataManager.getArtist($page.params.slug);
-  
+
+  const createWebsiteUrl = (website) => {
+    if(!website.includes('http')){
+      website = 'https://' + website;
+    }
+    return website;
+  }
 </script>
 
 <img class="img_responsive" src="/img/1.png" alt="img-description" />
@@ -57,7 +63,7 @@
     <p>{artist.description}</p>
     <div id="icons">
       {#if artist.website}
-      <a href={artist.website} target="_blank" >
+      <a href={createWebsiteUrl(artist.website)} target="_blank" >
         <img
           src="/svg/icon-20-20-web-blackbg.svg"
           class="img--social_icons"
