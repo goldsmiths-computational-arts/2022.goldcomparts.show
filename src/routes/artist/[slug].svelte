@@ -19,12 +19,21 @@
 
   const artist = DataManager.getArtist($page.params.slug);
 
+
   const createWebsiteUrl = (website) => {
     if(!website.includes('http')){
       website = 'https://' + website;
     }
     return website;
   }
+
+  import webImg from '$lib/svg/icon-20-20-web-blackbg.svg';
+  import vimeo from '$lib/svg/icon-20-20-vimeo-blackbg.svg';
+  import instagramImg from '$lib/svg/icon-20-20-instagram-blackbg.svg'
+
+import Artworks from "../artworks.svelte";
+  
+
 </script>
 
 <img class="img_responsive" src="/img/1.png" alt="img-description" />
@@ -65,17 +74,17 @@
       {#if artist.website}
       <a href={createWebsiteUrl(artist.website)} target="_blank" >
         <img
-          src="/svg/icon-20-20-web-blackbg.svg"
+          src={webImg}
+
           class="img--social_icons"
           alt="website icon"
         />
       </a>
       {/if}
       {#if artist.instagram}
-
       <a target="_blank" href="https://www.instagram.com/{artist.instagram}/">
         <img
-          src="/svg/icon-20-20-instagram-blackbg.svg"
+          src={instagramImg}
           class="img--social_icons"
           alt="instagram icon"
         />
@@ -86,7 +95,7 @@
 
       <a href={artist.vimeo} target="_blank" >
         <img
-          src="/svg/icon-20-20-vimeo-blackbg.svg"
+          src={vimeo}
           class="img--social_icons"
           alt="vimeo icon"
         />
@@ -96,7 +105,7 @@
       {#if artist.youtube}
       <a href={artist.youtube} target="_blank" >
         <img
-          src="/svg/icon-20-20-vimeo-blackbg.svg"
+          src={vimeo}
           class="img--social_icons"
           alt="youtube icon"
         />
