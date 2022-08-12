@@ -34,7 +34,7 @@
 	<div class="artists_grid">
 
 		{#each artists as artist}
-			<a  class="link_tile" sveltekit:prefetch href="{base}/artist/{artist.slug}">
+			<a class="link_tile" sveltekit:prefetch href="{base}/artist/{artist.slug}">
 				<div class="image_tile">
 					<img class="img_responsive" src="/img/1.png" alt="img" />
 					<h3 class="art_title"> {artist.title}</h3>

@@ -1,7 +1,7 @@
 <script>
 	import Header from '$lib/header/Header.svelte';
 
-	let fullSite = true;
+	let fullSite = false;
 </script>
 
 <main>
@@ -37,15 +37,15 @@
 			</div>
 			<div class="icons_wrap">
 				<a href="https://www.gold.ac.uk/pg/mfa-computational-arts/">
-					<img src="svg/icon-20-20-web-blackbg.svg"
+					<img src="/svg/icon-20-20-web-blackbg.svg"
 					class="website" alt="website icon">
 				</a>
 				<a href="https://www.instagram.com/goldsmithscomparts/">
-					<img src="svg/icon-20-20-instagram-blackbg.svg"
+					<img src="/svg/icon-20-20-instagram-blackbg.svg"
 					class="instagram" alt="instagram icon">
 				</a>
 				<a href="https://vimeo.com/showcase/9464762">
-					<img src="svg/icon-20-20-vimeo-blackbg.svg"
+					<img src="/svg/icon-20-20-vimeo-blackbg.svg"
 					class="vimeo" alt="vimeo icon">
 				</a>
 			</div>
