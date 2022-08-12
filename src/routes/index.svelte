@@ -3,7 +3,7 @@
 	import { base, assets } from '$app/paths';
 	import Seo from '$lib/seo/Seo.svelte';
 	import SubsystemSketch from '$lib/sketches/SubsystemSketch.svelte';
-  import { onMount } from 'svelte'
+  	import { onMount } from 'svelte'
 	import '../app.css';
 
 	let fullSite = false;
@@ -17,7 +17,10 @@
 	<div id="title-container">
 		<h2>The Computational Arts MA/MFA Degree Show</h2>
 		<h1 id="main-title">(SUB)<br>SYSTEMS</h1>
-		<h2>1st-4th September 2022</h2>
+		<h2>Opening Night Sept 1st 6pm - 9:30pm</h2>
+		<h3>Sept 2nd 11am - 8pm</h3>
+		<h3>Sept 3rd 11am - 8pm</h3>
+		<h3>Sept 4th 11am - 6pm</h3>
 	</div>
 
 	{#if fullSite}

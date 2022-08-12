@@ -1,6 +1,6 @@
 import { c as create_ssr_component, v as validate_component } from "../../internal/immutable/chunks/index-67574ba7.js";
-import { S as Seo } from "../../internal/immutable/chunks/Seo-6b61412b.js";
-/* empty css                                            */import { d as dev, b as browser } from "../../internal/immutable/chunks/env-57855b65.js";
+import { S as Seo } from "../../internal/immutable/chunks/app-2fbb1765.js";
+import { d as dev, b as browser } from "../../internal/immutable/chunks/env-57855b65.js";
 const about_svelte_svelte_type_style_lang = "";
 const css = {
   code: "h3.svelte-zr6nvb.svelte-zr6nvb{margin:1rem 0}.opening_wrap.svelte-zr6nvb.svelte-zr6nvb{width:50%;margin:2rem}.opening_wrap.svelte-zr6nvb hr.svelte-zr6nvb{margin:0.5rem 0;padding:0}.content_wrap.svelte-zr6nvb.svelte-zr6nvb{width:100%;margin:2rem}",

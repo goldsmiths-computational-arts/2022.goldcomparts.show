@@ -1,7 +1,9 @@
-import { g as getContext, c as create_ssr_component, b as subscribe, e as escape } from "../../../internal/immutable/chunks/index-67574ba7.js";
+import { g as getContext, c as create_ssr_component, b as subscribe, e as escape, a as add_attribute } from "../../../internal/immutable/chunks/index-67574ba7.js";
 import { d as dev, b as browser } from "../../../internal/immutable/chunks/env-57855b65.js";
-/* empty css                                               */import { D as DataManager } from "../../../internal/immutable/chunks/data-manager-5c72f515.js";
+import "../../../internal/immutable/chunks/app-2fbb1765.js";
+import { D as DataManager } from "../../../internal/immutable/chunks/artworks-5d04488f.js";
 import "lodash-es";
+import "../../../internal/immutable/chunks/paths-86ffdd15.js";
 const getStores = () => {
   const stores = getContext("__svelte__");
   return {
@@ -27,20 +29,21 @@ const page = {
     return store.subscribe(fn);
   }
 };
+const webImg = "/internal/immutable/assets/icon-20-20-web-blackbg-a3f17882.svg";
+const vimeo = "/internal/immutable/assets/icon-20-20-vimeo-blackbg-306518c0.svg";
+const instagramImg = "/internal/immutable/assets/icon-20-20-instagram-blackbg-2c7ed331.svg";
 const _slug__svelte_svelte_type_style_lang = "";
 const css = {
-  code: "h1.svelte-1a141io.svelte-1a141io{text-align:left}p.svelte-1a141io.svelte-1a141io{margin:1rem 0}ul.svelte-1a141io.svelte-1a141io{list-style-type:none}img.svelte-1a141io.svelte-1a141io{width:100%}.content_container.svelte-1a141io.svelte-1a141io{width:100%;display:block}.keywords.svelte-1a141io a.svelte-1a141io{padding:5px;border:1px solid var(--black);border-radius:5px}.keywords.svelte-1a141io.svelte-1a141io{display:flex;justify-content:space-between;padding:0;margin-top:5%}.img_responsive.svelte-1a141io.svelte-1a141io{height:500px;width:100%;object-fit:cover}.img_art.svelte-1a141io.svelte-1a141io{width:100%}.artist_wrap.svelte-1a141io.svelte-1a141io{width:100%;margin:1rem;padding:0}.txt_wrap.svelte-1a141io.svelte-1a141io{width:95%;margin:1rem;padding:0}@media(min-width: 800px){.content_container.svelte-1a141io.svelte-1a141io{width:100%;display:flex;justify-content:space-between}.txt_wrap.svelte-1a141io.svelte-1a141io{width:50%}.artist_wrap.svelte-1a141io.svelte-1a141io{width:50%}.img_art.svelte-1a141io.svelte-1a141io{width:50%;margin:1rem}}",
+  code: "h1.svelte-iqaq1c.svelte-iqaq1c{text-align:left}p.svelte-iqaq1c.svelte-iqaq1c{margin:1rem 0}ul.svelte-iqaq1c.svelte-iqaq1c{list-style-type:none}img.svelte-iqaq1c.svelte-iqaq1c{width:100%}#icons.svelte-iqaq1c.svelte-iqaq1c{display:flex;flex-direction:row}.img--social_icons.svelte-iqaq1c.svelte-iqaq1c{background:black;margin:0.25rem}.content_container.svelte-iqaq1c.svelte-iqaq1c{width:100%;display:block}.keywords.svelte-iqaq1c a.svelte-iqaq1c{padding:5px;border:1px solid var(--black);border-radius:5px}.keywords.svelte-iqaq1c.svelte-iqaq1c{display:flex;justify-content:space-between;padding:0;margin-top:5%}.img_responsive.svelte-iqaq1c.svelte-iqaq1c{height:500px;width:100%;object-fit:cover}.img_art.svelte-iqaq1c.svelte-iqaq1c{width:100%}.artist_wrap.svelte-iqaq1c.svelte-iqaq1c{width:100%;margin:1rem;padding:0}.txt_wrap.svelte-iqaq1c.svelte-iqaq1c{width:95%;margin:1rem;padding:0}@media(min-width: 800px){.content_container.svelte-iqaq1c.svelte-iqaq1c{width:100%;display:flex;justify-content:space-between}.txt_wrap.svelte-iqaq1c.svelte-iqaq1c{width:50%}.artist_wrap.svelte-iqaq1c.svelte-iqaq1c{width:50%}.img_art.svelte-iqaq1c.svelte-iqaq1c{width:50%;margin:1rem}}",
   map: null
 };
 const U5Bslugu5D = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $page, $$unsubscribe_page;
   $$unsubscribe_page = subscribe(page, (value) => $page = value);
-  console.log("oi", $page.params);
   const hydrate = dev;
   const router = browser;
   const prerender = true;
-  const artist = DataManager.getArtistList()[0];
-  console.log("ART", artist);
+  const artist = DataManager.getArtist($page.params.slug);
   if ($$props.hydrate === void 0 && $$bindings.hydrate && hydrate !== void 0)
     $$bindings.hydrate(hydrate);
   if ($$props.router === void 0 && $$bindings.router && router !== void 0)
@@ -49,28 +52,28 @@ const U5Bslugu5D = create_ssr_component(($$result, $$props, $$bindings, slots) =
     $$bindings.prerender(prerender);
   $$result.css.add(css);
   $$unsubscribe_page();
-  return `<img class="${"img_responsive svelte-1a141io"}" src="${"/img/1.png"}" alt="${"img-description"}">
+  return `<img class="${"img_responsive svelte-iqaq1c"}" src="${"/img/1.png"}" alt="${"img-description"}">
 
-<div class="${"content_container svelte-1a141io"}"><div class="${"artist_wrap svelte-1a141io"}"><h1 class="${"svelte-1a141io"}">${escape(artist.name)}</h1>
-        <h2>${escape(artist.title)}</h2></div>
+<div class="${"content_container svelte-iqaq1c"}"><div class="${"artist_wrap svelte-iqaq1c"}"><h1 class="${"svelte-iqaq1c"}">${escape(artist.name)}</h1>
+    <h2>${escape(artist.title)}</h2></div>
 
-    <div class="${"txt_wrap svelte-1a141io"}"><p class="${"svelte-1a141io"}">${escape(artist.bio)}</p>
-        <ul class="${"keywords svelte-1a141io"}"><li><a href="${"/"}" class="${"svelte-1a141io"}">Your Moma</a></li>
-            <li><a href="${"/"}" class="${"svelte-1a141io"}">Digital bitch</a></li>
-            <li><a href="${"/"}" class="${"svelte-1a141io"}">AI hard bicepts</a></li></ul></div></div>
+  <div class="${"txt_wrap svelte-iqaq1c"}"><p class="${"svelte-iqaq1c"}">${escape(artist.bio)}</p>
+    <ul class="${"keywords svelte-iqaq1c"}"><li><a href="${"/"}" class="${"svelte-iqaq1c"}">Keyword 1</a></li>
+      <li><a href="${"/"}" class="${"svelte-iqaq1c"}">Keyword 2</a></li>
+      <li><a href="${"/"}" class="${"svelte-iqaq1c"}">Keyword 3</a></li></ul></div></div>
 
 <hr>
 
+<div class="${"content_container svelte-iqaq1c"}"><div class="${"img_art svelte-iqaq1c"}"><img src="${"/img/3.png"}" alt="${"img-description"}" class="${"svelte-iqaq1c"}"></div>
 
-<div class="${"content_container svelte-1a141io"}"><div class="${"img_art svelte-1a141io"}"><img src="${"/img/3.png"}" alt="${"img-description"}" class="${"svelte-1a141io"}"></div>
+  <div class="${"txt_wrap svelte-iqaq1c"}"><h2>${escape(artist.subtitle)}</h2>
+    <p class="${"svelte-iqaq1c"}">${escape(artist.description)}</p>
+    <div id="${"icons"}" class="${"svelte-iqaq1c"}">${artist.website ? `<a href="${"https://" + escape(artist.website, true)}" target="${"_blank"}"><img${add_attribute("src", webImg, 0)} class="${"img--social_icons svelte-iqaq1c"}" alt="${"website icon"}"></a>` : ``}
+      ${artist.instagram ? `<a target="${"_blank"}" href="${"https://www.instagram.com/" + escape(artist.instagram, true) + "/"}"><img${add_attribute("src", instagramImg, 0)} class="${"img--social_icons svelte-iqaq1c"}" alt="${"instagram icon"}"></a>` : ``}
 
-        <div class="${"txt_wrap svelte-1a141io"}"><h2>${escape(artist.subtitle)}</h2>
-            <p class="${"svelte-1a141io"}">${escape(artist.description)}</p>
-            <div id="${"icons"}"><a href="${"https://www.gold.ac.uk/pg/mfa-computational-arts/"}"><img src="${"/svg/icon-20-20-web-blackbg.svg"}" class="${"icon-2020vimeo_blackbg svelte-1a141io"}" alt="${"website icon"}"></a>
-                <a href="${"https://www.instagram.com/goldsmithscomparts/"}"><img src="${"/svg/icon-20-20-instagram-blackbg.svg"}" class="${"icon-2020vimeo_blackbg svelte-1a141io"}" alt="${"instagram icon"}"></a>
-                <a href="${"https://vimeo.com/showcase/9464762"}"><img src="${"/svg/icon-20-20-vimeo-blackbg.svg"}" class="${"icon-2020vimeo_blackbg svelte-1a141io"}" alt="${"vimeo icon"}"></a>
-                <a href="${"https://vimeo.com/showcase/9464762"}"><img src="${"/svg/icon-20-20-vimeo-blackbg.svg"}" class="${"icon-2020vimeo_blackbg svelte-1a141io"}" alt="${"youtuve icon"}"></a></div></div>
+      ${artist.vimeo ? `<a${add_attribute("href", artist.vimeo, 0)} target="${"_blank"}"><img${add_attribute("src", vimeo, 0)} class="${"img--social_icons svelte-iqaq1c"}" alt="${"vimeo icon"}"></a>` : ``}
 
+      ${artist.youtube ? `<a${add_attribute("href", artist.youtube, 0)} target="${"_blank"}"><img${add_attribute("src", vimeo, 0)} class="${"img--social_icons svelte-iqaq1c"}" alt="${"youtube icon"}"></a>` : ``}</div></div>
 </div>`;
 });
 export {

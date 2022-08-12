@@ -1,5 +1,5 @@
 import { c as create_ssr_component, v as validate_component } from "../../internal/immutable/chunks/index-67574ba7.js";
-/* empty css                                            */import { S as Seo } from "../../internal/immutable/chunks/Seo-6b61412b.js";
+import { S as Seo } from "../../internal/immutable/chunks/app-2fbb1765.js";
 const SubsystemSketch_svelte_svelte_type_style_lang = "";
 const css$1 = {
   code: ".div__SketchWrapper.svelte-1nbtkwx{position:absolute;width:100%;height:100%;background-color:var(--white);z-index:-1}",
@@ -24,7 +24,10 @@ ${validate_component(SubsystemSketch, "SubsystemSketch").$$render($$result, {}, 
 
 <main class="${"svelte-augaqv"}"><div id="${"title-container"}" class="${"svelte-augaqv"}"><h2>The Computational Arts MA/MFA Degree Show</h2>
 		<h1 id="${"main-title"}" class="${"svelte-augaqv"}">(SUB)<br>SYSTEMS</h1>
-		<h2>1st-4th September 2022</h2></div>
+		<h2>Opening Night Sept 1st 6pm - 9:30pm</h2>
+		<h3>Sept 2nd 11am - 8pm</h3>
+		<h3>Sept 3rd 11am - 8pm</h3>
+		<h3>Sept 4th 11am - 6pm</h3></div>
 
 	${``}
 

@@ -42,7 +42,7 @@ export const npm_config_global_prefix = "/Users/mx/.nvm/versions/node/v16.13.1";
 export const CONDA_SHLVL = "1";
 
 /** @type {import('$env/static/private').TERM_PROGRAM_VERSION} */
-export const TERM_PROGRAM_VERSION = "1.70.0";
+export const TERM_PROGRAM_VERSION = "1.70.1";
 
 /** @type {import('$env/static/private').CONDA_PROMPT_MODIFIER} */
 export const CONDA_PROMPT_MODIFIER = "(base) ";

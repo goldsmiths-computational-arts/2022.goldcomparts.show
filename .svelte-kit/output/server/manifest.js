@@ -3,7 +3,7 @@ export const manifest = {
 	assets: new Set([".DS_Store","creativeCodingSketch/.DS_Store","creativeCodingSketch/data/4.png","creativeCodingSketch/data/4s.png","creativeCodingSketch/data/points1.3.csv","creativeCodingSketch/data/points1.5k.csv","creativeCodingSketch/data/points1.8.csv","creativeCodingSketch/data/pointsmobile.csv","creativeCodingSketch/fonts/BasisGrotesqueProOffWhite-Regular.otf","creativeCodingSketch/fonts/Coconat-Regular.otf","creativeCodingSketch/fonts/DotGothic16-Regular.ttf","creativeCodingSketch/fonts/Neutraface_Slab_Display_Light.otf","data/finalWeb.csv","data/threeArtists.csv","favicon.png","img/1.png","img/2.png","img/3.png","img/4.png","img/close.webp","img/hamburger.webp","robots.txt","svelte-welcome.png","svelte-welcome.webp","svg/icon-20-20-instagram-blackbg.svg","svg/icon-20-20-vimeo-blackbg.svg","svg/icon-20-20-web-blackbg.svg"]),
 	mimeTypes: {".png":"image/png",".csv":"text/csv",".otf":"font/otf",".ttf":"font/ttf",".webp":"image/webp",".txt":"text/plain",".svg":"image/svg+xml"},
 	_: {
-		entry: {"file":"internal/immutable/start-a904d18e.js","imports":["internal/immutable/start-a904d18e.js","internal/immutable/chunks/index-efab64bc.js","internal/immutable/chunks/paths-86ffdd15.js","internal/immutable/chunks/preload-helper-30e8f224.js"],"stylesheets":[]},
+		entry: {"file":"internal/immutable/start-33bde133.js","imports":["internal/immutable/start-33bde133.js","internal/immutable/chunks/index-efab64bc.js","internal/immutable/chunks/paths-86ffdd15.js","internal/immutable/chunks/preload-helper-30e8f224.js"],"stylesheets":[]},
 		nodes: [
 			() => import('./nodes/0.js'),
 			() => import('./nodes/1.js'),

@@ -26,7 +26,7 @@
 <section>
 	<!-- Under navbar spacing  -->
 	<div class="header_spacing"></div> 
-
+<!-- 
 	<div class="artists_grid">
 
 		{#each artists as artist}
@@ -39,7 +39,7 @@
 			</a>
 		{/each}
 
-	</div>	
+	</div>	 -->
 	<div class="footer_spacing"></div> 
 
 </section>
