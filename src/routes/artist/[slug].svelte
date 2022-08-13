@@ -19,12 +19,21 @@
 
   const artist = DataManager.getArtist($page.params.slug);
 
+
+  const createWebsiteUrl = (website) => {
+    if(!website.includes('http')){
+      website = 'https://' + website;
+    }
+    return website;
+  }
+
   import webImg from '$lib/svg/icon-20-20-web-blackbg.svg';
   import vimeo from '$lib/svg/icon-20-20-vimeo-blackbg.svg';
   import instagramImg from '$lib/svg/icon-20-20-instagram-blackbg.svg'
 
 import Artworks from "../artworks.svelte";
   
+
 </script>
 
 <img class="img_responsive" src="/img/1.png" alt="img-description" />
@@ -63,9 +72,10 @@ import Artworks from "../artworks.svelte";
     <p>{artist.description}</p>
     <div id="icons">
       {#if artist.website}
-      <a href="https://{artist.website}" target="_blank" >
-        <img 
+      <a href={createWebsiteUrl(artist.website)} target="_blank" >
+        <img
           src={webImg}
+
           class="img--social_icons"
           alt="website icon"
         />
