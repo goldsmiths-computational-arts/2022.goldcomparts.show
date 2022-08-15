@@ -6,7 +6,7 @@
   	import { onMount } from 'svelte'
 	import '../app.css';
 
-	let fullSite = false;
+	let fullSite =true;
 </script>
 
 <Seo title="Home Page" />
