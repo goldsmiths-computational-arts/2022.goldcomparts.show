@@ -2,12 +2,19 @@
 import fs from 'fs'
 import { normalize } from 'path'
 import { google } from 'googleapis'
+import { DataManager } from '../src/lib/util/data-manager'
 
 
 //pull the data from csv/tsv
+const artists = DataManager.getArtistList();
 
 //loop through each artist to get url's
-
+artists.map(artist => {
+    let headshot = artist.headshot_link;
+    // let headshotAlt = artist.headshot_txt;
+    let urls = artist.images_link.split(",");
+    // let alts = [artist.img1_txt, artist.img2_txt, artist.img3_txt];
+})
 //use the url's to access the photos in drive
 
 //save the photos to file in the repo, keeping track of who's they are
