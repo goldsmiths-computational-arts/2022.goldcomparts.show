@@ -27,6 +27,7 @@
 		"@fontsource/fira-mono": "^4.5.0",
 		"@sveltejs/adapter-static": "^1.0.0-next.38",
 		"cookie": "^0.4.1",
+		"googleapis": "^105.0.0",
 		"lodash": "^4.17.21",
 		"lodash-es": "^4.17.21",
 		"p5": "^1.4.2",
