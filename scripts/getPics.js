@@ -14,7 +14,7 @@ fs.readFile('../src/lib/data/artist.tsv','utf-8', function(err, data) {
     header:true,
   });
 
-  let firstArtist = artists.data[0]
+  let firstArtist = artists.data[3]
 
   getPortrait(firstArtist.headshot_link,firstArtist.uni_email);
 
@@ -46,10 +46,10 @@ const getPortrait = async (portraitUrl, preferredName) => {
 
   console.log(`Getting portrait pic for ${preferredName}`)
 
-  const bioPicsDir = `../static/img/bios/${preferredName}.jpg`;
+  let bioPicsDir = `../static/img/bios/${preferredName}`;
   const fileId = portraitUrl.replace('https://drive.google.com/open?id=', '')
 
-  const bioPicDest = fs.createWriteStream(bioPicsDir);
+  let bioPicDest = fs.createWriteStream(bioPicsDir);
 
   const auth = new GoogleAuth({scopes: 'https://www.googleapis.com/auth/drive'});
   const service = google.drive({version: 'v3', auth});
@@ -62,10 +62,15 @@ const getPortrait = async (portraitUrl, preferredName) => {
       alt: 'media',
     });
     console.log(file);
-    if(file.headers.connection['content-type'] == 'image/jpeg') {
-      console.log("jpeg");
+
+    if (file.headers['content-type'] == 'image/png') {
+      bioPicsDir += '.png';
+    } else {
+      bioPicsDir += '.jpg';
     }
-    fs.writeFile(bioPicsDir, JSON.stringify(file), function(err) {
+
+    
+    fs.writeFile(bioPicsDir, file.data, function(err) {
         if (err)
         console.log("error is " + err);
       else {
