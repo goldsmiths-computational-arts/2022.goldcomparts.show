@@ -1,54 +1,117 @@
 #!/usr/bin/env node -r esm
 import fs from 'fs'
 import { normalize } from 'path'
-import { google } from 'googleapis'
-import { DataManager } from '../src/lib/util/data-manager'
+
+import {GoogleAuth} from 'google-auth-library';
+import {google} from 'googleapis';
+import  Papa  from 'papaparse';
 
 
-//pull the data from csv/tsv
-const artists = DataManager.getArtistList();
+
+
+fs.readFile('../src/lib/data/artist.tsv','utf-8', function(err, data) {
+  let artists = Papa.parse(data, {
+    header:true,
+  });
+
+  let firstArtist = artists.data[0]
+
+  getPortrait(firstArtist.headshot_link,firstArtist.uni_email);
+
+  // artists.data.map(artist => {
+  //   let headshot = artist.headshot_link;
+  //   getPortrait(headshot, artist.uni_email);
+
+  // })
+});
+
 
 //loop through each artist to get url's
-artists.map(artist => {
-    let headshot = artist.headshot_link;
-    // let headshotAlt = artist.headshot_txt;
-    let urls = artist.images_link.split(",");
-    // let alts = [artist.img1_txt, artist.img2_txt, artist.img3_txt];
-})
+// artists.map(artist => {
+//     let headshot = artist.headshot_link;
+
+//     getPortrait(headshot, artist.pref_name)
+//     // let headshotAlt = artist.headshot_txt;
+//     let urls = artist.images_link.split(",");
+//     // let alts = [artist.img1_txt, artist.img2_txt, artist.img3_txt];
+// })
 //use the url's to access the photos in drive
 
 //save the photos to file in the repo, keeping track of who's they are
 
 
 
-const getPortrait = async (portraitUrl, preferredName, drive) => {
+const getPortrait = async (portraitUrl, preferredName) => {
   if (!portraitUrl) return
 
   console.log(`Getting portrait pic for ${preferredName}`)
 
-  const bioPicsDir = normalize(`${__dirname}/../static/img/bios`)
+  const bioPicsDir = `../static/img/bios/${preferredName}.jpg`;
   const fileId = portraitUrl.replace('https://drive.google.com/open?id=', '')
 
-  const bioPicDest = fs.createWriteStream(`${bioPicsDir}/${picName}.jpg`)
+  const bioPicDest = fs.createWriteStream(bioPicsDir);
 
-  drive.files.get(
-    {
-      fileId,
+  const auth = new GoogleAuth({scopes: 'https://www.googleapis.com/auth/drive'});
+  const service = google.drive({version: 'v3', auth});
+
+  try {
+
+    console.log(fileId);
+    const file = await service.files.get({
+      fileId: fileId,
       alt: 'media',
-    },
-    { responseType: 'stream' },
-    function (err, res) {
-      res.data
-        .on('done', () => {
-          console.log('done')
-        })
-        .on('error', (err) => {
-          console.log('error', err)
-        })
-        .pipe(bioPicDest)
+    });
+    console.log(file);
+    if(file.headers.connection['content-type'] == 'image/jpeg') {
+      console.log("jpeg");
     }
-  )
+    fs.writeFile(bioPicsDir, JSON.stringify(file), function(err) {
+        if (err)
+        console.log("error is " + err);
+      else {
+        console.log("File written successfully\n");
+      }
+    })
+    return;
+    
+  } catch (err) {
+    // TODO(developer) - Handle error
+    throw err;
+  }
+
+
+
 }
+
+/**
+ * Downloads a file
+ * @param{string} realFileId file ID
+ * @return{obj} file status
+ * */
+ async function downloadFile(realFileId) {
+  // Get credentials and build service
+  // TODO (developer) - Use appropriate auth mechanism for your app
+
+
+
+  const auth = new GoogleAuth({scopes: 'https://www.googleapis.com/auth/drive'});
+  const service = google.drive({version: 'v3', auth});
+
+  const fileId = realFileId;
+  try {
+    const file = await service.files.get({
+      fileId: fileId,
+      alt: 'media',
+    });
+    console.log(file.status);
+    return file.status;
+  } catch (err) {
+    // TODO(developer) - Handle error
+    throw err;
+  }
+};
+
+// downloadFile('1dNCsD2l0VUuFIQV82L9PNdh5WghB8ifL');
 
 const getArtworks = async (photoUrl, preferredName, drive) => {
   if (!photoUrl) return
@@ -117,4 +180,4 @@ const main = async () => {
   getArtworkFormData(drive)
 }
 
-main()
+// main()
