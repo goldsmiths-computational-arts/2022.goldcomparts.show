@@ -3,7 +3,7 @@
 export const NVM_INC = "/Users/mx/.nvm/versions/node/v16.13.1/include/node";
 
 /** @type {import('$env/static/private').MANPATH} */
-export const MANPATH = "/Users/mx/.nvm/versions/node/v16.13.1/share/man:/opt/homebrew/share/man:/usr/share/man:/usr/local/share/man:/Applications/Wireshark.app/Contents/Resources/share/man:/Users/mx/.nvm/versions/node/v13.14.0/share/man:/opt/homebrew/share/man:";
+export const MANPATH = "/Users/mx/.nvm/versions/node/v16.13.1/share/man:/Users/mx/.nvm/versions/node/v13.14.0/share/man:/opt/homebrew/share/man:/usr/share/man:/usr/local/share/man:/Applications/Wireshark.app/Contents/Resources/share/man:/Users/mx/.nvm/versions/node/v13.14.0/share/man:/opt/homebrew/share/man:";
 
 /** @type {import('$env/static/private').TERM_PROGRAM} */
 export const TERM_PROGRAM = "vscode";
@@ -12,7 +12,7 @@ export const TERM_PROGRAM = "vscode";
 export const NODE = "/Users/mx/.nvm/versions/node/v16.13.1/bin/node";
 
 /** @type {import('$env/static/private').INIT_CWD} */
-export const INIT_CWD = "/Users/mx/code/svelte/2022.goldcomparts.show";
+export const INIT_CWD = "/Users/mx/code/svelte/2022.goldcomparts.show/scripts";
 
 /** @type {import('$env/static/private')._P9K_TTY} */
 export const _P9K_TTY = "/dev/ttys000";
@@ -38,17 +38,20 @@ export const TMPDIR = "/var/folders/_4/36h6xbsn0f9bkr1tyj2f50fr0000gn/T/";
 /** @type {import('$env/static/private').npm_config_global_prefix} */
 export const npm_config_global_prefix = "/Users/mx/.nvm/versions/node/v16.13.1";
 
+/** @type {import('$env/static/private').GOOGLE_APPLICATION_CREDENTIALS} */
+export const GOOGLE_APPLICATION_CREDENTIALS = "/Users/mx/Downloads/key.json";
+
 /** @type {import('$env/static/private').CONDA_SHLVL} */
 export const CONDA_SHLVL = "1";
 
 /** @type {import('$env/static/private').TERM_PROGRAM_VERSION} */
-export const TERM_PROGRAM_VERSION = "1.70.1";
+export const TERM_PROGRAM_VERSION = "1.70.2";
 
 /** @type {import('$env/static/private').CONDA_PROMPT_MODIFIER} */
 export const CONDA_PROMPT_MODIFIER = "(base) ";
 
 /** @type {import('$env/static/private').ZDOTDIR} */
-export const ZDOTDIR = "/Users/mx";
+export const ZDOTDIR = "/var/folders/_4/36h6xbsn0f9bkr1tyj2f50fr0000gn/T/vscode-zsh";
 
 /** @type {import('$env/static/private').ORIGINAL_XDG_CURRENT_DESKTOP} */
 export const ORIGINAL_XDG_CURRENT_DESKTOP = "undefined";
@@ -84,7 +87,7 @@ export const npm_config_globalconfig = "/Users/mx/.nvm/versions/node/v16.13.1/et
 export const CONDA_EXE = "/Users/mx/opt/anaconda3/bin/conda";
 
 /** @type {import('$env/static/private').SSH_AUTH_SOCK} */
-export const SSH_AUTH_SOCK = "/private/tmp/com.apple.launchd.JujAFilg7O/Listeners";
+export const SSH_AUTH_SOCK = "/private/tmp/com.apple.launchd.dx07vVyLTp/Listeners";
 
 /** @type {import('$env/static/private').__CF_USER_TEXT_ENCODING} */
 export const __CF_USER_TEXT_ENCODING = "0x1F5:0x0:0x0";
@@ -95,11 +98,14 @@ export const npm_execpath = "/Users/mx/.nvm/versions/node/v16.13.1/lib/node_modu
 /** @type {import('$env/static/private').PAGER} */
 export const PAGER = "less";
 
+/** @type {import('$env/static/private')._CE_CONDA} */
+export const _CE_CONDA = "";
+
 /** @type {import('$env/static/private').LSCOLORS} */
 export const LSCOLORS = "Gxfxcxdxbxegedabagacad";
 
 /** @type {import('$env/static/private').PATH} */
-export const PATH = "/Users/mx/code/svelte/2022.goldcomparts.show/node_modules/.bin:/Users/mx/code/svelte/node_modules/.bin:/Users/mx/code/node_modules/.bin:/Users/mx/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/Users/mx/.nvm/versions/node/v16.13.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/mx/.nvm/versions/node/v16.13.1/bin:/Users/mx/.cabal/bin:/Users/mx/.ghcup/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Applications/Wireshark.app/Contents/MacOS:/Users/mx/.bun/bin:/Users/mx/opt/anaconda3/bin:/Users/mx/opt/anaconda3/condabin:/Users/mx/.nvm/versions/node/v13.14.0/bin:/Users/mx/.cabal/bin:/Users/mx/.ghcup/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/mx/.cargo/bin";
+export const PATH = "/Users/mx/code/svelte/2022.goldcomparts.show/node_modules/.bin:/Users/mx/code/svelte/node_modules/.bin:/Users/mx/code/node_modules/.bin:/Users/mx/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/Users/mx/.nvm/versions/node/v16.13.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/mx/.nvm/versions/node/v16.13.1/bin:/Users/mx/.bun/bin:/Users/mx/.nvm/versions/node/v13.14.0/bin:/Users/mx/.cabal/bin:/Users/mx/.ghcup/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Applications/Wireshark.app/Contents/MacOS:/Users/mx/.bun/bin:/Users/mx/opt/anaconda3/bin:/Users/mx/opt/anaconda3/condabin:/Users/mx/.nvm/versions/node/v13.14.0/bin:/Users/mx/.cabal/bin:/Users/mx/.ghcup/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/mx/.cargo/bin";
 
 /** @type {import('$env/static/private').npm_package_json} */
 export const npm_package_json = "/Users/mx/code/svelte/2022.goldcomparts.show/package.json";
@@ -126,7 +132,7 @@ export const npm_command = "run-script";
 export const PWD = "/Users/mx/code/svelte/2022.goldcomparts.show";
 
 /** @type {import('$env/static/private').npm_lifecycle_event} */
-export const npm_lifecycle_event = "build";
+export const npm_lifecycle_event = "dev";
 
 /** @type {import('$env/static/private').EDITOR} */
 export const EDITOR = "vi";
@@ -154,6 +160,9 @@ export const npm_config_node_gyp = "/Users/mx/.nvm/versions/node/v16.13.1/lib/no
 
 /** @type {import('$env/static/private').npm_package_version} */
 export const npm_package_version = "0.0.1";
+
+/** @type {import('$env/static/private')._CE_M} */
+export const _CE_M = "";
 
 /** @type {import('$env/static/private').XPC_SERVICE_NAME} */
 export const XPC_SERVICE_NAME = "0";
@@ -186,7 +195,7 @@ export const LESS = "-R";
 export const LOGNAME = "mx";
 
 /** @type {import('$env/static/private').npm_lifecycle_script} */
-export const npm_lifecycle_script = "vite build && touch ./docs/.nojekyll && echo '2022.goldcomparts.show' > ./docs/CNAME";
+export const npm_lifecycle_script = "vite dev";
 
 /** @type {import('$env/static/private').VSCODE_GIT_IPC_HANDLE} */
 export const VSCODE_GIT_IPC_HANDLE = "/var/folders/_4/36h6xbsn0f9bkr1tyj2f50fr0000gn/T/vscode-git-ba1d3680c1.sock";
@@ -223,6 +232,3 @@ export const npm_config_prefix = "/Users/mx/.nvm/versions/node/v16.13.1";
 
 /** @type {import('$env/static/private').COLORTERM} */
 export const COLORTERM = "truecolor";
-
-/** @type {import('$env/static/private').NODE_ENV} */
-export const NODE_ENV = "production";

@@ -2,7 +2,7 @@
 import ArtistTSV from '../data/artist.tsv'
 import ArtistCSV from '../data/artists.csv'
 import { shuffle } from 'lodash-es';
-import { slugify } from './helper';
+import { slugify } from './helper.js';
 
 export class DataManager {
 

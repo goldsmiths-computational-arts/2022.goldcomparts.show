@@ -25,10 +25,10 @@
 
 <div class="content_wrap">
 
-	<p>The Computational Arts MA/MFA</p>
-	<p>
-		Shabby chic before they sold out humblebrag master cleanse try-hard vinyl salvia, etsy wayfarers distillery actually taiyaki. Hell of ennui small batch iceland asymmetrical affogato quinoa selvage. Vinyl pork belly ethical, hell of chambray bitters trust fund poutine cardigan everyday carry migas fanny pack. Helvetica polaroid master cleanse chillwave taxidermy raclette migas adaptogen woke put a bird on it. Cray you probably haven't heard of them hammock XOXO chartreuse.
-	</p>
+	<h4>The Computational Arts MA/MFA Degree Show</h4>
+	<h2>
+		<br>How can divergent and alien sub-systems be assembled into coherent structures? This theme tackles the heterogeneity of work within the show head-on (treating them like linked organs forming an organism). It traces the patterns in the way digital worlds emerge from disparate functions and classes, the way diverse programs can be connected into elegant pipelines, the way machine components and sculptural elements can coherently terraform a space, the way user and computer can be linked into a high-functioning cyborg. <br><br>Zooming out, it addresses how the cohort’s varied practices are synthesised to produce the show. Possible References: Lialina on digital worlds produced by discordant users, Haraway on cyborgs and symbiotic systems, D&G ATP and Anti-Oedipus for machine systems + rhizomatics, Prigogine + Stengers on order out of chaos
+	</h2>
 </div>
 
 <hr/>
@@ -38,11 +38,14 @@
 	<p> 1st - 4th September 2020</p>
 </div>
 <div class="opening_wrap">
-	<p> 1st Thus (Opening Night)</p>
+	<span> 1st Thu (Opening Night)</span>
+	<span>6 pm - 9.30 pm</span>
 	<hr/>
-	<p> 2nd Fri - 3rd Sat</p>
+	<span> 2nd Fri - 3rd Sat</span>
+	<span> 11 am - 8 pm</span>
 	<hr/>
-	<p> 4th Sun</p>
+	<span> 4th Sun</span>
+	<span> 11 am - 6 pm</span>
 
 </div>
 <div class="footer_spacing"></div> 
@@ -62,7 +65,14 @@
 	}
 	
 	.content_wrap {
-		width: 100%;
-		margin: 2rem;
+		/* width: 100%; */
+		margin: 0rem;
+		padding: 1rem;
+	}
+
+	@media (min-width:720px) {
+		.content_wrap {
+			padding: 2rem;
+		}
 	}
 </style>
