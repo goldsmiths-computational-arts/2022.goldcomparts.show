@@ -144,14 +144,11 @@
 		flex-direction: column;
 	}
 
-	.date-container {
-		/* padding: 5px; */
-	}
-
 	.artists_grid {
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
 		row-gap: 2rem;	
+		padding-top: 5%;
 	}
 
 	.link_tile {
@@ -163,10 +160,15 @@
 		height: 200px;
 		object-fit: cover;
 		order: 0;
+		padding-top: 2%;
 	}
 
 	.text {
 		order: 1;
+	}
+
+	.text h3, p {
+		padding-top: 2%;
 	}
 
 	@media (min-width: 800px) {
@@ -180,12 +182,17 @@
 			flex-direction: row;
 		}
 
+		.date-container {
+			flex-basis: 50%;
+		}
+
 		.img_responsive {
 			order: 1;
 		}
 		
 		.text {
 			order: 0;
+			flex-basis: 100%;
 		}
 	
 	}
