@@ -12,7 +12,7 @@ export const TERM_PROGRAM = "vscode";
 export const NODE = "/Users/mx/.nvm/versions/node/v16.13.1/bin/node";
 
 /** @type {import('$env/static/private').INIT_CWD} */
-export const INIT_CWD = "/Users/mx/code/svelte/2022.goldcomparts.show/scripts";
+export const INIT_CWD = "/Users/mx/code/svelte/2022.goldcomparts.show";
 
 /** @type {import('$env/static/private')._P9K_TTY} */
 export const _P9K_TTY = "/dev/ttys000";
