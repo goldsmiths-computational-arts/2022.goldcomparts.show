@@ -38,9 +38,6 @@ export const TMPDIR = "/var/folders/_4/36h6xbsn0f9bkr1tyj2f50fr0000gn/T/";
 /** @type {import('$env/static/private').npm_config_global_prefix} */
 export const npm_config_global_prefix = "/Users/mx/.nvm/versions/node/v16.13.1";
 
-/** @type {import('$env/static/private').GOOGLE_APPLICATION_CREDENTIALS} */
-export const GOOGLE_APPLICATION_CREDENTIALS = "/Users/mx/Downloads/key.json";
-
 /** @type {import('$env/static/private').CONDA_SHLVL} */
 export const CONDA_SHLVL = "1";
 

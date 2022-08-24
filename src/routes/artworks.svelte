@@ -59,7 +59,8 @@
 	}
 	.artists_grid {
 		display: grid;
-		width: 100%;
+		width: 95%;
+		margin: auto;
 		grid-template-columns: repeat(1, 1fr);
 		row-gap: 2rem;
 	}
@@ -92,7 +93,7 @@
 		.artists_grid {
 			display: grid;
 			width: 100%;
-			grid-template-columns: repeat(3, 1fr);
+			grid-template-columns: repeat(4, 1fr);
 			margin: 0 1rem;
 			column-gap: 0.5rem;
 		}

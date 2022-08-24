@@ -38,15 +38,20 @@
 	<p> 1st - 4th September 2020</p>
 </div>
 <div class="opening_wrap">
-	<span> 1st Thu (Opening Night)</span>
-	<span>6 pm - 9.30 pm</span>
+	<div class="flex-date">
+		<span> 1st Thu (Opening Night)</span>
+		<span>6 pm - 9.30 pm</span>
+	</div>
 	<hr/>
-	<span> 2nd Fri - 3rd Sat</span>
-	<span> 11 am - 8 pm</span>
+	<div class="flex-date">
+		<span> 2nd Fri - 3rd Sat</span>
+		<span> 11 am - 8 pm</span>
+	</div>
 	<hr/>
-	<span> 4th Sun</span>
-	<span> 11 am - 6 pm</span>
-
+	<div class="flex-date">
+		<span> 4th Sun</span>
+		<span> 11 am - 6 pm</span>
+	</div>
 </div>
 <div class="footer_spacing"></div> 
 
@@ -56,12 +61,17 @@
 		margin: 1rem 0;
 	}
 	.opening_wrap{
-		width: 50%;
-		margin: 2rem;
+		width: 80%;
+		margin: 1rem;
 	}
-	.opening_wrap hr{
+	.opening_wrap hr {
 		margin: 0.5rem 0;
 		padding: 0;
+	}
+
+	.flex-date {
+		display: flex;
+		justify-content: space-between;
 	}
 	
 	.content_wrap {
@@ -73,6 +83,9 @@
 	@media (min-width:720px) {
 		.content_wrap {
 			padding: 2rem;
+		}
+		.opening_wrap {
+			width: 40%;
 		}
 	}
 </style>

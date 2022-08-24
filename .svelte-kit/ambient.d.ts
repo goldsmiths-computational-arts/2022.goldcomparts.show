@@ -17,7 +17,6 @@ declare module '$env/static/private' {
 	export const HOMEBREW_REPOSITORY: string;
 	export const TMPDIR: string;
 	export const npm_config_global_prefix: string;
-	export const GOOGLE_APPLICATION_CREDENTIALS: string;
 	export const CONDA_SHLVL: string;
 	export const TERM_PROGRAM_VERSION: string;
 	export const CONDA_PROMPT_MODIFIER: string;
