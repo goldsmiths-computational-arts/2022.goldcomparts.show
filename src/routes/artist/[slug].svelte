@@ -36,7 +36,7 @@ import Artworks from "../artworks.svelte";
 
 </script>
 
-<img class="img_responsive" src="/img/1.png" alt="img-description" />
+<img class="img_responsive" src="/img/artworks/img1_{artist.pref_name ? artist.pref_name.toLowerCase() : artist.name.toLowerCase()}.jpg" alt="img-description" />
 <div class="page-container">
   <div class="content_container">
     <div class="artist_wrap">
@@ -64,7 +64,7 @@ import Artworks from "../artworks.svelte";
   
   <div class="content_container">
     <div class="img_art">
-      <img src="/img/3.png" alt="img-description" />
+      <img src="/img/headshot/1_{artist.pref_name ? artist.pref_name.toLowerCase() : artist.name.toLowerCase()}.jpg" alt="img-description" />
     </div>
   
     <div class="txt_wrap">

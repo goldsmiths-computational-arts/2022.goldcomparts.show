@@ -21,7 +21,7 @@
       "_paths-86ffdd15.js"
     ],
     "css": [
-      "internal/immutable/assets/__layout-106e332e.css"
+      "internal/immutable/assets/__layout-a022c145.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
@@ -42,7 +42,7 @@
       "_env-57855b65.js"
     ],
     "css": [
-      "internal/immutable/assets/about-145d848a.css"
+      "internal/immutable/assets/about-eb421579.css"
     ]
   },
   "src/routes/artist/[slug].svelte": {
@@ -54,11 +54,11 @@
       "_stores-f833c0ae.js",
       "_env-57855b65.js",
       "_app-25f96378.js",
-      "_artworks-99de2a21.js",
+      "_artworks-04350490.js",
       "_paths-86ffdd15.js"
     ],
     "css": [
-      "internal/immutable/assets/[slug]-e080e946.css"
+      "internal/immutable/assets/[slug]-385f8360.css"
     ],
     "assets": [
       "internal/immutable/assets/icon-20-20-web-blackbg-a3f17882.svg",
@@ -88,7 +88,7 @@
       "_app-25f96378.js"
     ],
     "css": [
-      "internal/immutable/assets/index-4ebe2c82.css"
+      "internal/immutable/assets/index-d2966ad4.css"
     ]
   },
   "src/routes/location.svelte": {
@@ -111,7 +111,7 @@
       "_app-25f96378.js"
     ],
     "css": [
-      "internal/immutable/assets/schedule-1b293fec.css"
+      "internal/immutable/assets/schedule-52550d1b.css"
     ]
   },
   "src/routes/artworks.svelte": {
@@ -120,7 +120,7 @@
     "isEntry": true,
     "imports": [
       "_index-26b76976.js",
-      "_artworks-99de2a21.js",
+      "_artworks-04350490.js",
       "_app-25f96378.js",
       "_paths-86ffdd15.js",
       "_env-57855b65.js"
@@ -159,8 +159,8 @@
   "_env-57855b65.js": {
     "file": "internal/immutable/chunks/env-57855b65.js"
   },
-  "_artworks-99de2a21.js": {
-    "file": "internal/immutable/chunks/artworks-99de2a21.js",
+  "_artworks-04350490.js": {
+    "file": "internal/immutable/chunks/artworks-04350490.js",
     "imports": [
       "_index-26b76976.js",
       "_app-25f96378.js",
@@ -168,7 +168,7 @@
       "_env-57855b65.js"
     ],
     "css": [
-      "internal/immutable/assets/artworks-5173accd.css"
+      "internal/immutable/assets/artworks-08127999.css"
     ]
   },
   "src/hooks.js": {
