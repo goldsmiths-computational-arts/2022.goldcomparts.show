@@ -190,7 +190,7 @@ onMount(async() => {
     
     tableHelper();
     p5.createCanvas(1440, 1024);
-    p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
+    p5.resizeCanvas(p5.windowWidth, p5.windowHeight*0.8);
     p5.frameRate(10);
     
     
@@ -479,7 +479,7 @@ onMount(async() => {
 	.div__SketchWrapper {
         position: absolute;
         width: 100%;
-        height: 100%;
+        height: 80%;
         background-color: var(--white);
         z-index: -1;
         /* overflow: hidden; */

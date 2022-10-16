@@ -36,7 +36,7 @@
 		{#each artists as artist}
 			<a class="link_tile" sveltekit:prefetch href="{base}/artist/{artist.slug}">
 				<div class="image_tile">
-					<img class="img_responsive" src="/img/1.png" alt="img" />
+					<img class="img_responsive" src="/img/artworks/img1_{artist.pref_name ? artist.pref_name.toLowerCase() : artist.name.toLowerCase()}.jpg" alt="img" />
 					<h3 class="art_title"> {artist.title}</h3>
 					<p> {artist.pref_name ? artist.pref_name : artist.name} </p>
 				</div>
@@ -59,7 +59,8 @@
 	}
 	.artists_grid {
 		display: grid;
-		width: 100%;
+		width: 95%;
+		margin: auto;
 		grid-template-columns: repeat(1, 1fr);
 		row-gap: 2rem;
 	}
@@ -92,7 +93,7 @@
 		.artists_grid {
 			display: grid;
 			width: 100%;
-			grid-template-columns: repeat(3, 1fr);
+			grid-template-columns: repeat(4, 1fr);
 			margin: 0 1rem;
 			column-gap: 0.5rem;
 		}

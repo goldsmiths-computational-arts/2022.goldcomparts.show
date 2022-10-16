@@ -36,5 +36,5 @@ linking errors
 
 
 
-
+export GOOGLE_APPLICATION_CREDENTIALS="/Users/mx/Downloads/key.json"
 

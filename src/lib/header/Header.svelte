@@ -86,23 +86,21 @@ function menuImg() {
 	}
 
 	#logo a {
+		padding: 7px 4px 4px 4px;
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		justify-content: left;
 		width: 100%;
 		height: 100%;
 		text-decoration: none;
-	}
-
-	#logo img {
-		width: 2em;
-		height: 2em;
-		object-fit: contain;
+		font-family: NeutrafaceSlabDisplay;
+		font-weight: 300;
+		font-size: 30px;
 	}
 
 	nav {
 		background: var(--white);
-		opacity: 0.7;
+		opacity: 0.9;
 		width: 100%;
 	}
 
@@ -119,7 +117,7 @@ function menuImg() {
 		/* position: relative; */
 		/* display: flex; */
 		margin: 0;
- 		padding: 0;
+ 		padding: 0em;
 		height: 3em;
 		overflow: hidden;
 		/* justify-content: left; */
@@ -132,43 +130,39 @@ function menuImg() {
 		flex-direction: column;
 		justify-content: space-around;
 		align-items: center;
-	}
-
-	ul .menu-minimized {
-
+		
 	}
 
 	#overlay {
 		margin-top: 3em;
+		padding-top: 8em;
+		padding-bottom: 15em;
+
 		position: absolute;
 		width: 100%;
-		height: 80%;
+		height: 35%;
 		z-index: 1;
 		background-color: white;
 		
 	}
 
-	/* #overlay .menu-minimized {
-		display: flex;
-		justify-content: space-between;
-		flex-direction: row;
-	} */
-
-	#overlay .menu-expanded {
+	/* #overlay .menu-expanded {
 		display: flex;
 		justify-content: space-around;
 		flex-direction: row;
-	}
+	} */
 
 	li {
 		position: relative;
 		/* height: 100%; */
 		float: right;
+
 	}
 
 	#hamburger-menu {
 		position: relative;
-		height: 100%;
+		height: 36px;
+		object-fit: contain;
 		float: right;
 	}
 
@@ -183,8 +177,9 @@ function menuImg() {
 		display: block;
 		color: white;
 		text-align: center;
-		padding: 14px 16px;
+		padding: 0px;
 		text-decoration: none;
+		font-size: 30px;
 	}
 
 	li.active{
@@ -203,10 +198,24 @@ function menuImg() {
 		padding: 0 1em;
 		color: var(--heading-color);
 		font-weight: 700;
-		font-size: 0.8rem;
+		font-size: 24px;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
 		transition: color 0.2s linear;
+	}
+
+	@media (min-width: 720px) {
+		nav a {
+			font-size: 16px;
+		}
+
+		ul {
+			padding: 1em;
+		}
+
+		#logo a {
+			padding: 0px;
+		}
 	}
 
 

@@ -36,85 +36,87 @@ import Artworks from "../artworks.svelte";
 
 </script>
 
-<img class="img_responsive" src="/img/1.png" alt="img-description" />
-
-<div class="content_container">
-  <div class="artist_wrap">
-    <h1>{artist.name}</h1>
-    <h2>{artist.title}</h2>
+<img class="img_responsive" src="/img/artworks/img1_{artist.pref_name ? artist.pref_name.toLowerCase() : artist.name.toLowerCase()}.jpg" alt="img-description" />
+<div class="page-container">
+  <div class="content_container">
+    <div class="artist_wrap">
+      <h1>{artist.name}</h1>
+      <h2>{artist.title}</h2>
+    </div>
+  
+    <div class="txt_wrap">
+      <p>{artist.bio}</p>
+      <ul class="keywords">
+        <li>
+          <a href="/">Keyword 1</a>
+        </li>
+        <li>
+          <a href="/">Keyword 2</a>
+        </li>
+        <li>
+          <a href="/">Keyword 3</a>
+        </li>
+      </ul>
+    </div>
   </div>
-
-  <div class="txt_wrap">
-    <p>{artist.bio}</p>
-    <ul class="keywords">
-      <li>
-        <a href="/">Keyword 1</a>
-      </li>
-      <li>
-        <a href="/">Keyword 2</a>
-      </li>
-      <li>
-        <a href="/">Keyword 3</a>
-      </li>
-    </ul>
-  </div>
-</div>
-
-<hr />
-
-<div class="content_container">
-  <div class="img_art">
-    <img src="/img/3.png" alt="img-description" />
-  </div>
-
-  <div class="txt_wrap">
-    <h2>{artist.subtitle}</h2>
-    <p>{artist.description}</p>
-    <div id="icons">
-      {#if artist.website}
-      <a href={createWebsiteUrl(artist.website)} target="_blank" >
-        <img
-          src={webImg}
-
-          class="img--social_icons"
-          alt="website icon"
-        />
-      </a>
-      {/if}
-      {#if artist.instagram}
-      <a target="_blank" href="https://www.instagram.com/{artist.instagram}/">
-        <img
-          src={instagramImg}
-          class="img--social_icons"
-          alt="instagram icon"
-        />
-      </a>
-      {/if}
-
-      {#if artist.vimeo}
-
-      <a href={artist.vimeo} target="_blank" >
-        <img
-          src={vimeo}
-          class="img--social_icons"
-          alt="vimeo icon"
-        />
-      </a>
-      {/if}
-
-      {#if artist.youtube}
-      <a href={artist.youtube} target="_blank" >
-        <img
-          src={vimeo}
-          class="img--social_icons"
-          alt="youtube icon"
-        />
-      </a>
-      {/if}
-
+  
+  <hr />
+  
+  <div class="content_container">
+    <div class="img_art">
+      <img src="/img/headshot/1_{artist.pref_name ? artist.pref_name.toLowerCase() : artist.name.toLowerCase()}.jpg" alt="img-description" />
+    </div>
+  
+    <div class="txt_wrap">
+      <h2>{artist.subtitle}</h2>
+      <p>{artist.description}</p>
+      <div id="icons">
+        {#if artist.website}
+        <a href={createWebsiteUrl(artist.website)} target="_blank" >
+          <img
+            src={webImg}
+  
+            class="img--social_icons"
+            alt="website icon"
+          />
+        </a>
+        {/if}
+        {#if artist.instagram}
+        <a target="_blank" href="https://www.instagram.com/{artist.instagram}/">
+          <img
+            src={instagramImg}
+            class="img--social_icons"
+            alt="instagram icon"
+          />
+        </a>
+        {/if}
+  
+        {#if artist.vimeo}
+  
+        <a href={artist.vimeo} target="_blank" >
+          <img
+            src={vimeo}
+            class="img--social_icons"
+            alt="vimeo icon"
+          />
+        </a>
+        {/if}
+  
+        {#if artist.youtube}
+        <a href={artist.youtube} target="_blank" >
+          <img
+            src={vimeo}
+            class="img--social_icons"
+            alt="youtube icon"
+          />
+        </a>
+        {/if}
+  
+      </div>
     </div>
   </div>
 </div>
+
 
 <style>
   h1 {
@@ -142,6 +144,10 @@ import Artworks from "../artworks.svelte";
   .content_container {
     width: 100%;
     display: block;
+  }
+
+  .page-container {
+    padding-bottom: 250px;
   }
 
   .keywords a {
