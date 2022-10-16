@@ -24,16 +24,16 @@
 	<div class="header_spacing"></div> 
 		<div class="container">
 		<h2> Ground Floor</h2>
-		<img class="img_responsive" src="/img/2.png" alt="img" />
+		<img class="img_responsive" src="/img/floorplan/SJH_groundFloor.png" alt="floor plan graphic of an arts exhibition" />
 
 		<h2> First Floor</h2>
-		<img class="img_responsive" src="/img/2.png" alt="img" />
+		<img class="img_responsive" src="/img/floorplan/SJH_1stFloor.png" alt="floor plan graphic of an arts exhibition" />
 
 		<h2> Second Floor</h2>
-		<img class="img_responsive" src="/img/2.png" alt="img" />
+		<img class="img_responsive" src="/img/floorplan/SJH_2ndFloor.png" alt="floor plan graphic of an arts exhibition" />
 		
-		<h2> Last Floor</h2>
-		<img class="img_responsive" src="/img/2.png" alt="img" />
+		<h2> Third Floor</h2>
+		<img class="img_responsive" src="/img/floorplan/SJH_3rdFloor.png" alt="floor plan graphic of an arts exhibition" />
 		
 		<div class="footer_spacing"></div> 
 	</div>

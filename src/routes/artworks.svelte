@@ -28,9 +28,7 @@
 <section>
 	<!-- Under navbar spacing  -->
 	<div class="header_spacing"></div> 
-	<div class="drop_down_menu">
-		<p> Page about art</p>
-	</div>
+
 	<div class="artists_grid">
 
 		{#each artists as artist}

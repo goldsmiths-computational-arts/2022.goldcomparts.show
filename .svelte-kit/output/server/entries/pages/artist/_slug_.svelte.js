@@ -2,7 +2,7 @@ import { c as create_ssr_component, a as subscribe, e as escape, b as add_attrib
 import { p as page } from "../../../internal/immutable/chunks/stores-f833c0ae.js";
 import { d as dev, b as browser } from "../../../internal/immutable/chunks/env-57855b65.js";
 import "../../../internal/immutable/chunks/app-25f96378.js";
-import { D as DataManager } from "../../../internal/immutable/chunks/artworks-04350490.js";
+import { D as DataManager } from "../../../internal/immutable/chunks/artworks-d38384ee.js";
 import "lodash-es";
 import "../../../internal/immutable/chunks/paths-86ffdd15.js";
 const webImg = "/internal/immutable/assets/icon-20-20-web-blackbg-a3f17882.svg";
@@ -10,7 +10,7 @@ const vimeo = "/internal/immutable/assets/icon-20-20-vimeo-blackbg-306518c0.svg"
 const instagramImg = "/internal/immutable/assets/icon-20-20-instagram-blackbg-2c7ed331.svg";
 const _slug__svelte_svelte_type_style_lang = "";
 const css = {
-  code: "h1.svelte-qib0bo.svelte-qib0bo{text-align:left}p.svelte-qib0bo.svelte-qib0bo{margin:1rem 0}ul.svelte-qib0bo.svelte-qib0bo{list-style-type:none}img.svelte-qib0bo.svelte-qib0bo{width:100%}#icons.svelte-qib0bo.svelte-qib0bo{display:flex;flex-direction:row}.img--social_icons.svelte-qib0bo.svelte-qib0bo{background:black;margin:0.25rem}.content_container.svelte-qib0bo.svelte-qib0bo{width:100%;display:block}.page-container.svelte-qib0bo.svelte-qib0bo{padding-bottom:250px}.keywords.svelte-qib0bo a.svelte-qib0bo{padding:5px;border:1px solid var(--black);border-radius:5px}.keywords.svelte-qib0bo.svelte-qib0bo{display:flex;justify-content:space-between;padding:0;margin-top:5%}.img_responsive.svelte-qib0bo.svelte-qib0bo{height:500px;width:100%;object-fit:cover}.img_art.svelte-qib0bo.svelte-qib0bo{width:100%}.artist_wrap.svelte-qib0bo.svelte-qib0bo{width:100%;margin:1rem;padding:0}.txt_wrap.svelte-qib0bo.svelte-qib0bo{width:95%;margin:1rem;padding:0}@media(min-width: 800px){.content_container.svelte-qib0bo.svelte-qib0bo{width:100%;display:flex;justify-content:space-between}.txt_wrap.svelte-qib0bo.svelte-qib0bo{width:50%}.artist_wrap.svelte-qib0bo.svelte-qib0bo{width:50%}.img_art.svelte-qib0bo.svelte-qib0bo{width:50%;margin:1rem}}",
+  code: "h1.svelte-qib0bo{text-align:left}p.svelte-qib0bo{margin:1rem 0}img.svelte-qib0bo{width:100%}#icons.svelte-qib0bo{display:flex;flex-direction:row}.img--social_icons.svelte-qib0bo{background:black;margin:0.25rem}.content_container.svelte-qib0bo{width:100%;display:block}.page-container.svelte-qib0bo{padding-bottom:250px}.img_responsive.svelte-qib0bo{height:500px;width:100%;object-fit:cover}.img_art.svelte-qib0bo{width:100%}.artist_wrap.svelte-qib0bo{width:100%;margin:1rem;padding:0}.txt_wrap.svelte-qib0bo{width:95%;margin:1rem;padding:0}@media(min-width: 800px){.content_container.svelte-qib0bo{width:100%;display:flex;justify-content:space-between}.txt_wrap.svelte-qib0bo{width:50%}.artist_wrap.svelte-qib0bo{width:50%}.img_art.svelte-qib0bo{width:50%;margin:1rem}}",
   map: null
 };
 const U5Bslugu5D = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -34,21 +34,24 @@ const U5Bslugu5D = create_ssr_component(($$result, $$props, $$bindings, slots) =
     $$bindings.prerender(prerender);
   $$result.css.add(css);
   $$unsubscribe_page();
-  return `<img class="${"img_responsive svelte-qib0bo"}" src="${"/img/1.png"}" alt="${"img-description"}">
+  return `<img class="${"img_responsive svelte-qib0bo"}" src="${"/img/artworks/img1_" + escape(
+    artist.pref_name ? artist.pref_name.toLowerCase() : artist.name.toLowerCase(),
+    true
+  ) + ".jpg"}"${add_attribute("alt", artist.img1_txt, 0)}>
 <div class="${"page-container svelte-qib0bo"}"><div class="${"content_container svelte-qib0bo"}"><div class="${"artist_wrap svelte-qib0bo"}"><h1 class="${"svelte-qib0bo"}">${escape(artist.name)}</h1>
       <h2>${escape(artist.title)}</h2></div>
   
-    <div class="${"txt_wrap svelte-qib0bo"}"><p class="${"svelte-qib0bo"}">${escape(artist.bio)}</p>
-      <ul class="${"keywords svelte-qib0bo"}"><li><a href="${"/"}" class="${"svelte-qib0bo"}">Keyword 1</a></li>
-        <li><a href="${"/"}" class="${"svelte-qib0bo"}">Keyword 2</a></li>
-        <li><a href="${"/"}" class="${"svelte-qib0bo"}">Keyword 3</a></li></ul></div></div>
+    <div class="${"txt_wrap svelte-qib0bo"}"><h2>${escape(artist.subtitle)}</h2>
+      <p class="${"svelte-qib0bo"}">${escape(artist.description)}</p></div></div>
   
   <hr>
   
-  <div class="${"content_container svelte-qib0bo"}"><div class="${"img_art svelte-qib0bo"}"><img src="${"/img/3.png"}" alt="${"img-description"}" class="${"svelte-qib0bo"}"></div>
+  <div class="${"content_container svelte-qib0bo"}"><div class="${"img_art svelte-qib0bo"}"><img src="${"/img/headshot/img1_" + escape(
+    artist.pref_name ? artist.pref_name.toLowerCase() : artist.name.toLowerCase(),
+    true
+  ) + ".jpg"}"${add_attribute("alt", artist.headshot_txt, 0)} class="${"svelte-qib0bo"}"></div>
   
-    <div class="${"txt_wrap svelte-qib0bo"}"><h2>${escape(artist.subtitle)}</h2>
-      <p class="${"svelte-qib0bo"}">${escape(artist.description)}</p>
+    <div class="${"txt_wrap svelte-qib0bo"}"><p class="${"svelte-qib0bo"}">${escape(artist.bio)}</p>
       <div id="${"icons"}" class="${"svelte-qib0bo"}">${artist.website ? `<a${add_attribute("href", createWebsiteUrl(artist.website), 0)} target="${"_blank"}"><img${add_attribute("src", webImg, 0)} class="${"img--social_icons svelte-qib0bo"}" alt="${"website icon"}"></a>` : ``}
         ${artist.instagram ? `<a target="${"_blank"}" href="${"https://www.instagram.com/" + escape(artist.instagram, true) + "/"}"><img${add_attribute("src", instagramImg, 0)} class="${"img--social_icons svelte-qib0bo"}" alt="${"instagram icon"}"></a>` : ``}
   

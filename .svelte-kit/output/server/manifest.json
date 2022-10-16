@@ -54,11 +54,11 @@
       "_stores-f833c0ae.js",
       "_env-57855b65.js",
       "_app-25f96378.js",
-      "_artworks-04350490.js",
+      "_artworks-d38384ee.js",
       "_paths-86ffdd15.js"
     ],
     "css": [
-      "internal/immutable/assets/[slug]-385f8360.css"
+      "internal/immutable/assets/[slug]-0579eb1f.css"
     ],
     "assets": [
       "internal/immutable/assets/icon-20-20-web-blackbg-a3f17882.svg",
@@ -111,7 +111,7 @@
       "_app-25f96378.js"
     ],
     "css": [
-      "internal/immutable/assets/schedule-52550d1b.css"
+      "internal/immutable/assets/schedule-23af6063.css"
     ]
   },
   "src/routes/artworks.svelte": {
@@ -120,7 +120,7 @@
     "isEntry": true,
     "imports": [
       "_index-26b76976.js",
-      "_artworks-04350490.js",
+      "_artworks-d38384ee.js",
       "_app-25f96378.js",
       "_paths-86ffdd15.js",
       "_env-57855b65.js"
@@ -159,8 +159,8 @@
   "_env-57855b65.js": {
     "file": "internal/immutable/chunks/env-57855b65.js"
   },
-  "_artworks-04350490.js": {
-    "file": "internal/immutable/chunks/artworks-04350490.js",
+  "_artworks-d38384ee.js": {
+    "file": "internal/immutable/chunks/artworks-d38384ee.js",
     "imports": [
       "_index-26b76976.js",
       "_app-25f96378.js",

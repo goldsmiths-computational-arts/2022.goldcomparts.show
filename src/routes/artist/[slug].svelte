@@ -36,7 +36,7 @@ import Artworks from "../artworks.svelte";
 
 </script>
 
-<img class="img_responsive" src="/img/artworks/img1_{artist.pref_name ? artist.pref_name.toLowerCase() : artist.name.toLowerCase()}.jpg" alt="img-description" />
+<img class="img_responsive" src="/img/artworks/img1_{artist.pref_name ? artist.pref_name.toLowerCase() : artist.name.toLowerCase()}.jpg" alt={artist.img1_txt} />
 <div class="page-container">
   <div class="content_container">
     <div class="artist_wrap">
@@ -45,18 +45,8 @@ import Artworks from "../artworks.svelte";
     </div>
   
     <div class="txt_wrap">
-      <p>{artist.bio}</p>
-      <ul class="keywords">
-        <li>
-          <a href="/">Keyword 1</a>
-        </li>
-        <li>
-          <a href="/">Keyword 2</a>
-        </li>
-        <li>
-          <a href="/">Keyword 3</a>
-        </li>
-      </ul>
+      <h2>{artist.subtitle}</h2>
+      <p>{artist.description}</p>
     </div>
   </div>
   
@@ -64,12 +54,11 @@ import Artworks from "../artworks.svelte";
   
   <div class="content_container">
     <div class="img_art">
-      <img src="/img/headshot/1_{artist.pref_name ? artist.pref_name.toLowerCase() : artist.name.toLowerCase()}.jpg" alt="img-description" />
+      <img src="/img/headshot/img1_{artist.pref_name ? artist.pref_name.toLowerCase() : artist.name.toLowerCase()}.jpg" alt={artist.headshot_txt} />
     </div>
   
     <div class="txt_wrap">
-      <h2>{artist.subtitle}</h2>
-      <p>{artist.description}</p>
+      <p>{artist.bio}</p>
       <div id="icons">
         {#if artist.website}
         <a href={createWebsiteUrl(artist.website)} target="_blank" >

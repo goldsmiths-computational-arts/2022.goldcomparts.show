@@ -12,7 +12,7 @@ export const TERM_PROGRAM = "vscode";
 export const NODE = "/Users/mx/.nvm/versions/node/v18.8.0/bin/node";
 
 /** @type {import('$env/static/private').INIT_CWD} */
-export const INIT_CWD = "/Users/mx/code/svelte/2022.goldcomparts.show";
+export const INIT_CWD = "/Users/mx/code/svelte/2022.goldcomparts.show/static/img/headshot";
 
 /** @type {import('$env/static/private')._P9K_TTY} */
 export const _P9K_TTY = "/dev/ttys000";
@@ -42,13 +42,13 @@ export const npm_config_global_prefix = "/Users/mx/.nvm/versions/node/v18.8.0";
 export const CONDA_SHLVL = "1";
 
 /** @type {import('$env/static/private').TERM_PROGRAM_VERSION} */
-export const TERM_PROGRAM_VERSION = "1.71.0";
+export const TERM_PROGRAM_VERSION = "1.72.1";
 
 /** @type {import('$env/static/private').CONDA_PROMPT_MODIFIER} */
 export const CONDA_PROMPT_MODIFIER = "(base) ";
 
 /** @type {import('$env/static/private').ZDOTDIR} */
-export const ZDOTDIR = "/var/folders/_4/36h6xbsn0f9bkr1tyj2f50fr0000gn/T/vscode-zsh";
+export const ZDOTDIR = "/Users/mx";
 
 /** @type {import('$env/static/private').ORIGINAL_XDG_CURRENT_DESKTOP} */
 export const ORIGINAL_XDG_CURRENT_DESKTOP = "undefined";
@@ -84,7 +84,7 @@ export const npm_config_globalconfig = "/Users/mx/.nvm/versions/node/v18.8.0/etc
 export const CONDA_EXE = "/Users/mx/opt/anaconda3/bin/conda";
 
 /** @type {import('$env/static/private').SSH_AUTH_SOCK} */
-export const SSH_AUTH_SOCK = "/private/tmp/com.apple.launchd.ZLrymzbD2D/Listeners";
+export const SSH_AUTH_SOCK = "/private/tmp/com.apple.launchd.zVjmldve8O/Listeners";
 
 /** @type {import('$env/static/private').__CF_USER_TEXT_ENCODING} */
 export const __CF_USER_TEXT_ENCODING = "0x1F5:0x0:0x0";
@@ -115,6 +115,9 @@ export const npm_config_userconfig = "/Users/mx/.npmrc";
 
 /** @type {import('$env/static/private').npm_config_init_module} */
 export const npm_config_init_module = "/Users/mx/.npm-init.js";
+
+/** @type {import('$env/static/private').USER_ZDOTDIR} */
+export const USER_ZDOTDIR = "/Users/mx";
 
 /** @type {import('$env/static/private').CONDA_PREFIX} */
 export const CONDA_PREFIX = "/Users/mx/opt/anaconda3";
