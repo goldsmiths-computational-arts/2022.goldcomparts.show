@@ -132,7 +132,7 @@ export const npm_command = "run-script";
 export const PWD = "/Users/mx/code/svelte/2022.goldcomparts.show";
 
 /** @type {import('$env/static/private').npm_lifecycle_event} */
-export const npm_lifecycle_event = "dev";
+export const npm_lifecycle_event = "build";
 
 /** @type {import('$env/static/private').EDITOR} */
 export const EDITOR = "vi";
@@ -195,7 +195,7 @@ export const LESS = "-R";
 export const LOGNAME = "mx";
 
 /** @type {import('$env/static/private').npm_lifecycle_script} */
-export const npm_lifecycle_script = "vite dev";
+export const npm_lifecycle_script = "vite build && touch ./docs/.nojekyll && echo '2022.goldcomparts.show' > ./docs/CNAME";
 
 /** @type {import('$env/static/private').VSCODE_GIT_IPC_HANDLE} */
 export const VSCODE_GIT_IPC_HANDLE = "/var/folders/_4/36h6xbsn0f9bkr1tyj2f50fr0000gn/T/vscode-git-ba1d3680c1.sock";
@@ -232,3 +232,6 @@ export const npm_config_prefix = "/Users/mx/.nvm/versions/node/v18.8.0";
 
 /** @type {import('$env/static/private').COLORTERM} */
 export const COLORTERM = "truecolor";
+
+/** @type {import('$env/static/private').NODE_ENV} */
+export const NODE_ENV = "production";

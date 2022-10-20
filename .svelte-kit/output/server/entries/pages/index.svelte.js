@@ -2,12 +2,12 @@ import { c as create_ssr_component, v as validate_component } from "../../intern
 import { S as Seo } from "../../internal/immutable/chunks/app-25f96378.js";
 const SubsystemSketch_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: ".div__SketchWrapper.svelte-74ytkg{position:absolute;width:100%;height:80%;background-color:var(--white);z-index:-1}",
+  code: ".div__SketchWrapper.svelte-1abccwu{position:absolute;width:100%;height:60%;background-color:var(--white);z-index:-1}",
   map: null
 };
 const SubsystemSketch = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$1);
-  return `<div id="${"SubsystemSketch"}" class="${"div__SketchWrapper svelte-74ytkg"}">${``}
+  return `<div id="${"SubsystemSketch"}" class="${"div__SketchWrapper svelte-1abccwu"}">${``}
 </div>`;
 });
 const index_svelte_svelte_type_style_lang = "";

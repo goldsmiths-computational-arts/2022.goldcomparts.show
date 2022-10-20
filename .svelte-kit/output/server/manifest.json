@@ -21,7 +21,7 @@
       "_paths-86ffdd15.js"
     ],
     "css": [
-      "internal/immutable/assets/__layout-a022c145.css"
+      "internal/immutable/assets/__layout-13e03136.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
@@ -54,11 +54,11 @@
       "_stores-f833c0ae.js",
       "_env-57855b65.js",
       "_app-25f96378.js",
-      "_artworks-d38384ee.js",
+      "_artworks-1fe111b1.js",
       "_paths-86ffdd15.js"
     ],
     "css": [
-      "internal/immutable/assets/[slug]-0579eb1f.css"
+      "internal/immutable/assets/[slug]-a287f011.css"
     ],
     "assets": [
       "internal/immutable/assets/icon-20-20-web-blackbg-a3f17882.svg",
@@ -88,7 +88,7 @@
       "_app-25f96378.js"
     ],
     "css": [
-      "internal/immutable/assets/index-d2966ad4.css"
+      "internal/immutable/assets/index-964139f0.css"
     ]
   },
   "src/routes/location.svelte": {
@@ -120,7 +120,7 @@
     "isEntry": true,
     "imports": [
       "_index-26b76976.js",
-      "_artworks-d38384ee.js",
+      "_artworks-1fe111b1.js",
       "_app-25f96378.js",
       "_paths-86ffdd15.js",
       "_env-57855b65.js"
@@ -159,8 +159,8 @@
   "_env-57855b65.js": {
     "file": "internal/immutable/chunks/env-57855b65.js"
   },
-  "_artworks-d38384ee.js": {
-    "file": "internal/immutable/chunks/artworks-d38384ee.js",
+  "_artworks-1fe111b1.js": {
+    "file": "internal/immutable/chunks/artworks-1fe111b1.js",
     "imports": [
       "_index-26b76976.js",
       "_app-25f96378.js",
@@ -168,7 +168,7 @@
       "_env-57855b65.js"
     ],
     "css": [
-      "internal/immutable/assets/artworks-08127999.css"
+      "internal/immutable/assets/artworks-6b1c8aea.css"
     ]
   },
   "src/hooks.js": {

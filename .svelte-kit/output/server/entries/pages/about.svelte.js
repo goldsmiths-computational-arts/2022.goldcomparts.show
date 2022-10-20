@@ -30,7 +30,7 @@ const About = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 <hr>
 
 <div class="${"opening_wrap svelte-1m5n8lu"}"><h3 class="${"svelte-1m5n8lu"}">Opening Hours</h3>
-	<p>1st - 4th September 2020</p></div>
+	<p>1st - 4th September 2022</p></div>
 <div class="${"opening_wrap svelte-1m5n8lu"}"><div class="${"flex-date svelte-1m5n8lu"}"><span>1st Thu (Opening Night)</span>
 		<span>6 pm - 9.30 pm</span></div>
 	<hr class="${"svelte-1m5n8lu"}">
