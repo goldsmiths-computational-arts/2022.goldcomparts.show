@@ -35,7 +35,7 @@
 
 <div class="opening_wrap">
 	<h3> Opening Hours</h3>
-	<p> 1st - 4th September 2020</p>
+	<p> 1st - 4th September 2022</p>
 </div>
 <div class="opening_wrap">
 	<div class="flex-date">

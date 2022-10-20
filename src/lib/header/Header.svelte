@@ -141,6 +141,7 @@ function menuImg() {
 		position: absolute;
 		width: 100%;
 		height: 35%;
+		max-height: 600px;
 		z-index: 1;
 		background-color: white;
 		

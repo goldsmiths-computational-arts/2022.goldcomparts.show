@@ -48,6 +48,7 @@ import Artworks from "../artworks.svelte";
       <h2>{artist.subtitle}</h2>
       <p>{artist.description}</p>
     </div>
+
   </div>
   
   <hr />
@@ -103,7 +104,19 @@ import Artworks from "../artworks.svelte";
   
       </div>
     </div>
+
+
   </div>
+  {#if artist.img2_txt}
+  <div class="content_container">
+    <img class="img_responsive_2" src="/img/artworks/img2_{artist.pref_name ? artist.pref_name.toLowerCase() : artist.name.toLowerCase()}.jpg" alt={artist.img2_txt} />
+  </div>
+  {/if}
+  {#if artist.img3_txt}
+  <div class="content_container">
+    <img class="img_responsive_2" src="/img/artworks/img3_{artist.pref_name ? artist.pref_name.toLowerCase() : artist.name.toLowerCase()}.jpg" alt={artist.img3_txt} />
+  </div>
+  {/if}
 </div>
 
 
@@ -153,9 +166,15 @@ import Artworks from "../artworks.svelte";
   }
 
   .img_responsive {
-    height: 500px;
+    height: 600px;
     width: 100%;
     object-fit: cover;
+  }
+
+  .img_responsive_2 {
+    height: 700px;
+    width: 100%;
+    object-fit: contain;
   }
 
   .img_art {

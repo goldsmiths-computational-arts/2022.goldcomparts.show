@@ -12,7 +12,7 @@ export const TERM_PROGRAM = "vscode";
 export const NODE = "/Users/mx/.nvm/versions/node/v18.8.0/bin/node";
 
 /** @type {import('$env/static/private').INIT_CWD} */
-export const INIT_CWD = "/Users/mx/code/svelte/2022.goldcomparts.show/static/img/headshot";
+export const INIT_CWD = "/Users/mx/code/svelte/2022.goldcomparts.show";
 
 /** @type {import('$env/static/private')._P9K_TTY} */
 export const _P9K_TTY = "/dev/ttys000";
@@ -42,7 +42,7 @@ export const npm_config_global_prefix = "/Users/mx/.nvm/versions/node/v18.8.0";
 export const CONDA_SHLVL = "1";
 
 /** @type {import('$env/static/private').TERM_PROGRAM_VERSION} */
-export const TERM_PROGRAM_VERSION = "1.72.1";
+export const TERM_PROGRAM_VERSION = "1.72.2";
 
 /** @type {import('$env/static/private').CONDA_PROMPT_MODIFIER} */
 export const CONDA_PROMPT_MODIFIER = "(base) ";
