@@ -1,5 +1,5 @@
 import { c as create_ssr_component, v as validate_component } from "../../internal/immutable/chunks/index-26b76976.js";
-import { S as Seo } from "../../internal/immutable/chunks/app-25f96378.js";
+import { S as Seo } from "../../internal/immutable/chunks/app-3aae6c7f.js";
 const SubsystemSketch_svelte_svelte_type_style_lang = "";
 const css$1 = {
   code: ".div__SketchWrapper.svelte-1abccwu{position:absolute;width:100%;height:60%;background-color:var(--white);z-index:-1}",

@@ -1,8 +1,8 @@
 <script>
 	
 	export let title;
-	export let description = "This is the default SEO description";
-	export let image = 'img/1.png';
+	export let description = "Exhibition Website for the Goldsmiths Computational Arts MA/MFA Program 2022";
+	export let image = 'creativeCodingSketch/data/4.png';
 </script>
 
 <svelte:head>

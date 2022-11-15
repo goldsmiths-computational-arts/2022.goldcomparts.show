@@ -1,8 +1,8 @@
 import { c as create_ssr_component, a as subscribe, e as escape, b as add_attribute } from "../../../internal/immutable/chunks/index-26b76976.js";
 import { p as page } from "../../../internal/immutable/chunks/stores-f833c0ae.js";
 import { d as dev, b as browser } from "../../../internal/immutable/chunks/env-57855b65.js";
-import "../../../internal/immutable/chunks/app-25f96378.js";
-import { D as DataManager } from "../../../internal/immutable/chunks/artworks-1fe111b1.js";
+import "../../../internal/immutable/chunks/app-3aae6c7f.js";
+import { D as DataManager } from "../../../internal/immutable/chunks/artworks-d98ee182.js";
 import "lodash-es";
 import "../../../internal/immutable/chunks/paths-86ffdd15.js";
 const webImg = "/internal/immutable/assets/icon-20-20-web-blackbg-a3f17882.svg";

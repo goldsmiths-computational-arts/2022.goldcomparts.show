@@ -42,7 +42,7 @@ export const npm_config_global_prefix = "/Users/mx/.nvm/versions/node/v18.8.0";
 export const CONDA_SHLVL = "1";
 
 /** @type {import('$env/static/private').TERM_PROGRAM_VERSION} */
-export const TERM_PROGRAM_VERSION = "1.72.2";
+export const TERM_PROGRAM_VERSION = "1.73.1";
 
 /** @type {import('$env/static/private').CONDA_PROMPT_MODIFIER} */
 export const CONDA_PROMPT_MODIFIER = "(base) ";
@@ -84,7 +84,7 @@ export const npm_config_globalconfig = "/Users/mx/.nvm/versions/node/v18.8.0/etc
 export const CONDA_EXE = "/Users/mx/opt/anaconda3/bin/conda";
 
 /** @type {import('$env/static/private').SSH_AUTH_SOCK} */
-export const SSH_AUTH_SOCK = "/private/tmp/com.apple.launchd.zVjmldve8O/Listeners";
+export const SSH_AUTH_SOCK = "/private/tmp/com.apple.launchd.tyEkzaepaj/Listeners";
 
 /** @type {import('$env/static/private').__CF_USER_TEXT_ENCODING} */
 export const __CF_USER_TEXT_ENCODING = "0x1F5:0x0:0x0";
